@@ -52,11 +52,68 @@ const STORY = {
     ]
   },
   "office": {
-    "location": "Opening · Choice recorded",
+    "location": "4:47 p.m. · Daniel’s office",
     "title": "Head to his office.",
+    "text": [
+      "You walk. It takes forty-three seconds.",
+      "Daniel’s office door is open, because Daniel’s office door is always open. He looks up from a laptop and his whole face reorganizes into welcome.",
+      "“Hey! Oh my gosh, thank you so much for coming down. I really appreciate it. Did you eat lunch? I have a granola bar somewhere.”",
+      "You did eat lunch. You decline the granola bar. Daniel apologizes for asking, apologizes for the ticket, apologizes for having a printer at all.",
+      "There is a small framed photo of his family on the desk. There is a Bible verse on a Post-it stuck to the monitor. There is a coffee mug that says WORLD’S OKAYEST DAD in a font that suggests his kids picked it out.",
+      "“I hate to pull you away from anything,” he says. You are not being pulled away from anything.",
+      "He offers you his chair. You sit.",
+      "The printer is a Brother something-something. You open the driver page. Daniel’s phone lights up on the desk — you both look at it.",
+      "“Oh — gosh, I need to grab this. Are you okay for a sec? Just — just holler if you need anything. Really. Anything.”",
+      "He steps out. The door doesn’t quite close.",
+      "You wait for the driver to download. You put your hands on the keyboard because your hands have to go somewhere.",
+      "You type your name.",
+      "It’s not a special keyboard. It’s the kind of keyboard companies buy in bulk. It probably came with the desk.",
+      "You type your name again.",
+      "You’ve been typing on keyboards for twenty-two years. You have never noticed a keyboard before. You are noticing this keyboard.",
+      "You type a whole sentence. The sentence is: “Something is wrong with me.” You backspace it. The backspace also feels wonderful.",
+      "The driver is installed. Daniel is still on the phone in the hallway. His voice is warm and low and the words “blessing” and “appreciate” keep coming through the crack in the door.",
+      "Your hands are still on the keyboard."
+    ],
+    "choices": [
+      {
+        "label": "Take it. Right now.",
+        "hint": "You could be out of the building in ninety seconds.",
+        "next": "take_it_now"
+      },
+      {
+        "label": "Leave it. Come back for it later.",
+        "hint": "You’d finish clean. You’d plan. That’s who you are.",
+        "next": "return_later"
+      },
+      {
+        "label": "Stand up. Walk away. Never think about this again.",
+        "hint": "Everyone would tell you it’s the correct choice.",
+        "next": "walk_away"
+      }
+    ]
+  },
+  "take_it_now": {
+    "location": "Office · Choice recorded",
+    "title": "Take it. Right now.",
     "checkpoint": true,
     "text": [
-      "You’ve reached the end of the opening written so far. This branch will continue as the story develops."
+      "You’ve reached the end of the story written so far. This branch will continue as the story develops."
+    ]
+  },
+  "return_later": {
+    "location": "Office · Choice recorded",
+    "title": "Leave it. Come back for it later.",
+    "checkpoint": true,
+    "text": [
+      "You’ve reached the end of the story written so far. This branch will continue as the story develops."
+    ]
+  },
+  "walk_away": {
+    "location": "Office · Choice recorded",
+    "title": "Stand up. Walk away. Never think about this again.",
+    "checkpoint": true,
+    "text": [
+      "You’ve reached the end of the story written so far. This branch will continue as the story develops."
     ]
   },
   "restart_reply": {

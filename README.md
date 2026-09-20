@@ -18,7 +18,7 @@ The application is two static files with no runtime dependencies:
 - `index.html`: markup, inline SVG keyboard illustration, and the story engine script.
 - `styles.css`: responsive cream-and-green layout, serif narrative headings, accessible focus states, reduced-motion support. Linked from the HTML head; keep new styles here, not inline.
 - Static HTML: cover panel and inline SVG keyboard illustration on the left, interactive story on the right; stacked on narrow screens.
-- `STORY`: one approved opening and three explicit continuation checkpoints. No completed endings yet. The opening contains the plateau paragraph, Daniel’s 4:46 p.m. printer-driver ticket, and three choices: visit his office, suggest restarting, or check the model.
+- `STORY`: the opening, one developed second scene (`office`), and five explicit continuation checkpoints. No completed endings yet. The opening contains the plateau paragraph, Daniel’s 4:46 p.m. printer-driver ticket, and three choices: visit his office, suggest restarting, or check the model. The office scene walks the protagonist to Daniel’s desk (Ned-Flanders-nice CEO), leaves them alone with the keyboard while Daniel takes a call, plays the keyboard-touch moment, and forks into: take it now, come back later, or walk away.
 - Game engine: renders safe text using `textContent`, follows choices, supports going back, confirms restarting an active journey, shows visited scenes, and offers replay at endings.
 - `path`: array of visited scene IDs, starting at `arrival`.
 - `SAVE_KEY`: `keyboard-heist-v1`. Persists the path in localStorage; validates the saved route before restoring it. Falls back to in-memory play if storage is unavailable.
@@ -69,7 +69,8 @@ Current graph:
 
 ```text
 arrival -> office, restart_reply, printer_model
-checkpoints: office, restart_reply, printer_model
+office  -> take_it_now, return_later, walk_away
+checkpoints: restart_reply, printer_model, take_it_now, return_later, walk_away
 ```
 
 ## Verification expectations
@@ -97,4 +98,4 @@ No automated test suite is checked into the repository yet. Report actual verifi
 
 ## Next work
 
-The user approved the opening and asked to put it in the file. Next, ask which opening branch to develop and write it collaboratively. The keyboard discovery and theft mission are agreed premise, but their actual scenes have not yet been approved or implemented. If introducing inventory, conditional choices, or multiple stories, explicitly design state/save compatibility and revise this handoff.
+The office scene is written. Next, develop one of the office branches (`take_it_now`, `return_later`, `walk_away`) collaboratively. Open question on the `walk_away` branch: does it end the story or loop the protagonist back the next day, unable to shake it? Ask the user before writing that branch. The `restart_reply` and `printer_model` branches remain untouched checkpoints — develop when the user chooses. If introducing inventory, conditional choices, or multiple stories, explicitly design state/save compatibility and revise this handoff.
