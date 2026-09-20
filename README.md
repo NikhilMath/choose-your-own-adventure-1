@@ -1,4 +1,4 @@
-# AI handoff: Keyboard Heist
+# Keyboard Heist
 
 ## User intent and standing instructions
 
@@ -6,15 +6,17 @@
 - The user is the story creator. Ask for their ideas, then ask a few focused questions to develop the setting, characters, stakes, and choices collaboratively. Do not independently invent or finalize major story directions.
 - The chosen story is **Keyboard Heist**, a second-person dark office comedy. The protagonist is an IT Support Manager whose dull, miserable last few months have left life feeling pointless. A printer-driver ticket (their most hated IT task) brings them to a genuinely nice CEO. His ordinary $150 keyboard feels wonderful; buying one would not satisfy the protagonist, but stealing this one gives them purpose. They feel guilty and rationalize that the company wants happy employees. The fictional goal is to avoid being caught. Eventual absurd escalation is welcome; space was floated as a possibility, not an agreed plot point.
 - Work one scene or decision at a time: develop the user's idea, propose branches for discussion, and implement the agreed direction. For the approved opening, choices lead to explicit “To be continued” checkpoints until their scenes are developed with the user. Do not invent continuations merely to fill those checkpoints. For subsequent scenes, agree on destinations with the user.
-- Keep the game easy to open and share as one standalone HTML file.
-- The user authorizes committing and pushing completed changes directly to `main`. No additional permission is needed for routine commits or pushes. Do not force-push or overwrite unrelated changes.
-- This README is context for future AI assistants. Update it when architecture, behavior, verification, or next steps change.
+- Keep the game easy to open and share as a small set of static files (currently `index.html` + `styles.css`) with no build step, backend, or dependencies.
+- After completing any change, always commit and push to `origin main` without asking for permission each time. Do not force-push or overwrite unrelated changes.
+- This README is the durable place for standing instructions the user gives. Whenever the user states a preference, rule, or standing instruction, record it here so any AI assistant (not only Claude) picks it up in a future session. Update it when architecture, behavior, verification, or next steps change.
+- The user runs VS Code Live Server for live preview. Do not spin up your own local HTTP server or open Claude's browser preview pane for visual checks — the user already sees changes update on their live server.
 
 ## Current implementation
 
-`index.html` is the entire application, with no external assets or dependencies:
+The application is two static files with no runtime dependencies:
 
-- Embedded CSS: responsive cream-and-green layout, serif narrative headings, accessible focus states, reduced-motion support.
+- `index.html`: markup, inline SVG keyboard illustration, and the story engine script.
+- `styles.css`: responsive cream-and-green layout, serif narrative headings, accessible focus states, reduced-motion support. Linked from the HTML head; keep new styles here, not inline.
 - Static HTML: cover panel and inline SVG keyboard illustration on the left, interactive story on the right; stacked on narrow screens.
 - `STORY`: one approved opening and three explicit continuation checkpoints. No completed endings yet. The opening contains the plateau paragraph, Daniel’s 4:46 p.m. printer-driver ticket, and three choices: visit his office, suggest restarting, or check the model.
 - Game engine: renders safe text using `textContent`, follows choices, supports going back, confirms restarting an active journey, shows visited scenes, and offers replay at endings.
@@ -89,7 +91,7 @@ No automated test suite is checked into the repository yet. Report actual verifi
 - Default working/push branch: `main`.
 - Inspect `git status` before editing or committing. Preserve unrelated user work.
 - Stage only task files, use a descriptive commit, and push to `origin main` after verification.
-- An earlier push failed because HTTPS GitHub credentials were unavailable (`could not read Username`). Retry when delivering changes; if still blocked, retain the local commit and report the authentication blocker.
+- GitHub CLI (`gh`) is installed and authenticated on this machine, so `git push origin main` works over HTTPS without prompting. If auth breaks, re-run `gh auth login` and retry.
 - A GitHub source push does not itself configure website hosting. There is no deployment configuration in this repository.
 - License: MIT, see `LICENSE`.
 
