@@ -4,39 +4,84 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#142c29">
-<title>The Last Light — A branching adventure</title>
+<title>Keyboard Heist — A dark office comedy</title>
 <style>
 :root{color-scheme:light;--paper:#f4f3ed;--ink:#182e2b;--muted:#69756e;--line:#d8ddd3;--accent:#d8eeaa}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}button{font:inherit;cursor:pointer}button:focus-visible,summary:focus-visible{outline:3px solid #7a9744;outline-offset:5px}header{max-width:1400px;margin:auto;padding:27px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-size:14px;font-weight:700;letter-spacing:3px}.brand span{color:#789447;margin-right:10px}.edition{font-size:11px;color:var(--muted);letter-spacing:2px}main{max-width:1400px;margin:0 auto;padding:54px 5% 35px;display:grid;grid-template-columns:minmax(280px,.85fr) minmax(340px,1fr);gap:8%}.eyebrow{text-transform:uppercase;font-size:10px;font-weight:700;letter-spacing:2.5px;color:var(--muted)}h1{font-family:Georgia,serif;font-size:clamp(54px,6vw,86px);font-weight:400;letter-spacing:-4px;line-height:1.02;margin:20px 0}h1 em{font-weight:400;color:#718264}.intro{font-size:14px;line-height:1.8;color:var(--muted);max-width:330px}.art{position:relative;overflow:hidden;background:#193b37;border-radius:160px 160px 6px 6px;height:300px;margin-top:30px;isolation:isolate}.art svg{height:100%;width:100%;display:block}.art-caption{position:absolute;bottom:20px;left:24px;color:#c4d4c4;font-size:9px;letter-spacing:2px}.meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;font-size:10px;color:var(--muted);letter-spacing:1px}.reader{padding-top:6px}.toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px}.chapter{font-size:10px;letter-spacing:2px;color:var(--muted)}.text-button{border:0;background:none;color:var(--muted);padding:8px 0;font-size:12px}.text-button:hover{color:var(--ink)}.scene{animation:arrive .35s ease}h2{font-family:Georgia,serif;font-size:35px;line-height:1.2;font-weight:400;letter-spacing:-.8px;margin:12px 0 24px}.prose{font-family:Georgia,serif;font-size:17px;line-height:1.85;color:#46554d}.prose p{margin:0 0 16px}.decision{margin:30px 0 14px;font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}.choices{display:grid;gap:10px}.choice{width:100%;display:flex;align-items:center;gap:16px;text-align:left;border:1px solid var(--line);border-radius:7px;padding:17px;background:#fafbf6;color:var(--ink);transition:background .18s,transform .18s,border-color .18s}.choice:hover{background:#eaf0db;border-color:#acbd91;transform:translateX(3px)}.choice-number{display:grid;place-items:center;border:1px solid #d9dfce;border-radius:50%;width:28px;height:28px;flex-shrink:0;font-size:11px;color:#7b8967}.choice strong{font-size:13px;font-weight:500;display:block;line-height:1.5}.choice small{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:4px}.arrow{margin-left:auto;font-size:19px}.choice.primary{background:var(--accent);border-color:var(--accent)}.below{margin-top:23px;display:flex;align-items:center;justify-content:space-between;gap:15px}.save{font-size:10px;color:var(--muted)}details{margin-top:25px;border-top:1px solid var(--line);padding-top:16px;font-size:12px;color:var(--muted)}summary{cursor:pointer}ol{padding-left:20px;line-height:1.9}footer{max-width:1260px;margin:15px auto 0;padding:22px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:10px;letter-spacing:1px;color:var(--muted)}.ending-tag{display:inline-block;background:#e5ebd8;border-radius:20px;padding:7px 12px;font-size:10px;letter-spacing:1px}button:disabled{opacity:.35;cursor:default}noscript{display:block;padding:30px} @keyframes arrive{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}@media(max-width:760px){header{padding:22px 6%}.edition{font-size:9px;letter-spacing:1px}main{display:block;padding:30px 6%}.intro{max-width:100%}h1{font-size:60px}.art{height:190px;border-radius:100px 100px 6px 6px;margin-top:20px}.meta{margin-bottom:35px}.toolbar{margin-bottom:22px}footer{margin:0 6%;gap:20px;line-height:1.6}h2{font-size:30px}}
+.ticket{margin:24px 0;padding:20px;border:1px solid var(--line);border-left:3px solid #789447;border-radius:6px;background:#fafbf6;font-size:13px;line-height:1.7}.ticket p{margin:0 0 8px}.ticket p:last-child{margin:16px 0 0}aside,.reader{min-width:0}
 </style>
 </head>
 <body>
 <header><div class="brand"><span>✳</span> OTHER PATHS</div><div class="edition">STORIES YOU STEP INTO</div></header>
 <main>
-<aside><div class="eyebrow">Adventure No. 001 · Coastal mystery</div><h1>The Last<br><em>Light.</em></h1><p class="intro">An island that vanished. A letter that arrived too late. And a light that knows your name.</p>
-<div class="art" role="img" aria-label="A lighthouse casts its beam over a quiet green sea beneath the moon">
-<svg viewBox="0 0 480 320" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#142c29"/><stop offset="1" stop-color="#396256"/></linearGradient><linearGradient id="beam"><stop stop-color="#e6ecc0" stop-opacity=".65"/><stop offset="1" stop-color="#e6ecc0" stop-opacity="0"/></linearGradient></defs><path fill="url(#sky)" d="M0 0h480v320H0z"/><circle cx="345" cy="64" r="26" fill="#ccd7b1"/><g fill="#b2c6b3" opacity=".6"><circle cx="87" cy="55" r="1"/><circle cx="192" cy="33" r="1"/><circle cx="270" cy="92" r="1"/><circle cx="404" cy="117" r="1"/></g><path d="M230 135L480 60v120z" fill="url(#beam)"/><path d="M0 214q90-35 180 0t180 0 150 0v106H0" fill="#446a5c"/><path d="M0 251q100-38 210 0t270-6v75H0" fill="#315347"/><path d="M110 320l58-62 65-27 51 26 65 63" fill="#172f2b"/><path d="M201 250l10-112h24l12 112" fill="#c6cbb0"/><path d="M206 192h34l3 24h-39" fill="#6d8874"/><path d="M207 126h33v16h-33z" fill="#e5e9ae"/><path d="M201 125l23-19 23 19z" fill="#132c29"/><path d="M220 230h9v20h-9z" fill="#233b30"/><g stroke="#94ad91" opacity=".3"><path d="M30 233h62m260 15h60M320 278h77M65 279h38M379 223h39"/></g></svg><span class="art-caption">BELLWETHER ISLAND · 11:47 PM</span></div>
-<div class="meta"><span>◷ 5–10 MINUTES</span><span>⑂ 5 ENDINGS TO DISCOVER</span></div></aside>
+<aside><div class="eyebrow">Adventure No. 001 · Dark office comedy</div><h1>Keyboard<br><em>Heist.</em></h1><p class="intro">A $150 keyboard. A perfectly nice CEO. A wildly unreasonable reason to get out of bed.</p>
+<div class="art" role="img" aria-label="An ordinary office keyboard with one green key on a dark desk"><svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg"><path fill="#193b37" d="M0 0h480v320H0z"/><ellipse cx="240" cy="234" rx="190" ry="24" fill="#142c29"/><path d="M240 110V70q0-25 40-25" fill="none" stroke="#789486" stroke-width="5"/><rect x="50" y="105" width="380" height="130" rx="15" fill="#829788"/><rect x="68" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="242" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="68" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="148" width="24" height="21" rx="4" fill="#d8eeaa"/><rect x="242" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="68" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="242" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="152" y="204" width="176" height="18" rx="4" fill="#d4d9c8"/></svg><span class="art-caption">COMPANY PROPERTY · $149.99</span></div>
+<div class="meta"><span>◷ THE OPENING</span><span>⑂ STORY IN PROGRESS</span></div></aside>
 <section class="reader" aria-label="Interactive story"><div class="toolbar"><span class="chapter" id="chapter"></span><button class="text-button" id="restart">↻ Start over</button></div><div id="scene" class="scene"></div><div class="below"><button class="text-button" id="back">← Previous choice</button><span class="save" id="save" role="status"></span></div><details><summary>Your journey <span id="count"></span></summary><ol id="journey"></ol></details></section>
-</main><footer><span>A little curiosity changes everything.</span><span>YOUR CHOICES. YOUR STORY.</span></footer><noscript>Enable JavaScript in your browser to play this adventure.</noscript>
+</main><footer><span>Employee happiness is a company priority.</span><span>YOUR CHOICES. YOUR STORY.</span></footer><noscript>Enable JavaScript in your browser to play this adventure.</noscript>
 <script>
 // STORY DATA: write each destination scene before adding a choice that links to it.
-// Every non-ending scene has choices: { label, hint, next }. Every ending has ending: true.
+// Scenes have choices, ending: true, or checkpoint: true for an explicitly unfinished branch.
 const STORY = {
- arrival:{location:'The landing',title:'Some lights should stay out.',text:["The last ferry leaves without you. Ahead, Bellwether Island rises from the fog—a place erased from every map twenty years ago.","In your pocket is a letter in your brother’s handwriting. He disappeared here last winter. Just six words: “When the light returns, follow it.”","At 11:47, the abandoned lighthouse wakes. From the harbor, a brass bell rings once. A narrow path climbs toward the light; beneath the pier, someone strikes a match."],choices:[{label:'Take the path to the lighthouse',hint:'The letter brought you here. Follow its promise.',next:'gate'},{label:'Find the person beneath the pier',hint:'Someone else was expecting you.',next:'keeper'}]},
- gate:{location:'The cliff path',title:'A voice on the other side.',text:["Salt-stung grass brushes your knees. At the lighthouse gate, a telephone rings inside a rusted box. Its wire ends in empty air.","You lift the receiver. “Don’t let it finish turning,” your brother says. Behind the gate, the beam creeps across the sea. A maintenance stair leads down into the cliff."],choices:[{label:'Ask your brother what happened',hint:'Keep him talking.',next:'call'},{label:'Take the maintenance stair',hint:'Find what powers the light.',next:'engine'}]},
- keeper:{location:'Under the pier',title:'The woman with the match.',text:["An old woman shelters a flame in her hands. “You have his eyes,” she says. On her coat is the lighthouse keeper’s badge.","“The light doesn’t guide ships. It finds people we’ve lost. Your brother went inside to bring our islanders home.” She offers you a small glass lens. “He forgot someone has to stay behind.”"],choices:[{label:'Take the lens to the lantern room',hint:'There may be another way to bring him home.',next:'lantern'},{label:'Ask about the missing islanders',hint:'Learn what happened before you act.',next:'archive'}]},
- call:{location:'The broken telephone',title:'Twenty seconds of truth.',text:["“I’m in the beam,” he says. “Every turn takes me farther from shore. But I found them—the people who vanished. They’re still here.”","Through the receiver comes the sound of a hundred people breathing. “The keeper’s records explain the lens. Or stop the engine now. Please, choose.” The line goes quiet."],choices:[{label:'Search the keeper’s records',hint:'Risk another turn to understand the light.',next:'archive'},{label:'Go down and stop the engine',hint:'Put your brother’s warning first.',next:'engine'}]},
- archive:{location:'The keeper’s cottage',title:'A margin full of names.',text:["Inside the cottage, notebooks cover the floor. One entry describes a storm, a rescue beam, and an entire village caught between one heartbeat and the next.","Your brother has added a note: “A steady light makes a prison. A moving light makes a door. Split the beam toward the harbor.” Beneath the notebook sits a spare glass lens, wrapped in a chart of the tide."],choices:[{label:'Carry the lens upstairs',hint:'Turn his discovery into a way out.',next:'lantern'},{label:'Follow the tide chart to the sea cave',hint:'Find the other side of the door.',next:'cave'}]},
- engine:{location:'Below the lighthouse',title:'The heart beneath the stone.',text:["The engine is older than the tower. Inside its flywheel, tiny lights move like a school of fish. One pulses in the rhythm your brother used to knock on your bedroom door.","A red lever will stop the wheel. Beside it, a hand crank can reverse its direction. From a flooded passage comes the smell of rain on a summer street."],choices:[{label:'Pull the red lever',hint:'Stop the light before another turn.',next:'quiet'},{label:'Turn the wheel backward',hint:'Give the trapped lights a route home.',next:'return'},{label:'Enter the flooded passage',hint:'Follow the rain to its source.',next:'cave'}]},
- lantern:{location:'The lantern room',title:'An ocean of small stars.',text:["You climb into the lantern room. Hundreds of silhouettes drift within the glass. Your brother presses a hand against its inner surface.","The lens fits into an empty bracket. Two handles control the beam: one aims toward the harbor, the other toward the distant mainland. Below you, the island’s bell begins to ring."],choices:[{label:'Split the beam toward the harbor',hint:'Make a door for everyone inside.',next:'dawn'},{label:'Aim the light at the mainland',hint:'Send a signal beyond the island.',next:'signal'}]},
- cave:{location:'The sea cave',title:'The shore between seconds.',text:["The passage opens onto a beach under a motionless wave. Lanterns hang above a village street. The missing islanders wait beside packed suitcases.","Your brother stands among them. He smiles, then looks toward the light. “We can reverse the engine together. Or you can stay until someone opens the door.” He holds out his hand."],choices:[{label:'Lead him back to reverse the engine',hint:'Neither of you has to do this alone.',next:'return'},{label:'Stay with him on the waiting shore',hint:'Let the search end here, for now.',next:'stay'}]},
- quiet:{location:'Ending · 01 / 05',title:'The quiet keeper.',ending:true,text:["The engine stops. The beam holds still over the water. Your brother’s voice settles into the telephone: faint, but no longer fading.","At dawn, you move into the keeper’s cottage. There are notebooks to study and a door still to open. Each evening at 11:47, the telephone rings. This time, someone always answers."]},
- return:{location:'Ending · 02 / 05',title:'One passenger more.',ending:true,text:["You turn the wheel against its terrible weight. The lighthouse shudders. A hand closes over yours—your brother’s, warm and real.","The engine falls silent, its remaining lights nestled safely in the glass. At sunrise, two of you wait for the ferry. Your brother carries the keeper’s notebooks. Next time, you will come back for everyone."]},
- dawn:{location:'Ending · 03 / 05',title:'A harbor full of dawn.',ending:true,text:["The lens divides the beam into a thousand bright threads. Each becomes a narrow path across the water. First a child steps onto the pier. Then a fisherman. Then the whole lost village.","Your brother is the last to cross. “You got my letter,” he says, as if you’ve only been away a day. Behind him, the lighthouse goes dark. It has nothing left to keep."]},
- signal:{location:'Ending · 04 / 05',title:'The world answers.',ending:true,text:["You aim the beam beyond the fog. All along the mainland, windows glow with scenes from the missing village. For the first time in twenty years, the world sees Bellwether.","By morning, rescue boats crowd the harbor. Your brother is still inside the light, but now a hundred people are studying the keeper’s records. You didn’t open the door tonight. You made sure nobody could forget it."]},
- stay:{location:'Ending · 05 / 05',title:'A borrowed forever.',ending:true,text:["You take his hand. Somewhere above the frozen wave, the bell finishes ringing. Here, it is always the moment before dawn.","Your brother shows you the house he has kept for you. You open its windows, set two cups on the table, and begin a letter. Perhaps one day someone will follow the light. Until then, neither of you is alone."]}
+  "arrival": {
+    "location": "4:46 p.m. · New ticket",
+    "title": "Quick printer help? 🙂",
+    "text": [
+      "You’re the IT Support Manager. You’ve spent the last few months waking up, fixing problems, going home, and waiting until it’s reasonable to go to bed. Nothing is especially wrong. Nothing is especially interesting. You’ve reached the plateau, apparently, and the view is mostly Outlook."
+    ],
+    "ticket": {
+      "from": "Daniel, CEO",
+      "subject": "Quick printer help? 🙂",
+      "body": "Hey! Having trouble getting the new printer working. Think it needs a driver? Whenever you have a minute. Appreciate you!"
+    },
+    "afterTicket": [
+      "A printer driver.",
+      "You sit perfectly still, giving the ticket an opportunity to resolve itself.",
+      "It does not."
+    ],
+    "choices": [
+      {
+        "label": "Head to his office.",
+        "hint": "Maybe walking somewhere will count as feeling something.",
+        "next": "office"
+      },
+      {
+        "label": "Reply, “Have you tried restarting?”",
+        "hint": "You deserve to ask. Once.",
+        "next": "restart_reply"
+      },
+      {
+        "label": "Check the printer model first.",
+        "hint": "There’s still a professional somewhere inside you.",
+        "next": "printer_model"
+      }
+    ]
+  },
+  "office": {
+    "location": "Opening · Choice recorded",
+    "title": "Head to his office.",
+    "checkpoint": true,
+    "text": [
+      "You’ve reached the end of the opening written so far. This branch will continue as the story develops."
+    ]
+  },
+  "restart_reply": {
+    "location": "Opening · Choice recorded",
+    "title": "Reply, “Have you tried restarting?”",
+    "checkpoint": true,
+    "text": [
+      "You’ve reached the end of the opening written so far. This branch will continue as the story develops."
+    ]
+  },
+  "printer_model": {
+    "location": "Opening · Choice recorded",
+    "title": "Check the printer model first.",
+    "checkpoint": true,
+    "text": [
+      "You’ve reached the end of the opening written so far. This branch will continue as the story develops."
+    ]
+  }
 };
-const SAVE_KEY='other-paths-last-light-v1';
+const SAVE_KEY='keyboard-heist-v1';
 let path=['arrival'];
 let canSave=true;
 function validPath(value){return Array.isArray(value)&&value.length>0&&value[0]==='arrival'&&value.every((id,i)=>Object.hasOwn(STORY,id)&&(i===0||STORY[value[i-1]].choices?.some(c=>c.next===id)));}
@@ -49,9 +94,15 @@ function render(focus=false){
  const tag=document.createElement('div');tag.className=node.ending?'ending-tag':'eyebrow';tag.textContent=node.location;container.append(tag);
  const title=document.createElement('h2');title.textContent=node.title;title.tabIndex=-1;container.append(title);
  const prose=document.createElement('div');prose.className='prose';node.text.forEach(text=>{const p=document.createElement('p');p.textContent=text;prose.append(p);});container.append(prose);
- const prompt=document.createElement('p');prompt.className='decision';prompt.textContent=node.ending?'Every ending is another beginning.':'What will you do?';container.append(prompt);
+ if(node.ticket){
+  const ticket=document.createElement('section');ticket.className='ticket';ticket.setAttribute('aria-label','Support ticket');
+  for(const [label,value] of [['From',node.ticket.from],['Subject',node.ticket.subject]]){const row=document.createElement('p');const key=document.createElement('strong');key.textContent=label+': ';row.append(key,document.createTextNode(value));ticket.append(row);}
+  const body=document.createElement('p');body.textContent=node.ticket.body;ticket.append(body);container.append(ticket);
+ }
+ if(node.afterTicket){const after=document.createElement('div');after.className='prose';node.afterTicket.forEach(text=>{const p=document.createElement('p');p.textContent=text;after.append(p);});container.append(after);}
+ const prompt=document.createElement('p');prompt.className='decision';prompt.textContent=node.checkpoint?'To be continued':node.ending?'Every ending is another beginning.':'What will you do?';container.append(prompt);
  const choices=document.createElement('div');choices.className='choices';
- (node.choices||[{label:'Discover another path',hint:'Return to the island. Choose differently.',next:'arrival'}]).forEach((choice,i)=>{
+ (node.choices||(node.checkpoint?[]:[{label:'Discover another path',hint:'Return to the opening. Choose differently.',next:'arrival'}])).forEach((choice,i)=>{
  const button=document.createElement('button');button.className='choice'+(node.ending?' primary':'');
  const number=document.createElement('span');number.className='choice-number';number.textContent=node.ending?'↻':String(i+1).padStart(2,'0');number.setAttribute('aria-hidden','true');
  const copy=document.createElement('span');const label=document.createElement('strong');label.textContent=choice.label;const hint=document.createElement('small');hint.textContent=choice.hint;copy.append(label,hint);
