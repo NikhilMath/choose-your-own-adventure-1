@@ -1,65 +1,146 @@
-KEYBOARD HEIST: SPINE DRAFT
+KEYBOARD HEIST: SPINE DRAFT (v2, 22 scenes)
 Status: UNAPPROVED PROPOSAL. Nothing here is in the game yet. Change anything.
+Target length: about 20 scenes, more if we like where it goes. [YOURS]
 Rules: single choices only (each scene ends with one choice to the next scene),
 no forks, no diversions. Diversions come after the spine is approved.
 
 Source key: [YOURS] = direction the story creator gave. [PROPOSED] = Claude's idea.
+Every scene aims to stay short, a few terse beats, per the README.
 
+==============================================================================
+ACT 1: THE ITCH
 ------------------------------------------------------------------------------
 1. ARRIVAL  (written, approved)
    Plateau paragraph, Daniel's 4:46 p.m. printer-driver ticket.
    Choice: "Head to his office."
 
-2. OFFICE  (written earlier, at git commit 5e5552f; to be rebuilt without the fork)
-   Daniel is Ned-Flanders-nice: open door, granola bar, Bible verse Post-it, kids'
-   photo. He steps out for a call. You type on his keyboard for the first time in
-   22 years of typing on keyboards and actually notice one. [YOURS]
+2. OFFICE  (written earlier, commit 5e5552f; to be rebuilt without the fork)
+   Nice-CEO Daniel: open door, granola bar, Bible verse Post-it, kids' photo. He
+   steps out for a call. You type on his keyboard and notice a keyboard for the
+   first time in 22 years. [YOURS: setup / details from the earlier version]
    Choice [PROPOSED]: "Finish the driver. Leave it where it is. For now."
 
-3. THE PLAN  [PROPOSED]
-   Next morning. Purpose, for the first time in months. You case the office:
-   Daniel's schedule, when the room is empty, who has access. Cozy, efficient,
-   slightly unhinged. The IT job turns out to be perfect cover.
-   Choice: "Put in the ticket."
+3. THE DRIVE HOME  [PROPOSED]
+   The printer works. You go home. Dinner, TV, nothing, same as always, except
+   your fingers keep typing on the air. It's the first thing in months you're
+   thinking about.
+   Choice: "Look it up."
 
-4. THE SWAP SETUP  [PROPOSED]
-   You file a fake "replace keyboard" ticket and order an identical one.
-   Nobody questions IT. Waiting for the delivery is the best week you've had.
-   Choice: "Wait for the delivery."
+4. THE MODEL NUMBER  [PROPOSED]
+   You find the exact keyboard online. $149.99. Ordinary, which is the problem.
+   Nothing about it explains what you felt.
+   Choice: "Buy one."
 
-5. THE COMPLICATION  [PROPOSED, OPEN]
-   Something you didn't plan for goes wrong. Working idea: company keyboards are
-   asset-tagged and an audit is coming, so the swap has to happen before then.
-   Choice: "Do it before Friday."
+5. THE IMPOSTOR  [YOURS: premise / PROPOSED: scene]
+   It arrives. You type on it at the kitchen table. Nothing. Same model, same
+   keys, dead. Buying it doesn't work; it has to be his. Now you have a decoy.
+   Choice: "Bring it to work."
 
-6. THE ESCALATION  [OPEN QUESTION]
-   Absurd escalation is welcome [YOURS]. Space was floated, not agreed.
-   Do we add a bigger, stranger obstacle here, or keep the story grounded?
+ACT 2: THE PLAN
+------------------------------------------------------------------------------
+6. THE PLAN  [PROPOSED]
+   Next morning. You are early. You buy your own coffee. You start a spreadsheet.
+   Purpose, for the first time in months, and it's a crime.
+   Choice: "Case the office."
 
-7. THE HEIST  [PROPOSED]
-   You make the swap, barely. Close call with Daniel or a coworker.
-   Choice: "Walk out with it."
+7. RECON  [PROPOSED]
+   Daniel's schedule. His lunch. His door that is always open. His assistant,
+   Marcy, who sees everything. The IT job gives you a reason to be anywhere.
+   Choice: "Wait for a window."
 
-8. THE GUILT  [YOURS: premise / PROPOSED: details]
-   You feel guilty and rationalize that the company wants happy employees.
-   Daniel doesn't notice, or says the new keyboard feels great. Deflating.
+8. THE WINDOW  [PROPOSED]
+   Daniel leaves for a meeting. The office is empty. You get as far as the door.
+   Marcy looks up. You pretend to check a cable. You leave.
+   Choice: "Get everyone out of the building."
+
+9. THE OUTAGE  [PROPOSED; ESCALATION BEGINS]
+   Callback to the printer: you take the floor's printers offline "for
+   maintenance." Ten people wander toward your desk, upset. You're a hero. Marcy
+   stays put anyway.
+   Choice: "Send Marcy on an errand."
+
+10. MARCY'S ERRAND  [PROPOSED]
+   You get Marcy out of the way with a fake IT emergency on the fourth floor.
+   Two minutes, maybe. You walk into the office. The keyboard is right there.
+   Then a new email arrives: an asset audit, tomorrow.
+   Choice: "Back out. Think."
+
+ACT 3: THE COMPLICATION
+------------------------------------------------------------------------------
+11. THE AUDIT  [PROPOSED, OPEN]
+   Every keyboard is asset-tagged. Your decoy has no tag, so the swap will be
+   caught the moment someone scans it.
+   Choice: "Make a tag."
+
+12. THE LABEL MAKER  [PROPOSED]
+   11 p.m., the supply closet, a label printer, and a stack of blank tags. The
+   night cleaner walks by. You have never worked so hard on anything.
+   Choice: "Go home and sleep."
+
+13. THE AUDITOR  [PROPOSED]
+   A dry, stern outside auditor arrives with a scanner and a clipboard. She
+   counts everything twice. She likes you, which is worse.
+   Choice: "Give her the tour."
+
+14. THE TOUR  [PROPOSED]
+   You walk the auditor through the building, steering her away from Daniel's
+   office. She finds two missing monitors that aren't your fault. You panic
+   about the keyboard anyway.
+   Choice: "Let her finish."
+
+15. THE OFFSITE  [PROPOSED, OPEN; ESCALATION]
+   The audit ends. Daniel announces a company retreat this weekend, and he's
+   taking his keyboard because he "types better with it." The heist just
+   moved off-site. (Absurd escalation is welcome [YOURS]. Space was floated, not
+   agreed. This is my grounded version.)
+   Choice: "Sign up for the retreat."
+
+ACT 4: THE HEIST
+------------------------------------------------------------------------------
+16. TRUST FALLS  [PROPOSED]
+   Team-building. Daniel is the best at it. You are catching people you don't
+   care about. Your decoy is in your bag the whole time.
+   Choice: "Slip away."
+
+17. THE CABIN  [PROPOSED]
+   Daniel's room, unlocked, keyboard on the desk. You have ninety seconds. You
+   swap it. It should feel triumphant.
+   Choice: "Walk out."
+
+18. THE CLOSE CALL  [PROPOSED]
+   Daniel in the hallway. He sees you holding something. He asks what's in the
+   bag. You lie, badly, and he believes you completely. Later he says his
+   keyboard "feels great today."
+   Choice: "Drive home."
+
+ACT 5: THE PAYOFF
+------------------------------------------------------------------------------
+19. THE GUILT  [YOURS: premise / PROPOSED: scene]
+   You feel guilty and rationalize: the company wants happy employees. You are
+   an employee. You are happy. Aren't you?
    Choice: "Go home."
 
-9. THE KEYBOARD AT HOME  [PROPOSED]
-   It's on your kitchen table. You type your name.
-   Choice: "Type something else."
+20. THE KEYBOARD AT HOME  [PROPOSED]
+   It's on your kitchen table. It's plugged in.
+   Choice: "Type your name."
 
-10. ENDING  [YOURS]
+21. TYPING  [PROPOSED]
+   It feels like a keyboard. It always did. What you felt in Daniel's office was
+   never the keyboard.
+   Choice: "Turn it off."
+
+22. ENDING  [YOURS]
    You finally have the keyboard, and you're still bored with life. A keyboard
    doesn't fix anything. Ending scene; the game offers replay.
 
-------------------------------------------------------------------------------
+==============================================================================
 OPEN QUESTIONS
-- Beat 2: is the ending choice right, or should the office scene end differently?
-- Beat 5: asset-tag audit, or something else that goes wrong?
-- Beat 6: absurd escalation or grounded? If absurd, what (space or otherwise)?
-- Beat 8: does the guilt get its own scene, or run through several scenes?
-- How long should the spine be? This draft is 10 scenes, some might merge.
+- Act 2: is the "pretend purpose" tone right, and are Marcy and the asset audit
+  okay, or do you want other characters and obstacles?
+- Beat 15: grounded (retreat) or a bigger, stranger escalation? What about space?
+- Beat 19: does the guilt get its own scene, or run through several?
+- Beat 5 makes the decoy real. Do you like that it's bought and it's hollow?
+- Does 22 feel about right, or should any beat merge or expand?
 
 LATER (not now): diversions that rejoin the spine, e.g. the opening's "restart"
 and "printer model" choices, and the earlier "take it now" idea (Daniel drops and
