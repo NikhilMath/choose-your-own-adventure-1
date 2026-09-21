@@ -1,4 +1,4 @@
-KEYBOARD HEIST: SPINE DRAFT (v3, 25 scenes)
+KEYBOARD HEIST: SPINE DRAFT (v4, 30 scenes)
 Status: UNAPPROVED PROPOSAL. Nothing here is in the game yet. Change anything.
 Target length: about 20 scenes, more if we like where it goes. [YOURS]
 Rules: single choices only (each scene ends with one choice to the next scene),
@@ -45,7 +45,9 @@ ACT 2: THE PLAN
 
 7. RECON  [PROPOSED]
    Daniel's schedule. His lunch. His door that is always open. His assistant,
-   Marcy, who sees everything. The IT job gives you a reason to be anywhere.
+   Marcy, who sees everything. Her calendar has the company retreat next Friday,
+   and Daniel brings his own keyboard to everything ("types better with it").
+   Once it leaves the building, it's gone.
    Choice: "Wait for a window."
 
 8. THE WINDOW  [PROPOSED]
@@ -53,7 +55,7 @@ ACT 2: THE PLAN
    Marcy looks up. You pretend to check a cable. You leave.
    Choice: "Get everyone out of the building."
 
-9. THE OUTAGE  [PROPOSED; ESCALATION BEGINS]
+9. THE OUTAGE  [PROPOSED]
    Callback to the printer: you take the floor's printers offline "for
    maintenance." Ten people wander toward your desk, upset. You're a hero. Marcy
    stays put anyway.
@@ -61,105 +63,137 @@ ACT 2: THE PLAN
 
 10. MARCY'S ERRAND  [PROPOSED]
    You get Marcy out of the way with a fake IT emergency on the fourth floor.
-   Two minutes, maybe. You walk into the office. The keyboard is right there.
-   Then a new email arrives: an asset audit, tomorrow.
+   Two minutes, maybe. You walk into the office. The keyboard is right there. Then
+   Daniel's calendar pings on his monitor: retreat packing list, "keyboard" on it.
    Choice: "Back out. Think."
 
-ACT 3: THE COMPLICATION
+ACT 3: THE RETREAT  [NEW: cancel it by spreading rumors]
 ------------------------------------------------------------------------------
-11. THE AUDIT  [PROPOSED, OPEN]
-   Every keyboard is asset-tagged. Your decoy has no tag, so the swap will be
+11. THE REALIZATION  [YOURS: need to cancel / PROPOSED: scene]
+   You can't do this at a retreat, in the woods, with forty coworkers. The retreat
+   has to be canceled. And Daniel is far too nice to cancel it himself.
+   Choice: "Start a rumor."
+
+12. THE FIRST WHISPER  [YOURS: rumors / PROPOSED: details]
+   The coffee machine, the elevator, the bathroom. You drop small, believable
+   doubts about the retreat. Nobody says anything. A few people nod.
+   Choice: "Tell Marcy."
+
+13. MARCY  [YOURS]
+   You tell Marcy that people are very unhappy about the retreat. She takes
+   notes. She has a folder for this. She is so worried about morale.
+   Choice: "Let it spread."
+
+14. THE SNOWBALL  [PROPOSED]
+   A few days later the rumor comes back bigger than you sent it. People you've
+   never met complain about the cabin, the trust falls, the mandatory karaoke.
+   You didn't invent karaoke. Now people really are unhappy.
+   Choice: "Watch it happen."
+
+15. DANIEL CANCELS  [PROPOSED]
+   Marcy shows Daniel the folder. He is heartbroken and gracious: "I never want
+   anyone to dread coming to work." He cancels the retreat and thanks everyone
+   for being honest. Nobody knows it was you. You feel a little sick.
+   Choice: "Check your inbox."
+
+ACT 4: THE COMPLICATION
+------------------------------------------------------------------------------
+16. THE AUDIT  [PROPOSED, OPEN]
+   Daniel, deflated, replaces the retreat with something practical: an asset
+   audit. Every keyboard is tagged, and your decoy has no tag, so the swap will be
    caught the moment someone scans it.
    Choice: "Make a tag."
 
-12. THE LABEL MAKER  [PROPOSED]
+17. THE LABEL MAKER  [PROPOSED]
    11 p.m., the supply closet, a label printer, and a stack of blank tags. The
    night cleaner walks by. You have never worked so hard on anything.
    Choice: "Go home and sleep."
 
-13. THE AUDITOR  [PROPOSED; now male, per your version]
+18. THE AUDITOR  [PROPOSED; male, per your version]
    A dry, stern outside auditor arrives with a scanner and a clipboard. He counts
    everything twice. He likes you, which is worse.
    Choice: "Give him the tour."
 
-14. THE TOUR  [PROPOSED]
+19. THE TOUR  [PROPOSED]
    You walk him through the building, steering him away from Daniel's office. He
    works his way toward it anyway, floor by floor. You have to get there first.
    Choice: "Get there first."
 
-ACT 4: THE HEIST
+ACT 5: THE HEIST
 ------------------------------------------------------------------------------
-15. THE SWAP  [PROPOSED]
+20. THE SWAP  [PROPOSED]
    Daniel's office is empty. Marcy is elsewhere. You put the decoy on the desk and
    the real one in your hands, or nearly. Footsteps. The auditor is at the door.
    Choice: "Act natural."
 
-16. THE SCAN  [PROPOSED]
+21. THE SCAN  [PROPOSED]
    He scans the decoy. The forged tag beeps green. You almost celebrate. Then he
    stops mid-sentence and starts to wheeze.
    Choice: "Look at him."
 
-17. THE CHOICE  [YOURS]
+22. THE CHOICE  [YOURS]
    He's on one knee, gasping. The keyboard is right there. For one second you
    think about the keyboard. Only one second.
    Choice: "Grab the keyboard."
 
-18. THE SHOCK  [YOURS]
+23. THE SHOCK  [YOURS]
    You are shocked you even thought about it. You feel so guilty. You grab the
    keyboard and run anyway.
    Choice: "Run."
 
-19. THE RUN  [YOURS]
+24. THE RUN  [YOURS]
    Down the hall, keyboard in your arms. Your foot hits something on the floor:
    an inhaler. You say the F-word. (Uncensored in the game? Your call.)
    Choice: "Go back."
 
-20. THE LIE  [YOURS]
+25. THE LIE  [YOURS]
    You give it to him and make up a lie: you saw him drop it ten seconds ago. He
    breathes. He believes you. He assumes you'd never have let him die over a
    keyboard.
    Choice: "Help him up."
 
-21. THE THANKS  [PROPOSED, OPEN]
+26. THE THANKS  [PROPOSED, OPEN]
    He thanks you. He puts in a good word about you to Daniel. You are now the
    hero of the audit, holding the keyboard you were stealing.
    Choice: "Walk out."
 
-ACT 5: THE PAYOFF
+ACT 6: THE PAYOFF
 ------------------------------------------------------------------------------
-22. THE GUILT  [YOURS: premise / PROPOSED: scene]
+27. THE GUILT  [YOURS: premise / PROPOSED: scene]
    You feel guilty and rationalize: the company wants happy employees. You are
-   an employee. You are happy. Aren't you?
+   an employee. You are happy. Aren't you? (Two lies, a canceled retreat, and one
+   near-death, all for a keyboard.)
    Choice: "Go home."
 
-23. THE KEYBOARD AT HOME  [PROPOSED]
+28. THE KEYBOARD AT HOME  [PROPOSED]
    It's on your kitchen table. It's plugged in.
    Choice: "Type your name."
 
-24. TYPING  [PROPOSED]
+29. TYPING  [PROPOSED]
    It feels like a keyboard. It always did. What you felt in Daniel's office was
    never the keyboard.
    Choice: "Turn it off."
 
-25. ENDING  [YOURS]
+30. ENDING  [YOURS]
    You finally have the keyboard, and you're still bored with life. A keyboard
    doesn't fix anything. Ending scene; the game offers replay.
 
 ==============================================================================
 OPEN QUESTIONS
-- Your auditor beat replaced my company-retreat scenes, so the heist now happens
-  at the office during the audit. Is that what you want?
-- Beat 20-21: does the auditor see the keyboard in your hands? He may be too
-  winded to notice, or he may assume you were carrying it for Daniel.
-- Beat 17-18: it's a single choice by design ("Grab the keyboard"), with the
-  guilt carried by the writing. Okay, or do you want the player to feel more
-  choice there?
-- Beat 19: inhaler (asthma), or another device? The F-word uncensored?
-- Act 2: are Marcy and the fake printer outage okay, or do you want other
-  characters and obstacles?
-- Absurd escalation [YOURS, welcome]: with the retreat gone, the story is grounded.
-  Do you want something stranger somewhere? Space was floated, not agreed.
-- Does 25 feel about right, or should any beat merge or expand?
+- Act 3: does the rumor arc (5 scenes) feel right, or too long? Is Marcy's folder
+  funny, or should she be someone else?
+- Beats 9-10 (the outage and Marcy's errand) now come before the retreat. Do you
+  still want both, or should they merge into one attempt?
+- Beat 15: does Daniel cancel, and is the guilt at the end of it enough? Should it
+  come back later, e.g. Marcy at the end still trusts you?
+- Beat 16: the audit replaces the retreat as the deadline. Fine, or something else?
+- Beats 25-26: does the auditor see the keyboard in your hands?
+- Beats 22-23: it's a single choice by design ("Grab the keyboard"), with the guilt
+  carried by the writing. Okay?
+- Beat 24: inhaler (asthma), or another device? The F-word uncensored?
+- Absurd escalation [YOURS, welcome]: the rumor snowball is the first taste. Do
+  you want something stranger later? Space was floated, not agreed.
+- 30 scenes is a lot of writing. Should any beat merge or be cut?
 
 LATER (not now): diversions that rejoin the spine, e.g. the opening's "restart"
 and "printer model" choices, and the earlier "take it now" idea (Daniel drops and
