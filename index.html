@@ -30,7 +30,7 @@
 <aside><h1>Keyboard<br><em>Heist.</em></h1><div class="meta"><span id="scene-tally">◷ 32 SCENES</span><span id="ending-tally">⑂ 11 ENDINGS</span></div>
 <div class="art" role="img" aria-label="An ordinary office keyboard with one green key on a dark desk"><svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg"><path fill="#193b37" d="M0 0h480v320H0z"/><ellipse cx="240" cy="234" rx="190" ry="24" fill="#142c29"/><path d="M240 110V70q0-25 40-25" fill="none" stroke="#789486" stroke-width="5"/><rect x="50" y="105" width="380" height="130" rx="15" fill="#829788"/><rect x="68" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="242" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="68" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="148" width="24" height="21" rx="4" fill="#d8eeaa"/><rect x="242" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="68" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="242" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="152" y="204" width="176" height="18" rx="4" fill="#d4d9c8"/></svg><span class="art-caption">COMPANY PROPERTY · $149.99</span></div>
 </aside>
-<section class="reader" aria-label="Interactive story"><div class="toolbar"><span class="chapter" id="chapter"></span><button class="text-button" id="restart">↻ Start over</button></div><div id="scene" class="scene"></div><div class="below"><button class="text-button" id="back">← Previous choice</button><span class="save" id="save" role="status"></span></div><details open><summary>Your journey <span id="count"></span></summary><ol id="journey"></ol></details></section>
+<section class="reader" aria-label="Interactive story"><div class="toolbar"><span class="chapter" id="chapter"></span><button class="text-button" id="restart">↻ Start over</button></div><div id="scene" class="scene"></div><div class="below"><button class="text-button" id="back">← Previous choice</button><span class="save" id="save" role="status"></span></div><details open><summary>Your journey <span id="count"></span></summary><ol id="journey"></ol></details><details open><summary>Endings found <span id="found-count"></span></summary><ul id="found-list"></ul><p class="still-hidden" id="still-hidden"></p></details></section>
 </main><noscript>Enable JavaScript in your browser to play this adventure.</noscript>
 <script>
 // STORY DATA: write each destination scene before adding a choice that links to it.
@@ -153,11 +153,11 @@ const STORY = {
       "Daniel hates leaving anyone out. Last year he canceled the retreat because one intern was allergic to the trees at the cabin.",
       "All you need is a reason you can’t go. A sick relative. You have a mother in Ohio, who is fine and picks up her phone. Or you could hire a grandmother.",
       "You post an ad: “Small family role. Elderly woman. $75/hour. No questions.” Three people reply. The first is a college student in a wig. They probably thought it was for a play. The second is a real grandmother, so old she doesn’t even know how to improvise a lie.",
-      "The third is Lilly. She reads the brief, asks about your childhood, and tears up. You haven’t told her anything yet."
+      "The third introduces herself as Mrs. Cox. She reads the brief, asks about your childhood, and tears up. You haven’t told her anything yet."
     ],
     "choices": [
       {
-        "label": "Hire Lilly.",
+        "label": "Hire Mrs. Cox.",
         "hint": "She’s far too good. That’s the point.",
         "next": "visit"
       },
@@ -174,7 +174,7 @@ const STORY = {
     "text": [
       "You tell Daniel your grandmother is very sick and you can’t make the retreat. You look at the floor. You’re better at this than you should be.",
       "He puts a hand over his heart. “Then we’re not going. Nobody gets left out.” Then he asks where she is. He’d like to visit.",
-      "Daniel arrives with flowers and a casserole. Lilly is propped up in a bed you rented by the hour. She knows your middle name. She knows your childhood dog’s name. You don’t remember telling her.",
+      "Daniel arrives with flowers and a casserole. Mrs. Cox is propped up in a bed you rented by the hour. She knows your middle name. She knows your childhood dog’s name. You don’t remember telling her.",
       "Daniel takes her hand and prays. She squeezes back. She’s crying real tears. “You’re a good grandkid,” she says to you. She means it more than you can bear.",
       "He sends the email: “Family comes first. The retreat is canceled. Please keep our teammate’s grandmother in your prayers.” Marcy replies all with a heart. Forty people follow."
     ],
@@ -185,7 +185,7 @@ const STORY = {
         "next": "audit"
       },
       {
-        "label": "Let Lilly keep going.",
+        "label": "Let Mrs. Cox keep going.",
         "hint": "She’s getting attached. So is he.",
         "next": "end_method"
       }
@@ -195,7 +195,7 @@ const STORY = {
     "location": "Thursday · New email",
     "title": "The audit",
     "text": [
-      "You paid Lilly $150 in cash in a parking lot. She asked for a good review and left. The room cost almost as much. Add the decoy, and you’ve spent three keyboards’ worth of money to steal one keyboard.",
+      "You paid Mrs. Cox $150 in cash in a parking lot. She asked for a good review and left. The room cost almost as much. Add the decoy, and you’ve spent three keyboards’ worth of money to steal one keyboard.",
       "Then, a new email, all staff: an asset audit. Every keyboard, every monitor, every stapler, scanned and logged.",
       "Every keyboard is tagged. Yours isn’t. The moment anyone scans your decoy, it’s over. You have exactly one day."
     ],
@@ -285,7 +285,8 @@ const STORY = {
       "Tomorrow there will be a ticket."
     ],
     "prompt": "The end.",
-    "finale": true
+    "finale": true,
+    "name": "The plateau"
   },
   "end_spare": {
     "location": "Ending · The spare",
@@ -301,7 +302,8 @@ const STORY = {
       "It slips. It hits the floor. The space bar skates down the hall. Something inside makes a small, final sound.",
       "Daniel looks at it. “Oh. Never mind. I’ll use the spare.”",
       "You install the printer driver. It takes four minutes. Then you go back to your desk, where Outlook is waiting."
-    ]
+    ],
+    "name": "The spare"
   },
   "end_mom": {
     "location": "Ending · Long distance",
@@ -312,18 +314,20 @@ const STORY = {
       "She picks up on the first ring. She is fine. She is also confused. Daniel prays for three minutes. She says “Amen,” because she is polite.",
       "She calls you back at six. “Who is Daniel and why is he so nice to me? Are you okay?”",
       "She’s coming for a long visit. She has already booked the flight. The keyboard is still on Daniel’s desk."
-    ]
+    ],
+    "name": "Long distance"
   },
   "end_method": {
     "location": "Ending · Method",
-    "title": "Let Lilly keep going.",
+    "title": "Let Mrs. Cox keep going.",
     "ending": true,
     "text": [
-      "You let Lilly keep going. She is not a woman who stops. She tells Daniel he reminds her of her late husband, Walter.",
+      "You let Mrs. Cox keep going. She is not a woman who stops. She tells Daniel he reminds her of her late husband, Walter.",
       "By Friday, Daniel has given her the guest room. By Monday, she is at the all-hands, taking notes.",
       "She catches your eye across the conference table and mouths: “You owe me.” She is not wrong.",
       "Nobody else knows. You never get near the keyboard again."
-    ]
+    ],
+    "name": "Method"
   },
   "end_red": {
     "location": "Ending · Asset not found",
@@ -334,7 +338,8 @@ const STORY = {
       "The auditor checks. He scans the keyboard on Daniel’s desk. It beeps once. Red. “Asset not found,” says the scanner, very calmly.",
       "He looks at the keyboard. He looks at you. He has seen this before, and he is sad about it. He calls Daniel in.",
       "Daniel arrives, still holding a granola bar. He looks at the keyboard, then at you. He is heartbroken. “I just wish you’d asked.” You are asked to leave. The real keyboard was in your bag the whole time. It feels like nothing."
-    ]
+    ],
+    "name": "Asset not found"
   },
   "end_running": {
     "location": "Ending · Not the hero",
@@ -345,7 +350,8 @@ const STORY = {
       "She finds the auditor on the floor. She finds the inhaler under the fern. He is fine. He is also very clear about who ran.",
       "You have the keyboard for eleven hours. It is on your kitchen table. It feels like nothing.",
       "At nine a.m., HR is waiting by your desk. Daniel stands behind them. He looks so disappointed you almost feel something."
-    ]
+    ],
+    "name": "Not the hero"
   },
   "restart": {
     "location": "4:47 p.m. · Your inbox",
@@ -397,7 +403,8 @@ const STORY = {
     "text": [
       "You call in sick. Daniel sends soup. Forty people sign a card. Marcy brings the plaque to your apartment herself and stays for an hour to tell you about her cat.",
       "You have never been so celebrated. You have never been so bored."
-    ]
+    ],
+    "name": "Get well soon"
   },
   "end_speech": {
     "location": "Ending · Standing ovation",
@@ -407,7 +414,8 @@ const STORY = {
       "You say, “I’ve been really bored for a long time. Like, years.” The room goes silent.",
       "Then everyone laughs. Someone whoops. Daniel wipes his eyes. “Oh my gosh, you’re so funny.”",
       "You get a standing ovation. Nobody believes you."
-    ]
+    ],
+    "name": "Standing ovation"
   },
   "walk_away": {
     "location": "Next morning · Your desk",
@@ -462,7 +470,8 @@ const STORY = {
       "Six weeks, paid. You buy nothing. You go nowhere. You lie on the couch and wait to feel rested.",
       "On day thirteen, you catch yourself typing on the arm of the couch.",
       "On day forty-two, you go back. There is a ticket."
-    ]
+    ],
+    "name": "Paid leave"
   },
   "ask": {
     "location": "4:52 p.m. · Daniel’s office",
@@ -520,7 +529,8 @@ const STORY = {
       "He hands it over like a sleeping baby. You carry it home in both hands. It has typed a thousand invoices. You plug it in at the kitchen table.",
       "You type your name. It’s a keyboard. By the door, in your bag, its twin sits in silence. You now own two of the same keyboard. Neither feels like anything.",
       "The worst part is that he gave it to you. You had a whole plan. You feel worse than if you’d stolen it."
-    ]
+    ],
+    "name": "The founding keyboard"
   },
   "end_borrowed": {
     "location": "Ending · Monday",
@@ -531,7 +541,8 @@ const STORY = {
       "On Monday, you carry it back. “How was it?” Daniel asks.",
       "“Fine,” you say. “It’s a keyboard.” He laughs, delighted, as if you’ve said something profound.",
       "Tomorrow there will be a ticket."
-    ]
+    ],
+    "name": "Monday"
   },
   "printer_model": {
     "location": "4:52 p.m. · Your desk",
@@ -629,7 +640,13 @@ try{const found=JSON.parse(localStorage.getItem(SEEN_KEY));if(Array.isArray(foun
 function persist(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(path));localStorage.setItem(SEEN_KEY,JSON.stringify([...seen]));canSave=true;}catch{canSave=false;}document.getElementById('save').textContent=canSave?'Progress saved on this browser':'Progress kept for this visit';}
 function tally(){
  document.getElementById('scene-tally').textContent='◷ '+seen.size+' / '+ALL_SCENES.length+' SCENES';
- document.getElementById('ending-tally').textContent='⑂ '+ALL_ENDINGS.filter(id=>seen.has(id)).length+' / '+ALL_ENDINGS.length+' ENDINGS';
+ const found=ALL_ENDINGS.filter(id=>seen.has(id));
+ document.getElementById('ending-tally').textContent='⑂ '+found.length+' / '+ALL_ENDINGS.length+' ENDINGS';
+ document.getElementById('found-count').textContent='· '+found.length+' of '+ALL_ENDINGS.length;
+ const list=document.getElementById('found-list');list.replaceChildren();
+ found.forEach(id=>{const li=document.createElement('li');li.textContent=STORY[id].name;list.append(li);});
+ const left=ALL_ENDINGS.length-found.length;
+ document.getElementById('still-hidden').textContent=left===0?'You found every ending.':left===1?'1 ending still hidden.':left+' endings still hidden.';
 }
 function render(focus=false){
  const node=STORY[path.at(-1)];

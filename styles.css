@@ -203,6 +203,10 @@ details {
 }
 summary { cursor: pointer; }
 ol { padding-left: 20px; line-height: 1.9; }
+#found-list { list-style: none; padding-left: 0; margin: 0; line-height: 1.9; }
+#found-list li { color: var(--ink); }
+#found-list li::before { content: "\2713"; color: #789447; margin-right: 9px; }
+.still-hidden { margin: 6px 0 0; color: var(--muted); }
 .journey-link {
   border: 0;
   background: none;

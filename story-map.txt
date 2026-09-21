@@ -25,10 +25,10 @@ T2 office .......... "Leave it. Come back for it later." -> T3
 T3 the plan ........ "Case the office."                 -> T4
                      "Just ask him about it."            -> E5
 T4 the outage ...... "Back out. Think."                  -> T5
-T5 the grandmother . "Hire Lilly."                       -> T6
+T5 the grandmother . "Hire Mrs. Cox."                       -> T6
                      "Use your mother in Ohio."          -> E6
 T6 the visit ....... "Pay her and move on."              -> T7
-                     "Let Lilly keep going."             -> E7
+                     "Let Mrs. Cox keep going."             -> E7
 T7 the audit ....... "Make the tag."                     -> T8
                      "Skip it. Nobody checks."           -> E8
 T8 the swap ........ "Look at him."                      -> T9
@@ -68,12 +68,12 @@ T4 THE OUTAGE  [merges: window, outage]
 T5 THE GRANDMOTHER  [merges: realization, casting]
    You can't steal it at a retreat. Daniel can cancel it; he hates leaving anyone
    out (the intern allergic to the trees at the cabin). You need a sick relative.
-   The ad, three candidates, Lilly.
+   The ad, three candidates, Mrs. Cox.
 
 T6 THE VISIT  [merges: briefing, visit, cancels]
    You tell Daniel; "nobody gets left out." He visits with flowers and a casserole.
-   Lilly knows your middle name. Daniel prays. He cancels the retreat. You pay
-   Lilly $150. The room cost almost as much. Three keyboards' worth for one.
+   Mrs. Cox knows your middle name. Daniel prays. He cancels the retreat. You pay
+   Mrs. Cox $150. The room cost almost as much. Three keyboards' worth for one.
 
 T7 THE AUDIT  [merges: audit, label maker, auditor, tour]
    Asset audit email. Your decoy has no tag. The supply closet, the night cleaner.
@@ -130,7 +130,7 @@ E6  CALL YOUR MOTHER
     visit. The keyboard is still on his desk.
 
 E7  METHOD
-    You let Lilly keep going. She is so good that Daniel adopts her: she moves
+    You let Mrs. Cox keep going. She is so good that Daniel adopts her: she moves
     into his guest room, comes to the audit, and asks you to pay her in hugs.
     Nobody else knows. You never get near the keyboard again.
 
