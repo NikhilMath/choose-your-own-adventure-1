@@ -5,7 +5,7 @@
 - Build and maintain a playable choose-your-own-adventure game in an HTML document with JavaScript and modern, clean CSS.
 - The user is the story creator. Ask for their ideas, then ask a few focused questions to develop the setting, characters, stakes, and choices collaboratively. Do not independently invent or finalize major story directions.
 - The chosen story is **Keyboard Heist**, a second-person dark office comedy. The protagonist is an IT Support Manager whose dull, miserable last few months have left life feeling pointless. A printer-driver ticket (their most hated IT task) brings them to a genuinely nice CEO. His ordinary $150 keyboard feels wonderful; buying one would not satisfy the protagonist, but stealing this one gives them purpose. They feel guilty and rationalize that the company wants happy employees. The fictional goal is to avoid being caught. Eventual absurd escalation is welcome; space was floated as a possibility, not an agreed plot point.
-- Work one scene or decision at a time: develop the user's idea, propose branches for discussion, and implement the agreed direction. For the approved opening, choices lead to explicit “To be continued” checkpoints until their scenes are developed with the user. Do not invent continuations merely to fill those checkpoints. For subsequent scenes, agree on destinations with the user.
+- Work one scene or decision at a time: develop the user's idea, propose branches for discussion, and implement the agreed direction. The live game shows only the approved opening and ends there with “To be continued” (a checkpoint on `arrival`); the three placeholder choices were removed until the story is developed (user's direction; they are recoverable at commit `e4a95d8`). Do not invent continuations merely to fill checkpoints. Add choices back only when their destination scenes are written and agreed with the user.
 - Keep scene text short. Aim for the smallest number of paragraphs that still reads well; each paragraph is a beat, not a chunk. Prefer terse, rhythmic prose over exposition, and combine adjacent beats whenever the writing survives it.
 - Build the true spine (main storyline) first, using single choices only: each spine scene ends with one choice leading to the next spine scene, no forks. Diversions come after the spine exists. No code changes until the user approves the spine draft in `spine-draft.txt`.
 - Spine length: aim for about 20 scenes to reach the ending, more if the user likes where it goes.
@@ -26,7 +26,7 @@ The application is two static files with no runtime dependencies:
 - `index.html`: markup, inline SVG keyboard illustration, and the story engine script.
 - `styles.css`: responsive cream-and-green layout, serif narrative headings, accessible focus states, reduced-motion support. Linked from the HTML head; keep new styles here, not inline.
 - Static HTML: cover panel and inline SVG keyboard illustration on the left, interactive story on the right; stacked on narrow screens.
-- `STORY`: only the approved opening (`arrival`) plus three explicit continuation checkpoints. It contains the plateau paragraph, Daniel’s 4:46 p.m. printer-driver ticket, and three choices: visit his office, suggest restarting, or check the model. No scenes beyond the opening and no endings exist yet.
+- `STORY`: only the approved opening (`arrival`), marked as a checkpoint so it ends with “To be continued” and no choices. It contains the plateau paragraph and Daniel’s 4:46 p.m. printer-driver ticket. No other scenes and no endings exist yet.
 - Game engine: renders safe text using `textContent`, follows choices, supports going back, confirms restarting an active journey, shows visited scenes, and offers replay at endings.
 - `path`: array of visited scene IDs, starting at `arrival`.
 - `SAVE_KEY`: `keyboard-heist-v1`. Persists the path in localStorage; validates the saved route before restoring it. Falls back to in-memory play if storage is unavailable.
@@ -76,8 +76,7 @@ When expanding the story:
 Current graph:
 
 ```text
-arrival -> office, restart_reply, printer_model
-checkpoints: office, restart_reply, printer_model
+arrival (checkpoint, no choices yet)
 ```
 
 ## Verification expectations
@@ -105,4 +104,4 @@ No automated test suite is checked into the repository yet. Report actual verifi
 
 ## Next work
 
-No code changes yet. First, review and revise the spine draft in `spine-draft.txt` with the user (it is an unapproved proposal). Once approved, build the spine one scene at a time with single choices, starting by rebuilding the office scene (the earlier approved version, minus its three-way fork, is at commit `5e5552f`). Diversions come after the spine exists; the old `take_it_now` ending (Daniel drops and breaks the keyboard) is also at `5e5552f`. Ask the user to pick each next step, and follow the standing rule to summarize and suggest 2-3 next steps whenever starting a new path. If introducing inventory, conditional choices, or multiple stories, explicitly design state/save compatibility and revise this handoff.
+Only the opening is live, and it ends with “To be continued.” Do not add scenes or code until the user approves the spine. First, review and revise the spine draft in `spine-draft.txt` with the user (it is an unapproved proposal). Once approved, build the spine one scene at a time with single choices, starting by rebuilding the office scene (the earlier approved version, minus its three-way fork, is at commit `5e5552f`). Diversions come after the spine exists; the old `take_it_now` ending (Daniel drops and breaks the keyboard) is also at `5e5552f`. Ask the user to pick each next step, and follow the standing rule to summarize and suggest 2-3 next steps whenever starting a new path. If introducing inventory, conditional choices, or multiple stories, explicitly design state/save compatibility and revise this handoff.
