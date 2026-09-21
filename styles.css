@@ -24,20 +24,6 @@ summary:focus-visible {
   outline-offset: 5px;
 }
 
-/* Header */
-header {
-  max-width: 1400px;
-  margin: auto;
-  padding: 27px 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--line);
-}
-.brand { font-size: 14px; font-weight: 700; letter-spacing: 3px; }
-.brand span { color: #789447; margin-right: 10px; }
-.edition { font-size: 11px; color: var(--muted); letter-spacing: 2px; }
-
 /* Layout */
 main {
   max-width: 1400px;
@@ -267,8 +253,6 @@ noscript { display: block; padding: 30px; }
 
 /* Responsive */
 @media (max-width: 760px) {
-  header { padding: 22px 6%; }
-  .edition { font-size: 9px; letter-spacing: 1px; }
   main { display: block; padding: 30px 6%; }
   .intro { max-width: 100%; }
   h1 { font-size: 60px; }
