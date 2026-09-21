@@ -18,7 +18,8 @@
 - Keep the game easy to open and share as a small set of static files (currently `index.html` + `styles.css`) with no build step, backend, or dependencies.
 - After completing any change, always commit and push to `origin main` without asking for permission each time. Do not force-push or overwrite unrelated changes.
 - This README is the durable place for standing instructions the user gives. Whenever the user states a preference, rule, or standing instruction, record it here so any AI assistant (not only Claude) picks it up in a future session. Update it when architecture, behavior, verification, or next steps change.
-- The user runs VS Code Live Server for live preview. Do not spin up your own local HTTP server or open Claude's browser preview pane for visual checks — the user already sees changes update on their live server.
+- The user runs VS Code Live Server for live preview. Do not spin up your own local HTTP server or open Claude's browser preview pane for visual checks. The user already sees changes update on their live server.
+- Never use em dashes anywhere: not in story text, UI copy, code comments, or documentation. Use commas, periods, colons, or parentheses instead. Check before every commit.
 
 ## Current implementation
 
