@@ -1,8 +1,10 @@
-KEYBOARD HEIST: SPINE DRAFT (v6, 29 scenes)
+KEYBOARD HEIST: SPINE DRAFT (v7, 35 scenes)
 Status: UNAPPROVED PROPOSAL. Nothing here is in the game yet. Change anything.
 Target length: about 20 scenes, more if we like where it goes. [YOURS]
 Rules: single choices only (each scene ends with one choice to the next scene),
 no forks, no diversions. Diversions come after the spine is approved.
+Shape: grounded office comedy that gets weirder and weirder, peaks almost in
+space, then drops back to grounded reality for the ending. [YOURS]
 
 Source key: [YOURS] = direction the story creator gave. [PROPOSED] = Claude's idea.
 Every scene aims to stay short, a few terse beats, per the README.
@@ -47,7 +49,8 @@ ACT 2: THE PLAN
    Daniel's schedule. His lunch. His door that is always open. His assistant,
    Marcy, who sees everything. Her calendar has the company retreat next Friday,
    and Daniel brings his own keyboard to everything ("types better with it").
-   Once it leaves the building, it's gone.
+   Once it leaves the building, it's gone. (Seed for later: a flyer on the break
+   room fridge, "EMPLOYEE HAPPINESS BALLOON: COMING SOON!" You ignore it.)
    Choice: "Wait for a window."
 
 8. THE WINDOW  [PROPOSED]
@@ -64,7 +67,7 @@ ACT 2: THE PLAN
    "keyboard" on it.
    Choice: "Back out. Think."
 
-ACT 3: THE RETREAT  [NEW: cancel it with a fake sick grandmother]
+ACT 3: THE RETREAT  [cancel it with a fake sick grandmother]
 ------------------------------------------------------------------------------
 10. THE REALIZATION  [YOURS: need to cancel / PROPOSED: scene]
    You can't do this at a retreat, in the woods, with forty coworkers. The retreat
@@ -72,9 +75,10 @@ ACT 3: THE RETREAT  [NEW: cancel it with a fake sick grandmother]
    someone he cares about needs him. You don't have a grandmother.
    Choice: "Get a grandmother."
 
-11. THE CASTING  [YOURS: pay someone to act as grandma / PROPOSED: details]
+11. THE CASTING  [YOURS: pay someone to act as grandma; name: Lilly]
    You post an ad for a "small family role, elderly woman, $80 an hour, no
-   questions." Three candidates. One is far too good. You hire her.
+   questions." Three candidates. One is far too good. Her name is Lilly. You hire
+   her.
    Choice: "Brief her."
 
 12. THE BRIEFING  [PROPOSED]
@@ -84,24 +88,24 @@ ACT 3: THE RETREAT  [NEW: cancel it with a fake sick grandmother]
    Choice: "Take him to see her."
 
 13. THE VISIT  [PROPOSED]
-   Daniel arrives with flowers and a casserole. Your grandmother, in a bed, in a
-   rented room, is a method actor. She knows more about you than you do. Daniel
-   prays with her. You watch her cry real tears.
+   Daniel arrives with flowers and a casserole. Lilly, in a bed, in a rented room,
+   is a method actor. She knows more about you than you do. Daniel prays with her.
+   You watch her cry real tears.
    Choice: "Get him out of there."
 
-14. DANIEL CANCELS  [PROPOSED; grandmother paid off]
+14. DANIEL CANCELS  [PROPOSED; Lilly paid off]
    Daniel sends the email: "Family comes first. Retreat is canceled. Please keep
-   her in your prayers." Marcy replies-all with a heart. You pay the actor in
-   cash. She asks for a good review and leaves. She is not coming back. Nobody
-   knows it was you. You feel a little sick.
+   her in your prayers. Something better is coming." Marcy replies-all with a
+   heart. You pay Lilly in cash. She asks for a good review and leaves. She is not
+   coming back. Nobody knows it was you. You feel a little sick.
    Choice: "Check your inbox."
 
 ACT 4: THE COMPLICATION
 ------------------------------------------------------------------------------
 15. THE AUDIT  [PROPOSED, OPEN]
    Daniel, still worried about your "grandmother," throws himself into work: an
-   asset audit. Every keyboard is tagged, and your decoy has no tag, so the swap will be
-   caught the moment someone scans it.
+   asset audit. Every keyboard is tagged, and your decoy has no tag, so the swap
+   will be caught the moment someone scans it.
    Choice: "Make a tag."
 
 16. THE LABEL MAKER  [PROPOSED]
@@ -155,43 +159,79 @@ ACT 5: THE HEIST
    He sees the keyboard in your arms. "Why did you grab the keyboard?" You say
    you don't know. You were too busy thinking about saving his life. It's
    almost true. He's moved. He assumes you'd never have let him die over a
-   keyboard. You're the hero of the audit, holding the keyboard you were
-   stealing.
+   keyboard.
    Choice: "Walk out."
 
-ACT 6: THE PAYOFF
+ACT 6: THE LAUNCH  [NEW: the weird part, from almost-space]
 ------------------------------------------------------------------------------
-26. THE GUILT  [YOURS: premise / PROPOSED: scene]
+26. THE HERO  [PROPOSED]
+   The auditor tells everyone. Daniel is so proud he cries. He announces the
+   "something better" that replaces the retreat: the Employee Happiness Balloon,
+   a weather balloon that will carry one beloved item to the edge of space. He
+   picks his favorite keyboard, the one you "rescued." You are the guest of honor.
+   Choice: "Say yes."
+
+27. THE FIELD  [PROPOSED]
+   Launch day. A field, folding tables, matching shirts, a balloon consultant
+   named Brett who has never seen a balloon fail. The keyboard is sealed in a
+   foam box with a camera. You have one chance to take it back.
+   Choice: "Get close."
+
+28. THE LIFTOFF  [PROPOSED]
+   The tether snaps early. Your jacket is clipped to the payload strap. The ground
+   shrinks. Marcy is waving. Daniel is waving. Everyone is so happy.
+   Choice: "Hold on."
+
+29. THE ASCENT  [PROPOSED]
+   Cloud. Cold. Quiet. The sky goes black and you can see the curve of the Earth.
+   You've never been this high, and this is the closest you've ever come to
+   feeling something, and it has nothing to do with the keyboard.
+   Choice: "Look down."
+
+30. THE DESCENT  [PROPOSED]
+   The balloon pops. The parachute opens late. You land in a field two counties
+   over, keyboard in your arms, in front of a very confused farmer.
+   Choice: "Get up."
+
+31. THE VAN  [PROPOSED]
+   The whole company arrives in a van, cheering. Nobody suspects. You are the
+   most beloved employee in company history. The camera footage is on the news.
+   Choice: "Get in the van."
+
+ACT 7: THE PAYOFF  [back to grounded reality]
+------------------------------------------------------------------------------
+32. THE GUILT  [YOURS: premise / PROPOSED: scene]
    You feel guilty and rationalize: the company wants happy employees. You are
-   an employee. You are happy. Aren't you? (Two lies, a canceled retreat, and one
-   near-death, all for a keyboard.)
+   an employee. You are happy. Aren't you?
    Choice: "Go home."
 
-27. THE KEYBOARD AT HOME  [PROPOSED]
-   It's on your kitchen table. It's plugged in.
+33. THE KEYBOARD AT HOME  [PROPOSED]
+   It's on your kitchen table. It's plugged in. No balloons, no cheering.
    Choice: "Type your name."
 
-28. TYPING  [PROPOSED]
+34. TYPING  [PROPOSED]
    It feels like a keyboard. It always did. What you felt in Daniel's office was
    never the keyboard.
    Choice: "Turn it off."
 
-29. ENDING  [YOURS]
+35. ENDING  [YOURS]
    You finally have the keyboard, and you're still bored with life. A keyboard
    doesn't fix anything. Ending scene; the game offers replay.
 
 ==============================================================================
 OPEN QUESTIONS
-- Act 3: does the fake-grandmother arc (5 scenes) still feel right? The actor's
-  name and personality are open (she's paid off and gone at the end of it).
-- Does 29 scenes feel right, or should Act 2 (beats 6-9, the near misses) be
-  shorter?
-- Beat 15: the audit replaces the retreat as the deadline. Fine, or something else?
-- Beats 21-22: it's a single choice by design ("Grab the keyboard"), with the guilt
-  carried by the writing. Okay?
-- Beat 23: inhaler (asthma), or another device? The F-word uncensored?
-- Absurd escalation [YOURS, welcome]: the fake grandmother is the first taste. Do
-  you want something stranger later? Space was floated, not agreed.
+- Is a weather balloon the right "almost space," or do you want it stranger
+  (a rocket, a private space startup, the CEO's cousin's spaceship)?
+- Scene 29: the ascent is the closest the protagonist comes to feeling something,
+  and it's not the keyboard. Does that fit the ending, or should the ending still
+  say nothing helped?
+- The weird ramps up in Act 6 only. Do you want it to start earlier (Lilly gets
+  weirder, the audit gets weirder)?
+- Brett the balloon consultant is a placeholder name.
+- Does 35 scenes feel right, or should Act 2 (the near misses) be shorter?
+- Scenes 21-22: single choice by design ("Grab the keyboard"), the guilt carried
+  by the writing. Okay?
+- Scene 23: inhaler (asthma), or another device? The F-word uncensored?
 
 LATER (not now): diversions that rejoin the spine, e.g. the opening's "restart"
 and "printer model" choices, and the earlier "take it now" idea (Daniel drops and
