@@ -401,7 +401,10 @@ function render(focus=false){
  });container.append(choices);
  document.getElementById('back').disabled=path.length===1;
  document.getElementById('count').textContent='· '+path.length+' scenes';
- const journey=document.getElementById('journey');journey.replaceChildren();path.forEach(id=>{const li=document.createElement('li');li.textContent=STORY[id].title;journey.append(li);});persist();
+ const journey=document.getElementById('journey');journey.replaceChildren();path.forEach((id,i)=>{const li=document.createElement('li');
+  if(i===path.length-1){li.textContent=STORY[id].title;li.setAttribute('aria-current','step');}
+  else{const link=document.createElement('button');link.className='journey-link';link.textContent=STORY[id].title;link.addEventListener('click',()=>{path=path.slice(0,i+1);render(true);});li.append(link);}
+  journey.append(li);});persist();
  if(focus)title.focus({preventScroll:true});
 }
 document.getElementById('back').addEventListener('click',()=>{if(path.length>1){path.pop();render(true);}});

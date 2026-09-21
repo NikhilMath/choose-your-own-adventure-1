@@ -30,7 +30,7 @@ The application is two static files with no runtime dependencies:
 - `styles.css`: responsive cream-and-green layout, serif narrative headings, accessible focus states, reduced-motion support. Linked from the HTML head; keep new styles here, not inline.
 - Static HTML: cover panel and inline SVG keyboard illustration on the left, interactive story on the right; stacked on narrow screens.
 - `STORY`: 20 scenes. Trunk: `arrival`, `office`, `plan`, `outage`, `grandmother`, `visit`, `audit`, `swap`, `choice`, `lie`. Endings: `end_plateau` (the canonical ending), `end_restart`, `end_printer`, `end_spare`, `end_walk_away`, `end_gift`, `end_mom`, `end_method`, `end_red`, `end_running`. The protagonist leaves with the real keyboard in their bag; the decoy stays on Daniel’s desk. Scenes have one to three buttons; endings offer replay.
-- Game engine: renders safe text using `textContent`, follows choices, supports going back, confirms restarting an active journey, shows visited scenes, and offers replay at endings.
+- Game engine: renders safe text using `textContent`, follows choices, supports going back, confirms restarting an active journey, shows visited scenes in “Your journey” (every earlier step is a button that jumps back to that scene and trims the route; the current step is plain text), and offers replay at endings.
 - `path`: array of visited scene IDs, starting at `arrival`.
 - `SAVE_KEY`: `keyboard-heist-v2`. Persists the path in localStorage; validates the saved route before restoring it. Falls back to in-memory play if storage is unavailable.
 
