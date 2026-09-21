@@ -78,9 +78,12 @@ ACT 2: THE PLAN
 ACT 3: THE RETREAT  [cancel it with a fake sick grandmother]
 ------------------------------------------------------------------------------
 10. THE REALIZATION  [YOURS: need to cancel / PROPOSED: scene]
-   You can't do this at a retreat, in the woods, with forty coworkers. The retreat
-   has to be canceled. And Daniel is far too nice to cancel it himself... unless
-   someone he cares about needs him. You don't have a grandmother.
+   You can't steal it at the retreat: a cabin, forty coworkers, nowhere to hide,
+   and once the keyboard leaves the building it's gone. You can't cancel the
+   retreat, but Daniel can, and he hates leaving anyone out (he once canceled the
+   picnic because an intern was allergic to grass). All you need is a reason you
+   can't go: a sick relative. Your mother in Ohio is fine and would find out. You
+   need a grandmother.
    Choice: "Get a grandmother."
 
 11. THE CASTING  [YOURS: pay someone to act as grandma; name: Lilly]
