@@ -1,4 +1,4 @@
-KEYBOARD HEIST: SPINE DRAFT (v4, 30 scenes)
+KEYBOARD HEIST: SPINE DRAFT (v5, 30 scenes)
 Status: UNAPPROVED PROPOSAL. Nothing here is in the game yet. Change anything.
 Target length: about 20 scenes, more if we like where it goes. [YOURS]
 Rules: single choices only (each scene ends with one choice to the next scene),
@@ -67,40 +67,42 @@ ACT 2: THE PLAN
    Daniel's calendar pings on his monitor: retreat packing list, "keyboard" on it.
    Choice: "Back out. Think."
 
-ACT 3: THE RETREAT  [NEW: cancel it by spreading rumors]
+ACT 3: THE RETREAT  [NEW: cancel it with a fake sick grandmother]
 ------------------------------------------------------------------------------
 11. THE REALIZATION  [YOURS: need to cancel / PROPOSED: scene]
    You can't do this at a retreat, in the woods, with forty coworkers. The retreat
-   has to be canceled. And Daniel is far too nice to cancel it himself.
-   Choice: "Start a rumor."
+   has to be canceled. And Daniel is far too nice to cancel it himself... unless
+   someone he cares about needs him. You don't have a grandmother.
+   Choice: "Get a grandmother."
 
-12. THE FIRST WHISPER  [YOURS: rumors / PROPOSED: details]
-   The coffee machine, the elevator, the bathroom. You drop small, believable
-   doubts about the retreat. Nobody says anything. A few people nod.
-   Choice: "Tell Marcy."
+12. THE CASTING  [YOURS: pay someone to act as grandma / PROPOSED: details]
+   You post an ad for a "small family role, elderly woman, $80 an hour, no
+   questions." Three candidates. One is far too good. You hire her.
+   Choice: "Brief her."
 
-13. MARCY  [YOURS]
-   You tell Marcy that people are very unhappy about the retreat. She takes
-   notes. She has a folder for this. She is so worried about morale.
-   Choice: "Let it spread."
+13. THE BRIEFING  [PROPOSED]
+   You tell Daniel your grandmother is very sick and you can't go to the retreat.
+   He's stricken. He says the retreat is canceled "so nobody's left out." Then he
+   asks where she is, because he'd like to visit.
+   Choice: "Take him to see her."
 
-14. THE SNOWBALL  [PROPOSED]
-   A few days later the rumor comes back bigger than you sent it. People you've
-   never met complain about the cabin, the trust falls, the mandatory karaoke.
-   You didn't invent karaoke. Now people really are unhappy.
-   Choice: "Watch it happen."
+14. THE VISIT  [PROPOSED]
+   Daniel arrives with flowers and a casserole. Your grandmother, in a bed, in a
+   rented room, is a method actor. She knows more about you than you do. Daniel
+   prays with her. You watch her cry real tears.
+   Choice: "Get him out of there."
 
 15. DANIEL CANCELS  [PROPOSED]
-   Marcy shows Daniel the folder. He is heartbroken and gracious: "I never want
-   anyone to dread coming to work." He cancels the retreat and thanks everyone
-   for being honest. Nobody knows it was you. You feel a little sick.
+   Daniel sends the email: "Family comes first. Retreat is canceled. Please keep
+   the [grandmother] in your prayers." Marcy replies-all with a heart. Nobody
+   knows it was you. You feel a little sick.
    Choice: "Check your inbox."
 
 ACT 4: THE COMPLICATION
 ------------------------------------------------------------------------------
 16. THE AUDIT  [PROPOSED, OPEN]
-   Daniel, deflated, replaces the retreat with something practical: an asset
-   audit. Every keyboard is tagged, and your decoy has no tag, so the swap will be
+   Daniel, still worried about your "grandmother," throws himself into work: an
+   asset audit. Every keyboard is tagged, and your decoy has no tag, so the swap will be
    caught the moment someone scans it.
    Choice: "Make a tag."
 
@@ -180,12 +182,13 @@ ACT 6: THE PAYOFF
 
 ==============================================================================
 OPEN QUESTIONS
-- Act 3: does the rumor arc (5 scenes) feel right, or too long? Is Marcy's folder
-  funny, or should she be someone else?
+- Act 3: does the fake-grandmother arc (5 scenes) feel right, or too long? The
+  actor's name and personality are open; she could be a running gag, or come
+  back at the end.
 - Beats 9-10 (the outage and Marcy's errand) now come before the retreat. Do you
   still want both, or should they merge into one attempt?
-- Beat 15: does Daniel cancel, and is the guilt at the end of it enough? Should it
-  come back later, e.g. Marcy at the end still trusts you?
+- Beat 15: is the guilt at the end of it enough? Should the grandmother come back
+  later, e.g. Daniel asking after her at the end?
 - Beat 16: the audit replaces the retreat as the deadline. Fine, or something else?
 - Beats 25-26: does the auditor see the keyboard in your hands?
 - Beats 22-23: it's a single choice by design ("Grab the keyboard"), with the guilt
