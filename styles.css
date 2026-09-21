@@ -253,7 +253,8 @@ noscript { display: block; padding: 30px; }
 @media (max-width: 760px) {
   main { display: block; padding: 30px 6%; }
   h1 { font-size: 60px; }
-  .art { height: 190px; border-radius: 100px 100px 6px 6px; margin-top: 20px; margin-bottom: 35px; }
+  .art { height: 190px; border-radius: 100px 100px 6px 6px; margin-top: 20px; }
+  #map-box { margin-bottom: 35px; }
   .toolbar { margin-bottom: 22px; }
   h2 { font-size: 30px; }
 }
