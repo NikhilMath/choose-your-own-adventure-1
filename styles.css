@@ -236,6 +236,8 @@ hr {
 .map-node.map-end { fill: #789447; }
 .map-node.map-unseen { fill: #ccd4c5; }
 .map-node.map-here { fill: var(--ink); stroke: var(--ink); stroke-width: 4; stroke-opacity: .16; }
+.map-hit { fill: transparent; cursor: pointer; }
+.map-hit:focus-visible { outline: 3px solid #7a9744; outline-offset: 2px; }
 .map-key { margin: 0; font-size: 11px; line-height: 1.6; color: var(--muted); }
 .journey-link {
   border: 0;
