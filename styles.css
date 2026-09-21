@@ -189,7 +189,7 @@ h2 {
 .ticket p { margin: 0 0 8px; }
 .ticket p:last-child { margin: 16px 0 0; }
 
-/* Below / journey / footer */
+/* Below / journey */
 .below {
   margin-top: 23px;
   display: flex;
@@ -221,17 +221,6 @@ ol { padding-left: 20px; line-height: 1.9; }
 }
 .journey-link:hover { color: var(--ink); text-decoration-color: currentColor; }
 li[aria-current="step"] { color: var(--ink); font-weight: 600; }
-footer {
-  max-width: 1260px;
-  margin: 15px auto 0;
-  padding: 22px 0;
-  border-top: 1px solid var(--line);
-  display: flex;
-  justify-content: space-between;
-  font-size: 10px;
-  letter-spacing: 1px;
-  color: var(--muted);
-}
 .ending-tag {
   display: inline-block;
   background: #e5ebd8;
@@ -260,5 +249,4 @@ noscript { display: block; padding: 30px; }
   .meta { margin-bottom: 35px; }
   .toolbar { margin-bottom: 22px; }
   h2 { font-size: 30px; }
-  footer { margin: 0 6%; gap: 20px; line-height: 1.6; }
 }
