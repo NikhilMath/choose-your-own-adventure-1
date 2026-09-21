@@ -33,7 +33,8 @@ const STORY = {
     "afterTicket": [
       "A printer driver... I hate those."
     ],
-    "checkpoint": true
+    "checkpoint": true,
+    "prompt": "Choose-your-own-adventure options are coming soon. Nikhil is working on them in the backend."
   }
 };
 const SAVE_KEY='keyboard-heist-v1';
@@ -55,7 +56,7 @@ function render(focus=false){
   const body=document.createElement('p');body.textContent=node.ticket.body;ticket.append(body);container.append(ticket);
  }
  if(node.afterTicket){const after=document.createElement('div');after.className='prose';node.afterTicket.forEach(text=>{const p=document.createElement('p');p.textContent=text;after.append(p);});container.append(after);}
- const prompt=document.createElement('p');prompt.className='decision';prompt.textContent=node.checkpoint?'To be continued':node.ending?'Every ending is another beginning.':'What will you do?';container.append(prompt);
+ const prompt=document.createElement('p');prompt.className='decision';prompt.textContent=node.prompt||(node.checkpoint?'To be continued':node.ending?'Every ending is another beginning.':'What will you do?');container.append(prompt);
  const choices=document.createElement('div');choices.className='choices';
  (node.choices||(node.checkpoint?[]:[{label:'Discover another path',hint:'Return to the opening. Choose differently.',next:'arrival'}])).forEach((choice,i)=>{
  const button=document.createElement('button');button.className='choice'+(node.ending?' primary':'');
