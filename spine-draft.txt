@@ -70,7 +70,8 @@ ACT 2: THE PLAN
    You take down the office internet "for an emergency patch." The building goes
    quiet, then loud: ten people wander toward your desk holding their laptops
    like sick pets. Marcy, who lives in her inbox, comes down herself, and you tell
-   her the router problem is on the fourth floor. Two minutes, maybe. You walk
+   her one wired connection still works, in the fourth-floor conference room. She
+   grabs her laptop and goes. Two minutes, maybe. You walk
    into Daniel's office. The keyboard is right there. Next to it, on paper (the
    internet is down), his retreat packing list, with "keyboard" underlined.
    Choice: "Back out. Think."
