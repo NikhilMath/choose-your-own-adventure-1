@@ -1,12 +1,12 @@
-KEYBOARD HEIST: SPINE DRAFT (v11, 35 scenes, built)
+KEYBOARD HEIST: SPINE DRAFT (v12, 29 scenes, built)
 Status: APPROVED by the user and BUILT as a first draft in index.html (the prose
 was written from this outline). Edit here or in the game; keep them in sync.
 The user said not to work on other branches yet.
 Target length: about 20 scenes, more if we like where it goes. [YOURS]
 Rules: single choices only (each scene ends with one choice to the next scene),
 no forks, no diversions. Diversions come after the spine is approved.
-Shape: grounded office comedy that gets weirder and weirder, peaks almost in
-space, then drops back to grounded reality for the ending. [YOURS]
+Shape: grounded office comedy that keeps escalating, then lands on a quiet,
+grounded ending. [YOURS] (The user cut the near-space balloon act as too wacky.)
 
 Source key: [YOURS] = direction the story creator gave. [PROPOSED] = Claude's idea.
 Every scene aims to stay short, a few terse beats, per the README.
@@ -57,8 +57,6 @@ ACT 2: THE PLAN
    Marcy, who sees everything. Her calendar has the company retreat next Friday,
    and Daniel brings his own keyboard to everything. Marcy calls it "the founding
    keyboard": he started the company on it. Once it leaves the building, it's gone.
-   (Seed for later: a flyer on the break room fridge, "BIG NEWS COMING," and
-   Daniel humming.)
    Choice: "Wait for a window."
 
 8. THE WINDOW  [PROPOSED]
@@ -106,7 +104,7 @@ ACT 3: THE RETREAT  [cancel it with a fake sick grandmother]
 
 14. DANIEL CANCELS  [PROPOSED; Lilly paid off]
    Daniel sends the email: "Family comes first. Retreat is canceled. Please keep
-   her in your prayers. Something better is coming." Marcy replies-all with a
+   her in your prayers." Marcy replies-all with a
    heart. You pay Lilly $150 in cash. She asks for a good review and leaves. She is not
    coming back. The room cost almost as much, and with the decoy you've spent
    three keyboards' worth to steal one keyboard. Nobody knows it was you. You feel a little sick.
@@ -175,79 +173,36 @@ ACT 5: THE HEIST
    keyboard.
    Choice: "Walk out."
 
-ACT 6: THE LAUNCH  [NEW: the weird part, from almost-space]
+ACT 6: THE PAYOFF  [back to grounded reality]
 ------------------------------------------------------------------------------
-26. THE HERO  [YOURS: keyboard to space; $100M; started the company on it / PROPOSED: rest]
-   The auditor tells everyone about the inhaler. Nobody knows about the keyboard,
-   which is in your bag. Daniel cries. Then the "something better": the company
-   crossed $100 million and he started it on the keyboard on his desk (your
-   decoy). To represent growth, he's sending it to the edge of space on a weather
-   balloon. You are the guest of honor.
-   Choice: "Say yes."
-
-27. THE FIELD  [PROPOSED]
-   Launch day. A field, folding tables, matching shirts, a balloon consultant
-   named Brett who has never seen a balloon fail. Daniel puts the foam box in your
-   hands so you can strap it on: a fake, in a box shaped like his life's work.
-   Choice: "Strap it on."
-
-28. THE LIFTOFF  [PROPOSED]
-   The tether snaps early. Your jacket is clipped to the payload strap. The ground
-   shrinks. Marcy is waving. Daniel is waving. Everyone is so happy.
-   Choice: "Hold on."
-
-29. THE ASCENT  [PROPOSED]
-   Cloud. Cold. Quiet. The sky goes black and you can see the curve of the Earth.
-   You're hanging by a jacket strap next to the foam box, with the real keyboard
-   zipped in your bag. This is the closest you've ever come to feeling something,
-   and it has nothing to do with the keyboard.
-   Choice: "Look down."
-
-30. THE DESCENT  [PROPOSED]
-   The balloon pops. The parachute opens late. You land in a field two counties
-   over, keyboard in your arms, in front of a very confused farmer.
-   Choice: "Get up."
-
-31. THE VAN  [PROPOSED]
-   The whole company arrives in a van, cheering. The footage is on the local news.
-   The fake keyboard is going in a glass case in the lobby. Nobody suspects a
-   thing. You are the most beloved employee in company history.
-   Choice: "Get in the van."
-
-ACT 7: THE PAYOFF  [back to grounded reality]
-------------------------------------------------------------------------------
-32. THE GUILT  [YOURS: premise / PROPOSED: scene]
-   You feel guilty and rationalize: the company wants happy employees. You are
-   an employee. You are happy. Aren't you?
+26. THE GUILT  [YOURS: premise / PROPOSED: scene]
+   By evening everyone knows about the inhaler, and nobody knows about the
+   keyboard, which is in your bag. You feel guilty and rationalize: the company
+   wants happy employees. You are an employee. You are happy. Aren't you? You
+   canceled a retreat, hired an actor, and lied to a man having an asthma attack.
+   Daniel texts: "Heard what you did today. Thank you. You saved a man's life."
    Choice: "Go home."
 
-33. THE KEYBOARD AT HOME  [PROPOSED]
-   It's on your kitchen table. It's plugged in. No balloons, no cheering.
+27. THE KEYBOARD AT HOME  [PROPOSED]
+   It's on your kitchen table. It's plugged in. Nobody is cheering.
    Choice: "Type your name."
 
-34. TYPING  [PROPOSED]
+28. TYPING  [PROPOSED]
    It feels like a keyboard. It always did. What you felt in Daniel's office was
    never the keyboard.
    Choice: "Turn it off."
 
-35. ENDING  [YOURS]
+29. ENDING  [YOURS]
    You finally have the keyboard, and you're still bored with life. A keyboard
    doesn't fix anything. Ending scene; the game offers replay.
 
 ==============================================================================
 OPEN QUESTIONS
-- Is a weather balloon the right "almost space," or do you want it stranger
-  (a rocket, a private space startup, the CEO's cousin's spaceship)?
-- Scene 29: the ascent is the closest the protagonist comes to feeling something,
-  and it's not the keyboard. Does that fit the ending, or should the ending still
-  say nothing helped?
-- The weird ramps up in Act 6 only. Do you want it to start earlier (Lilly gets
-  weirder, the audit gets weirder)?
-- Brett the balloon consultant is a placeholder name.
-- The keyboard is now the "founding keyboard" of a $100M company. Does that change
-  how the ending should hit? (An ordinary keyboard that built an empire, and it
-  still fixes nothing for you.)
-- Does 35 scenes feel right, or should Act 2 (the near misses) be shorter?
+- The user cut the near-space balloon act (too wacky). Does the story still need
+  a bigger escalation somewhere, or is the grounded arc enough?
+- The keyboard is Daniel's "founding keyboard" (mentioned in scene 7). It no
+  longer pays off in a big announcement. Keep the mention, or cut it?
+- Does 29 scenes feel right, or should Act 2 (the near misses) be shorter?
 - Scenes 21-22: single choice by design ("Grab the keyboard"), the guilt carried
   by the writing. Okay?
 - Scene 23: inhaler (asthma), or another device? The F-word uncensored?
