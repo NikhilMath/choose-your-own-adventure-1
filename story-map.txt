@@ -87,7 +87,7 @@ T8 THE SWAP  [merges: swap, scan]
 T9 THE CHOICE  [merges: choice, shock, run]
    He drops to one knee. The keyboard is right there. One second. You're shocked
    at yourself. You grab it and run. Something skitters under your shoe: an
-   inhaler. "Fuck," you say.
+   inhaler. "Dang," you say.
 
 T10 THE LIE  [merges: lie, question, guilt]
    You slide back in and press the inhaler into his hand. "I saw you drop it ten
