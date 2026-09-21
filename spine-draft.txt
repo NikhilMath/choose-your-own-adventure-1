@@ -87,7 +87,7 @@ ACT 3: THE RETREAT  [cancel it with a fake sick grandmother]
    Choice: "Get a grandmother."
 
 11. THE CASTING  [YOURS: pay someone to act as grandma; name: Lilly]
-   You post an ad for a "small family role, elderly woman, $80 an hour, no
+   You post an ad for a "small family role, elderly woman, $75 an hour, no
    questions." Three candidates. One is far too good. Her name is Lilly. You hire
    her.
    Choice: "Brief her."
@@ -107,8 +107,9 @@ ACT 3: THE RETREAT  [cancel it with a fake sick grandmother]
 14. DANIEL CANCELS  [PROPOSED; Lilly paid off]
    Daniel sends the email: "Family comes first. Retreat is canceled. Please keep
    her in your prayers. Something better is coming." Marcy replies-all with a
-   heart. You pay Lilly in cash. She asks for a good review and leaves. She is not
-   coming back. Nobody knows it was you. You feel a little sick.
+   heart. You pay Lilly $150 in cash. She asks for a good review and leaves. She is not
+   coming back. The room cost almost as much, and with the decoy you've spent
+   three keyboards' worth to steal one keyboard. Nobody knows it was you. You feel a little sick.
    Choice: "Check your inbox."
 
 ACT 4: THE COMPLICATION
