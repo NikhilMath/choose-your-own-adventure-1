@@ -111,6 +111,19 @@ wizard  -> end_wizard (real ending), refuse (real ending), end_report (dead end)
 pretend -> outage               (back into the heist)
 ```
 
+## Continuity rules (learned in the full review)
+
+A full route-by-route review found that nearly every continuity bug came from one pattern: a line written for one route, sitting in a scene that several routes reach. Before editing any scene, check every way into it. The scenes with more than one way in are `office` (from `arrival`, `printer_model`, `lemon`), `plan` (from `office`, `draft`, `typo`), `outage` (from `plan`, `declined`, `pretend`) and `end_founding` (from `ask`, `garage`). Anything downstream of them inherits every route.
+
+- **The printer is not always broken.** On the `printer_model` route you fix it remotely, and on the `restart` route restarting fixes it. So nothing reachable from `office` may say you installed or finished the driver, or that you came to fix the printer.
+- **Characters must be introduced on every route before being named.** Marcy is introduced in `plan`, but the Employee of the Month route (`restart`, `ceremony`, `end_sick`) never passes through `plan`, so she is introduced inline there too. A double introduction on a longer route is fine; none is not.
+- **Multi-parent scenes need relative timestamps.** `office` says “A few minutes later” because an absolute 4:47 p.m. ran backward from the 4:52 printer route and was the wrong day from the Friday ceremony. Check the clock along every edge; `typo` once said 9:31 a.m. after two hours that started at 9:04.
+- **Only his keyboard feels special.** That is the premise: the identical model you buy feels like nothing. No other keyboard, including your own at your desk, may feel wonderful.
+- **A scene’s location label must match what it covers.** Scenes that jump in time use “X · Then Y”. A scene that stops being an ending must lose its “Ending ·” label.
+- **Deliberate repetition is house style**, not an error: “Nothing is especially wrong. Nothing is especially interesting.”, “He breathes. He breathes again.”, “You say goodbye to Daniel. You say goodbye to the keyboard.” Keep it.
+- **Contractions are the house voice** in narration (“You don’t”, “He’s”). Save uncontracted phrasing for a deliberate beat, such as the mock-epic “It is Danal, seventh and most evil wizard of Xeon.”
+- Accepted, not fixed: in `lie` the auditor sees a keyboard in your arms while the decoy sits on the desk, so there are briefly two. He is recovering from an asthma attack, not doing inventory; flagging it would cost more than it saves.
+
 ## Verification expectations
 
 For changes to the engine or story graph, check:
@@ -137,4 +150,4 @@ No automated test suite is checked into the repository yet. Report actual verifi
 
 ## Next work
 
-The map, three early mini-adventures, the rejoin routes and the wizard branch are built and live (38 scenes, 3 real endings, 10 dead ends). Next, the user plays it on the live site and reports what they like and dislike; edit scene by scene from that feedback. Open questions: whether the main path (11 scenes) should be longer, which endings to keep or cut, and the inhaler and profanity choices. Verification so far: script syntax checked with macOS JavaScriptCore (no `node` installed), and every ending and dead end and every rejoin route were reached through the real engine with a stub DOM, including the ending button going back exactly one choice, the journey links were tested, and the scroll-to-scene behavior was tested against a stub (not on a real iPhone); no browser, mobile, or keyboard-navigation check, and the favicon was only viewed as a rendered PNG, not in a browser tab. Follow the standing rule to summarize and suggest 2-3 next steps whenever starting a new path. If introducing inventory, conditional choices, or multiple stories, explicitly design state/save compatibility and revise this handoff.
+The map, three early mini-adventures, the rejoin routes and the wizard branch are built and live (38 scenes, 3 real endings, 10 dead ends). Next, the user plays it on the live site and reports what they like and dislike; edit scene by scene from that feedback. Open questions: whether the main path (11 scenes) should be longer, which endings to keep or cut, and the inhaler and profanity choices. A full continuity and syntax review was done (30 fixes, then a second and third read). Verification so far: script syntax checked with macOS JavaScriptCore (no `node` installed), and every ending and dead end and every rejoin route were reached through the real engine with a stub DOM, including the ending button going back exactly one choice, the journey links were tested, and the scroll-to-scene behavior was tested against a stub (not on a real iPhone); no browser, mobile, or keyboard-navigation check, and the favicon was only viewed as a rendered PNG, not in a browser tab. Follow the standing rule to summarize and suggest 2-3 next steps whenever starting a new path. If introducing inventory, conditional choices, or multiple stories, explicitly design state/save compatibility and revise this handoff.
