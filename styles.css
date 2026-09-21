@@ -116,6 +116,8 @@ h2 {
   font-size: 12px;
 }
 .text-button:hover { color: var(--ink); }
+.text-button:disabled:hover { color: var(--muted); }
+.tools { display: flex; gap: 20px; align-items: center; }
 
 /* Scene */
 .scene { animation: arrive .35s ease; scroll-margin-top: 20px; }
