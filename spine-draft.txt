@@ -1,4 +1,4 @@
-KEYBOARD HEIST: SPINE DRAFT (v7, 35 scenes)
+KEYBOARD HEIST: SPINE DRAFT (v8, 35 scenes)
 Status: UNAPPROVED PROPOSAL. Nothing here is in the game yet. Change anything.
 Target length: about 20 scenes, more if we like where it goes. [YOURS]
 Rules: single choices only (each scene ends with one choice to the next scene),
@@ -48,9 +48,10 @@ ACT 2: THE PLAN
 7. RECON  [PROPOSED]
    Daniel's schedule. His lunch. His door that is always open. His assistant,
    Marcy, who sees everything. Her calendar has the company retreat next Friday,
-   and Daniel brings his own keyboard to everything ("types better with it").
-   Once it leaves the building, it's gone. (Seed for later: a flyer on the break
-   room fridge, "EMPLOYEE HAPPINESS BALLOON: COMING SOON!" You ignore it.)
+   and Daniel brings his own keyboard to everything. Marcy calls it "the founding
+   keyboard": he started the company on it. Once it leaves the building, it's gone.
+   (Seed for later: a flyer on the break room fridge, "BIG NEWS COMING," and
+   Daniel humming.)
    Choice: "Wait for a window."
 
 8. THE WINDOW  [PROPOSED]
@@ -164,11 +165,12 @@ ACT 5: THE HEIST
 
 ACT 6: THE LAUNCH  [NEW: the weird part, from almost-space]
 ------------------------------------------------------------------------------
-26. THE HERO  [PROPOSED]
-   The auditor tells everyone. Daniel is so proud he cries. He announces the
-   "something better" that replaces the retreat: the Employee Happiness Balloon,
-   a weather balloon that will carry one beloved item to the edge of space. He
-   picks his favorite keyboard, the one you "rescued." You are the guest of honor.
+26. THE HERO  [YOURS: keyboard goes to space; $100M; he started the company on it / PROPOSED: rest]
+   The auditor tells everyone. Daniel is so proud he cries. Then he announces the
+   "something better" that replaces the retreat: the company just crossed $100
+   million in revenue, and he started it on that very keyboard. To represent
+   growth, he's sending it to the edge of space on a weather balloon. The keyboard
+   you "rescued." You are the guest of honor.
    Choice: "Say yes."
 
 27. THE FIELD  [PROPOSED]
@@ -228,6 +230,9 @@ OPEN QUESTIONS
 - The weird ramps up in Act 6 only. Do you want it to start earlier (Lilly gets
   weirder, the audit gets weirder)?
 - Brett the balloon consultant is a placeholder name.
+- The keyboard is now the "founding keyboard" of a $100M company. Does that change
+  how the ending should hit? (An ordinary keyboard that built an empire, and it
+  still fixes nothing for you.)
 - Does 35 scenes feel right, or should Act 2 (the near misses) be shorter?
 - Scenes 21-22: single choice by design ("Grab the keyboard"), the guilt carried
   by the writing. Okay?
