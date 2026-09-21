@@ -207,6 +207,11 @@ ol { padding-left: 20px; line-height: 1.9; }
 #found-list li { color: var(--ink); }
 #found-list li::before { content: "\2713"; color: #789447; margin-right: 9px; }
 .still-hidden { margin: 6px 0 0; color: var(--muted); }
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 22px 0 0;
+}
 #map-box { margin-top: 18px; }
 .map-svg { width: 100%; height: auto; display: block; margin: 4px 0 10px; overflow: visible; }
 .map-edge { stroke: #c3ccbb; stroke-width: 1; }
