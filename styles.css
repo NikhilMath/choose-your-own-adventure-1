@@ -144,6 +144,14 @@ h2 {
   color: var(--muted);
   text-transform: uppercase;
 }
+.decision.finale {
+  font-family: Georgia, serif;
+  font-size: 46px;
+  letter-spacing: -1.5px;
+  color: var(--ink);
+  text-transform: none;
+  margin: 40px 0 26px;
+}
 
 /* Choices */
 .choices { display: grid; gap: 10px; }
