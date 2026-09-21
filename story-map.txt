@@ -1,4 +1,4 @@
-KEYBOARD HEIST: STORY MAP (v2, 20 scenes, 10 endings, built)
+KEYBOARD HEIST: STORY MAP (v3, 32 scenes, 16 endings, built)
 Status: BUILT in index.html as a first draft at the user's request ("push the full
 story map"). Not yet reviewed by the user; expect edits. Change anything.
 Source: the user's sketch (about 20 scenes total, about 10 different endings,
@@ -160,3 +160,27 @@ OPEN QUESTIONS
 - Do you want fewer endings that hit harder, or 10?
 - E3, E1, and E2 are old material. Fine to reuse?
 - Buttons: labels above are placeholders. Do you want to rewrite any?
+
+==============================================================================
+V3 ADDITION: THREE EARLY WRONG CHOICES GROW INTO MINI-ADVENTURES
+(User's choice: restarting, walk away, just asking. "Create some stuff and let
+me explore." Built as a first draft; expect edits.)
+
+RESTART: "Employee of the Month"
+  restart -> [Go to the ceremony] ceremony -> [Say a few words] E end_speech
+                                            -> [Say thank you, sit down] E end_lemon
+          -> [Call in sick Friday] E end_sick
+
+WALK AWAY: "The resignation"
+  walk_away -> [Send it] resigned -> [Take the sabbatical] E end_sabbatical
+                                   -> [Say it was a typo] E end_typo
+            -> [Save it as a draft] E end_draft
+
+JUST ASK: "The founding keyboard"
+  ask -> [Let him finish] garage -> [Take it] E end_founding
+                                 -> [Borrow it for the weekend] E end_borrowed
+                                 -> [Say you couldn't possibly] E end_declined
+      -> [Ask if you could have it] E end_founding
+
+Later wrong choices (mom, method, red, running, spare, printer model) remain
+one-scene endings.

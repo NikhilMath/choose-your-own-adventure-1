@@ -6,13 +6,16 @@
 <meta name="theme-color" content="#142c29">
 <title>Keyboard Heist: An office comedy</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png" sizes="180x180">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body>
 <header><div class="brand"><span>✳</span> OTHER PATHS</div><div class="edition">STORIES YOU STEP INTO</div></header>
 <main>
 <aside><div class="eyebrow">Adventure No. 001 · Office comedy</div><h1>Keyboard<br><em>Heist.</em></h1><p class="intro">Steal a keyboard just to feel something.</p>
 <div class="art" role="img" aria-label="An ordinary office keyboard with one green key on a dark desk"><svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg"><path fill="#193b37" d="M0 0h480v320H0z"/><ellipse cx="240" cy="234" rx="190" ry="24" fill="#142c29"/><path d="M240 110V70q0-25 40-25" fill="none" stroke="#789486" stroke-width="5"/><rect x="50" y="105" width="380" height="130" rx="15" fill="#829788"/><rect x="68" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="242" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="68" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="148" width="24" height="21" rx="4" fill="#d8eeaa"/><rect x="242" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="68" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="242" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="152" y="204" width="176" height="18" rx="4" fill="#d4d9c8"/></svg><span class="art-caption">COMPANY PROPERTY · $149.99</span></div>
-<div class="meta"><span>◷ 20 SCENES</span><span>⑂ 10 ENDINGS</span></div></aside>
+<div class="meta"><span>◷ 32 SCENES</span><span>⑂ 16 ENDINGS</span></div></aside>
 <section class="reader" aria-label="Interactive story"><div class="toolbar"><span class="chapter" id="chapter"></span><button class="text-button" id="restart">↻ Start over</button></div><div id="scene" class="scene"></div><div class="below"><button class="text-button" id="back">← Previous choice</button><span class="save" id="save" role="status"></span></div><details><summary>Your journey <span id="count"></span></summary><ol id="journey"></ol></details></section>
 </main><footer><span>Employee happiness is a company priority.</span><span>YOUR CHOICES. YOUR STORY.</span></footer><noscript>Enable JavaScript in your browser to play this adventure.</noscript>
 <script>
@@ -43,7 +46,7 @@ const STORY = {
       {
         "label": "Reply, “Have you tried restarting?”",
         "hint": "You deserve to ask. Once.",
-        "next": "end_restart"
+        "next": "restart"
       },
       {
         "label": "Check the printer model first.",
@@ -81,7 +84,7 @@ const STORY = {
       {
         "label": "Stand up. Walk away. Never think about this again.",
         "hint": "Everyone would tell you it’s the correct choice.",
-        "next": "end_walk_away"
+        "next": "walk_away"
       }
     ]
   },
@@ -104,8 +107,8 @@ const STORY = {
       },
       {
         "label": "Just ask him about it.",
-        "hint": "Normal. Suspiciously normal.",
-        "next": "end_gift"
+        "hint": "Normal. He might even say yes.",
+        "next": "ask"
       }
     ]
   },
@@ -267,17 +270,6 @@ const STORY = {
       "Tomorrow there will be a ticket."
     ]
   },
-  "end_restart": {
-    "location": "Ending · Ticket closed",
-    "title": "Have you tried restarting?",
-    "ending": true,
-    "text": [
-      "Daniel replies in eleven seconds. “Oh! Good idea!” A minute later: “That worked!! You’re a genius. Appreciate you!”",
-      "The ticket closes at 4:49 p.m. It’s the fastest you’ve ever solved anything. It took no skill at all.",
-      "You never go to his office. You go home. You have never felt so nothing.",
-      "Tomorrow there will be a ticket."
-    ]
-  },
   "end_printer": {
     "location": "Ending · Ticket closed",
     "title": "Check the printer model first.",
@@ -302,28 +294,6 @@ const STORY = {
       "It slips. It hits the floor. The space bar skates down the hall. Something inside makes a small, final sound.",
       "Daniel looks at it. “Oh. Never mind. I’ll use the spare.”",
       "You install the printer driver. It takes four minutes. Then you go back to your desk, where Outlook is waiting."
-    ]
-  },
-  "end_walk_away": {
-    "location": "Ending · Nothing happens",
-    "title": "Stand up. Walk away. Never think about this again.",
-    "ending": true,
-    "text": [
-      "You finish the driver. You say goodbye to Daniel. You say goodbye to the keyboard, silently, like an idiot.",
-      "You go home. You do not think about it. You think about it in the shower. You think about it at dinner.",
-      "The next morning, your fingers are typing on the steering wheel.",
-      "Nothing is especially wrong. Nothing is especially interesting. Tomorrow there will be a ticket."
-    ]
-  },
-  "end_gift": {
-    "location": "Ending · The gift",
-    "title": "Just ask him about it.",
-    "ending": true,
-    "text": [
-      "You ask Daniel where he got the keyboard. He lights up like you’ve asked about his kids.",
-      "“Oh, you like it? Take a new one from the supply closet! We have a whole box!”",
-      "It’s still in its plastic. You carry it to your desk with both hands, like it could still mean something. You type your name.",
-      "It’s a keyboard. Buying it never worked. Being given one doesn’t either."
     ]
   },
   "end_mom": {
@@ -368,6 +338,231 @@ const STORY = {
       "She finds the auditor on the floor. She finds the inhaler under the fern. He is fine. He is also very clear about who ran.",
       "You have the keyboard for eleven hours. It is on your kitchen table. It feels like nothing.",
       "At nine a.m., HR is waiting by your desk. Daniel stands behind them, holding the granola bar. He looks so disappointed you almost feel something."
+    ]
+  },
+  "restart": {
+    "location": "4:47 p.m. · Your inbox",
+    "title": "Have you tried restarting?",
+    "text": [
+      "Daniel replies in eleven seconds. “Oh! Good idea!” A minute later: “That worked!! You’re a genius. Appreciate you!”",
+      "The ticket closes at 4:49 p.m. It’s the fastest you’ve ever solved anything. It took no skill at all.",
+      "Then, a second email, all staff: “Please join me Friday at 3 p.m. in congratulating our IT Support Manager, Employee of the Month! There will be cake.”",
+      "You have never won anything. You have never wanted to."
+    ],
+    "choices": [
+      {
+        "label": "Go to the ceremony.",
+        "hint": "There will be cake.",
+        "next": "ceremony"
+      },
+      {
+        "label": "Call in sick Friday.",
+        "hint": "Awards are just attention with a plaque.",
+        "next": "end_sick"
+      }
+    ]
+  },
+  "ceremony": {
+    "location": "Friday · 3:00 p.m. · The all-hands",
+    "title": "The ceremony",
+    "text": [
+      "Forty people clap. Marcy made a banner. It says CONGRATULATIONS, ROB. Your name is not Rob.",
+      "Daniel hands you a plaque and a granola bar. “Would you like to say a few words?”",
+      "The whole room is looking at you with its whole face. It’s the most attention you’ve had in years. You wait to feel it."
+    ],
+    "choices": [
+      {
+        "label": "Say a few words.",
+        "hint": "Say something true. It might be funny.",
+        "next": "end_speech"
+      },
+      {
+        "label": "Say “thank you” and sit down.",
+        "hint": "Safe. Quiet. Familiar.",
+        "next": "end_lemon"
+      }
+    ]
+  },
+  "end_sick": {
+    "location": "Ending · Get well soon",
+    "title": "Call in sick Friday.",
+    "ending": true,
+    "text": [
+      "You call in sick. Daniel sends soup. Forty people sign a card. Marcy brings the plaque to your apartment herself and stays for an hour to tell you about her cat.",
+      "You have never been so celebrated. You have never been so bored."
+    ]
+  },
+  "end_speech": {
+    "location": "Ending · Standing ovation",
+    "title": "Say a few words.",
+    "ending": true,
+    "text": [
+      "You say, “I’ve been really bored for a long time. Like, years.” The room goes silent.",
+      "Then everyone laughs. Someone whoops. Daniel wipes his eyes. “Oh my gosh, you’re so funny.”",
+      "You get a standing ovation. Nobody believes you."
+    ]
+  },
+  "end_lemon": {
+    "location": "Ending · Lemon cake",
+    "title": "Say “thank you” and sit down.",
+    "ending": true,
+    "text": [
+      "You say thank you. You sit down. The cake is lemon. You hate lemon.",
+      "You eat two slices. You have never felt so appreciated. You have never felt so far away."
+    ]
+  },
+  "walk_away": {
+    "location": "Next morning · Your desk",
+    "title": "Stand up. Walk away. Never think about this again.",
+    "text": [
+      "You finish the driver. You say goodbye to Daniel. You say goodbye to the keyboard, silently, like an idiot.",
+      "You go home. You do not think about it. You think about it in the shower. You think about it at dinner.",
+      "The next morning, at your desk, you open a blank email and type: “Dear Daniel, I quit.” It feels wonderful.",
+      "You backspace it. The backspace also feels wonderful. You type it again. Your cursor hovers over Send."
+    ],
+    "choices": [
+      {
+        "label": "Send it.",
+        "hint": "Some feelings come with consequences.",
+        "next": "resigned"
+      },
+      {
+        "label": "Save it as a draft.",
+        "hint": "Safe. Unsent. Yours.",
+        "next": "end_draft"
+      }
+    ]
+  },
+  "resigned": {
+    "location": "9:04 a.m. · Your desk",
+    "title": "The resignation",
+    "text": [
+      "You send it. Your heart does something it hasn’t done in months.",
+      "Thirty seconds later your phone rings. “Oh my gosh. Are you okay? Is it the printer?”",
+      "Daniel is at your desk in ninety seconds. He pulls up the visitor chair. He listens for two hours. He does not once look at his phone.",
+      "He offers a sabbatical, a raise, a therapist named Carol, and a granola bar. “I’d rather lose a printer than a person,” he says.",
+      "You could take it. You could take it back."
+    ],
+    "choices": [
+      {
+        "label": "Take the sabbatical.",
+        "hint": "Six weeks. Paid. You’ll be fine.",
+        "next": "end_sabbatical"
+      },
+      {
+        "label": "Say it was a typo.",
+        "hint": "Recover. Retreat. Rewrite.",
+        "next": "end_typo"
+      }
+    ]
+  },
+  "end_draft": {
+    "location": "Ending · Drafts",
+    "title": "Save it as a draft.",
+    "ending": true,
+    "text": [
+      "You save it as a draft. It joins fourteen others. The oldest is from 2021 and just says “Dear Daniel,” which is somehow the saddest one.",
+      "You close the folder. Tomorrow there will be a ticket."
+    ]
+  },
+  "end_sabbatical": {
+    "location": "Ending · Paid leave",
+    "title": "Take the sabbatical.",
+    "ending": true,
+    "text": [
+      "Six weeks, paid. You buy nothing. You go nowhere. You lie on the couch and wait to feel rested.",
+      "On day thirteen, you catch yourself typing on the arm of the couch.",
+      "On day forty-two, you go back. There is a ticket."
+    ]
+  },
+  "end_typo": {
+    "location": "Ending · Autocorrect",
+    "title": "Say it was a typo.",
+    "ending": true,
+    "text": [
+      "“It was a typo,” you say.",
+      "Daniel reads the email. It says, in full, “Dear Daniel, I quit.” He looks at you for a long moment. “A typo,” he says gently. “Okay.”",
+      "He believes you. He hugs you anyway. He smells like granola.",
+      "It was the most alive you’ve felt all year, and you didn’t even leave."
+    ]
+  },
+  "ask": {
+    "location": "4:52 p.m. · Daniel’s office",
+    "title": "Just ask him about it.",
+    "text": [
+      "You ask Daniel where he got the keyboard, in the most innocent voice you own.",
+      "He lights up like you’ve asked about his kids. “Oh, gosh, this old thing? Sit. Sit!”",
+      "He bought it in a garage, on a Tuesday, for $150, with a partner who quit two years later to open a kayak shop. He typed his first invoice on it. He has typed every invoice since.",
+      "It’s the first time anyone has talked to you in weeks without a ticket number. Somewhere in your bag, the decoy is very, very quiet."
+    ],
+    "choices": [
+      {
+        "label": "Let him finish.",
+        "hint": "He has more. He always has more.",
+        "next": "garage"
+      },
+      {
+        "label": "Ask if you could have it.",
+        "hint": "Bold. He might say yes.",
+        "next": "end_founding"
+      }
+    ]
+  },
+  "garage": {
+    "location": "Thirty minutes later · Still Daniel’s office",
+    "title": "The garage",
+    "text": [
+      "Thirty minutes later, he’s still going. You know about the kayak shop. You know about his first customer, a dentist named Phil, and Phil’s very specific ideas about fonts.",
+      "“You know what?” Daniel says. He looks at the keyboard. “I’ve had it long enough. I think it’s time.”",
+      "He holds it out to you with both hands. It’s the thing you wanted. He’s just giving it to you."
+    ],
+    "choices": [
+      {
+        "label": "Take it.",
+        "hint": "It’s what you came for. Is it what you wanted?",
+        "next": "end_founding"
+      },
+      {
+        "label": "Borrow it for the weekend.",
+        "hint": "A compromise. A very polite one.",
+        "next": "end_borrowed"
+      },
+      {
+        "label": "Say you couldn’t possibly.",
+        "hint": "You have a decoy in your bag. Have some shame.",
+        "next": "end_declined"
+      }
+    ]
+  },
+  "end_founding": {
+    "location": "Ending · The founding keyboard",
+    "title": "Take it.",
+    "ending": true,
+    "text": [
+      "He hands it over like a sleeping baby. You carry it home in both hands. It has typed a thousand invoices. You plug it in at the kitchen table.",
+      "You type your name. It’s a keyboard. By the door, in your bag, its twin sits in silence. You now own two of the same keyboard. Neither feels like anything.",
+      "The worst part is that he gave it to you. You had a whole plan. You feel worse than if you’d stolen it."
+    ]
+  },
+  "end_borrowed": {
+    "location": "Ending · Monday",
+    "title": "Borrow it for the weekend.",
+    "ending": true,
+    "text": [
+      "You take it home for the weekend. You type your name. You type the alphabet. You type a very short letter to nobody. Nothing.",
+      "On Monday, you carry it back. “How was it?” Daniel asks.",
+      "“Fine,” you say. “It’s a keyboard.” He laughs, delighted, as if you’ve said something profound.",
+      "Tomorrow there will be a ticket."
+    ]
+  },
+  "end_declined": {
+    "location": "Ending · Some shame",
+    "title": "Say you couldn’t possibly.",
+    "ending": true,
+    "text": [
+      "You say you couldn’t possibly. Daniel insists. You say it again. It costs you more than you expected.",
+      "He puts it back on the desk, a little hurt, and hands you a granola bar to make up for it.",
+      "In your bag, the decoy has never felt heavier. You eat the granola bar. It’s a really good granola bar."
     ]
   }
 };
