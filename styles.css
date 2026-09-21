@@ -92,6 +92,7 @@ h2 {
 /* Meta / chapter / toolbar */
 .meta {
   display: flex;
+  justify-content: center;
   gap: 22px;
   flex-wrap: wrap;
   margin-top: 16px;
