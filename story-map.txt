@@ -47,7 +47,7 @@ arrival -> office -> plan -> outage -> grandmother -> visit -> audit -> swap -> 
 THE TRUNK SCENES (each merges scenes from spine-draft.txt; keep the approved beats)
 
 T1 ARRIVAL
-   The approved opening: plateau paragraph, "A ticket pops up," Daniel Hall's
+   The approved opening: plateau paragraph, "Then a ticket pops up...," Daniel Hall's
    ticket. Three buttons, exactly as you wrote them.
 
 T2 OFFICE
