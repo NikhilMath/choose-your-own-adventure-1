@@ -1,5 +1,7 @@
-KEYBOARD HEIST: SPINE DRAFT (v10, 35 scenes)
-Status: UNAPPROVED PROPOSAL. Nothing here is in the game yet. Change anything.
+KEYBOARD HEIST: SPINE DRAFT (v11, 35 scenes, built)
+Status: APPROVED by the user and BUILT as a first draft in index.html (the prose
+was written from this outline). Edit here or in the game; keep them in sync.
+The user said not to work on other branches yet.
 Target length: about 20 scenes, more if we like where it goes. [YOURS]
 Rules: single choices only (each scene ends with one choice to the next scene),
 no forks, no diversions. Diversions come after the spine is approved.
@@ -133,8 +135,9 @@ ACT 4: THE COMPLICATION
 ACT 5: THE HEIST
 ------------------------------------------------------------------------------
 19. THE SWAP  [PROPOSED]
-   Daniel's office is empty. Marcy is elsewhere. You put the decoy on the desk and
-   the real one in your hands, or nearly. Footsteps. The auditor is at the door.
+   Daniel's office is empty. Marcy is at lunch. The decoy goes on the desk. The
+   real keyboard goes on the chair for a second. Footsteps. The auditor is at the
+   door.
    Choice: "Act natural."
 
 20. THE SCAN  [PROPOSED]
@@ -171,19 +174,19 @@ ACT 5: THE HEIST
 
 ACT 6: THE LAUNCH  [NEW: the weird part, from almost-space]
 ------------------------------------------------------------------------------
-26. THE HERO  [YOURS: keyboard goes to space; $100M; he started the company on it / PROPOSED: rest]
-   The auditor tells everyone. Daniel is so proud he cries. Then he announces the
-   "something better" that replaces the retreat: the company just crossed $100
-   million in revenue, and he started it on that very keyboard. To represent
-   growth, he's sending it to the edge of space on a weather balloon. The keyboard
-   you "rescued." You are the guest of honor.
+26. THE HERO  [YOURS: keyboard to space; $100M; started the company on it / PROPOSED: rest]
+   The auditor tells everyone about the inhaler. Nobody knows about the keyboard,
+   which is in your bag. Daniel cries. Then the "something better": the company
+   crossed $100 million and he started it on the keyboard on his desk (your
+   decoy). To represent growth, he's sending it to the edge of space on a weather
+   balloon. You are the guest of honor.
    Choice: "Say yes."
 
 27. THE FIELD  [PROPOSED]
    Launch day. A field, folding tables, matching shirts, a balloon consultant
-   named Brett who has never seen a balloon fail. The keyboard is sealed in a
-   foam box with a camera. You have one chance to take it back.
-   Choice: "Get close."
+   named Brett who has never seen a balloon fail. Daniel puts the foam box in your
+   hands so you can strap it on: a fake, in a box shaped like his life's work.
+   Choice: "Strap it on."
 
 28. THE LIFTOFF  [PROPOSED]
    The tether snaps early. Your jacket is clipped to the payload strap. The ground
@@ -192,8 +195,9 @@ ACT 6: THE LAUNCH  [NEW: the weird part, from almost-space]
 
 29. THE ASCENT  [PROPOSED]
    Cloud. Cold. Quiet. The sky goes black and you can see the curve of the Earth.
-   You've never been this high, and this is the closest you've ever come to
-   feeling something, and it has nothing to do with the keyboard.
+   You're hanging by a jacket strap next to the foam box, with the real keyboard
+   zipped in your bag. This is the closest you've ever come to feeling something,
+   and it has nothing to do with the keyboard.
    Choice: "Look down."
 
 30. THE DESCENT  [PROPOSED]
@@ -202,8 +206,9 @@ ACT 6: THE LAUNCH  [NEW: the weird part, from almost-space]
    Choice: "Get up."
 
 31. THE VAN  [PROPOSED]
-   The whole company arrives in a van, cheering. Nobody suspects. You are the
-   most beloved employee in company history. The camera footage is on the news.
+   The whole company arrives in a van, cheering. The footage is on the local news.
+   The fake keyboard is going in a glass case in the lobby. Nobody suspects a
+   thing. You are the most beloved employee in company history.
    Choice: "Get in the van."
 
 ACT 7: THE PAYOFF  [back to grounded reality]
