@@ -1,0 +1,66 @@
+KEYBOARD HEIST: SPINE DRAFT
+Status: UNAPPROVED PROPOSAL. Nothing here is in the game yet. Change anything.
+Rules: single choices only (each scene ends with one choice to the next scene),
+no forks, no diversions. Diversions come after the spine is approved.
+
+Source key: [YOURS] = direction the story creator gave. [PROPOSED] = Claude's idea.
+
+------------------------------------------------------------------------------
+1. ARRIVAL  (written, approved)
+   Plateau paragraph, Daniel's 4:46 p.m. printer-driver ticket.
+   Choice: "Head to his office."
+
+2. OFFICE  (written earlier, at git commit 5e5552f; to be rebuilt without the fork)
+   Daniel is Ned-Flanders-nice: open door, granola bar, Bible verse Post-it, kids'
+   photo. He steps out for a call. You type on his keyboard for the first time in
+   22 years of typing on keyboards and actually notice one. [YOURS]
+   Choice [PROPOSED]: "Finish the driver. Leave it where it is. For now."
+
+3. THE PLAN  [PROPOSED]
+   Next morning. Purpose, for the first time in months. You case the office:
+   Daniel's schedule, when the room is empty, who has access. Cozy, efficient,
+   slightly unhinged. The IT job turns out to be perfect cover.
+   Choice: "Put in the ticket."
+
+4. THE SWAP SETUP  [PROPOSED]
+   You file a fake "replace keyboard" ticket and order an identical one.
+   Nobody questions IT. Waiting for the delivery is the best week you've had.
+   Choice: "Wait for the delivery."
+
+5. THE COMPLICATION  [PROPOSED, OPEN]
+   Something you didn't plan for goes wrong. Working idea: company keyboards are
+   asset-tagged and an audit is coming, so the swap has to happen before then.
+   Choice: "Do it before Friday."
+
+6. THE ESCALATION  [OPEN QUESTION]
+   Absurd escalation is welcome [YOURS]. Space was floated, not agreed.
+   Do we add a bigger, stranger obstacle here, or keep the story grounded?
+
+7. THE HEIST  [PROPOSED]
+   You make the swap, barely. Close call with Daniel or a coworker.
+   Choice: "Walk out with it."
+
+8. THE GUILT  [YOURS: premise / PROPOSED: details]
+   You feel guilty and rationalize that the company wants happy employees.
+   Daniel doesn't notice, or says the new keyboard feels great. Deflating.
+   Choice: "Go home."
+
+9. THE KEYBOARD AT HOME  [PROPOSED]
+   It's on your kitchen table. You type your name.
+   Choice: "Type something else."
+
+10. ENDING  [YOURS]
+   You finally have the keyboard, and you're still bored with life. A keyboard
+   doesn't fix anything. Ending scene; the game offers replay.
+
+------------------------------------------------------------------------------
+OPEN QUESTIONS
+- Beat 2: is the ending choice right, or should the office scene end differently?
+- Beat 5: asset-tag audit, or something else that goes wrong?
+- Beat 6: absurd escalation or grounded? If absurd, what (space or otherwise)?
+- Beat 8: does the guilt get its own scene, or run through several scenes?
+- How long should the spine be? This draft is 10 scenes, some might merge.
+
+LATER (not now): diversions that rejoin the spine, e.g. the opening's "restart"
+and "printer model" choices, and the earlier "take it now" idea (Daniel drops and
+breaks the keyboard). None of these are designed yet.
