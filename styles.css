@@ -61,12 +61,6 @@ h2 {
   letter-spacing: -.8px;
   margin: 12px 0 24px;
 }
-.intro {
-  font-size: 14px;
-  line-height: 1.8;
-  color: var(--muted);
-  max-width: 330px;
-}
 .prose {
   font-family: Georgia, serif;
   font-size: 17px;
@@ -244,7 +238,6 @@ noscript { display: block; padding: 30px; }
 /* Responsive */
 @media (max-width: 760px) {
   main { display: block; padding: 30px 6%; }
-  .intro { max-width: 100%; }
   h1 { font-size: 60px; }
   .art { height: 190px; border-radius: 100px 100px 6px 6px; margin-top: 20px; margin-bottom: 35px; }
   .toolbar { margin-bottom: 22px; }
