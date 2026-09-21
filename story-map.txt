@@ -1,0 +1,161 @@
+KEYBOARD HEIST: STORY MAP (v1, 20 scenes, 10 endings)
+Status: UNAPPROVED PROPOSAL. Nothing here is in the game yet. Change anything.
+Source: the user's sketch (about 20 scenes total, about 10 different endings,
+a fan shape widening toward the endings) and "do what you suggest."
+The old single-path draft is spine-draft.txt (29 scenes); this map compresses it.
+
+ASSUMPTIONS (change any of these)
+- 20 scenes total: 10 trunk scenes (the main story) + 10 one-scene endings.
+- Every wrong choice goes to its own ending. Branches do NOT rejoin the trunk.
+- Scenes have one to three buttons. Endings have none (the game offers replay).
+- Tone: comic. Bad endings are embarrassment, firing, or heartbreak, never death.
+- No space, no balloons (the user cut them).
+- Second person ("you"), no em dashes, short scenes (README rules).
+
+==============================================================================
+THE MAP  (T = trunk scene, E = ending; the arrows are buttons)
+
+T1 arrival ......... "Head to his office."            -> T2
+                     "Reply, Have you tried restarting?" -> E1
+                     "Check the printer model first."    -> E2
+T2 office .......... "Leave it. Come back for it later." -> T3
+                     "Take it. Right now."               -> E3
+                     "Walk away. Never think about this again." -> E4
+T3 the plan ........ "Case the office."                 -> T4
+                     "Just ask him about it."            -> E5
+T4 the outage ...... "Back out. Think."                  -> T5
+T5 the grandmother . "Hire Lilly."                       -> T6
+                     "Use your mother in Ohio."          -> E6
+T6 the visit ....... "Pay her and move on."              -> T7
+                     "Let Lilly keep going."             -> E7
+T7 the audit ....... "Make the tag."                     -> T8
+                     "Skip it. Nobody checks."           -> E8
+T8 the swap ........ "Look at him."                      -> T9
+T9 the choice ...... "Go back with the inhaler."         -> T10
+                     "Keep running."                     -> E9
+T10 the lie ........ "Walk out."                         -> E10
+
+Picture (main line across, exits down):
+
+arrival -> office -> plan -> outage -> grandmother -> visit -> audit -> swap -> choice -> lie -> E10 THE PLATEAU
+  |  |       |  |      |                    |          |        |                    |
+ E1 E2      E3 E4    E5                   E6         E7       E8                  E9
+ (restart) (printer) (spare) (walk away) (gift)   (mom)  (method) (red)         (keep running)
+
+==============================================================================
+THE TRUNK SCENES (each merges scenes from spine-draft.txt; keep the approved beats)
+
+T1 ARRIVAL
+   The approved opening: plateau paragraph, "A ticket pops up," Daniel Hall's
+   ticket. Three buttons, exactly as you wrote them.
+
+T2 OFFICE
+   The approved office scene (Daniel, granola bar, Post-it, kids' photo, he steps
+   out, you type on the keyboard, "Something is wrong with me").
+   Three buttons: plan it, grab it now, or walk away.
+
+T3 THE PLAN  [merges: drive home, model number, impostor, plan, recon]
+   You can't stop typing on the couch. You look it up: $149.99. You buy one and it
+   feels like nothing. It has to be his. Decoy. Spreadsheet. Marcy, the retreat
+   calendar, "he started the company on it."
+
+T4 THE OUTAGE  [merges: window, outage]
+   The doorway attempt (Marcy looks up, "Cable"). Then you take down the internet
+   "for an emergency patch." Laptops like sick pets. Marcy: two minutes, snack,
+   break room. You have two minutes. Daniel's packing list: "keyboard" underlined.
+
+T5 THE GRANDMOTHER  [merges: realization, casting]
+   You can't steal it at a retreat. Daniel can cancel it; he hates leaving anyone
+   out (the intern allergic to the trees at the cabin). You need a sick relative.
+   The ad, three candidates, Lilly.
+
+T6 THE VISIT  [merges: briefing, visit, cancels]
+   You tell Daniel; "nobody gets left out." He visits with flowers and a casserole.
+   Lilly knows your middle name. Daniel prays. He cancels the retreat. You pay
+   Lilly $150. The room cost almost as much. Three keyboards' worth for one.
+
+T7 THE AUDIT  [merges: audit, label maker, auditor, tour]
+   Asset audit email. Your decoy has no tag. The supply closet, the night cleaner.
+   The stern auditor arrives, likes you, works toward Daniel's office. You get
+   there first.
+
+T8 THE SWAP  [merges: swap, scan]
+   The decoy goes on the desk, the real one on the chair. The auditor scans the
+   forged tag: green. Then he starts to wheeze.
+
+T9 THE CHOICE  [merges: choice, shock, run]
+   He drops to one knee. The keyboard is right there. One second. You're shocked
+   at yourself. You grab it and run. Something skitters under your shoe: an
+   inhaler. "Fuck," you say.
+
+T10 THE LIE  [merges: lie, question, guilt]
+   You slide back in and press the inhaler into his hand. "I saw you drop it ten
+   seconds ago." He asks why you grabbed the keyboard. "I don't know. I was too
+   busy thinking about saving your life." He's moved. By evening everyone knows
+   about the inhaler and nobody knows about the keyboard, in your bag. You
+   rationalize. Daniel texts: "Heard what you did today. Thank you."
+
+==============================================================================
+THE 10 ENDINGS (each one short scene; every one ends with the replay button)
+
+E1  HAVE YOU TRIED RESTARTING?  [your original opening choice]
+    Daniel: "Oh! Good idea!" He restarts it. It works. "Appreciate you!" Ticket
+    closed in two minutes. You never go to his office. You have never felt so
+    nothing. Tomorrow there will be a ticket.
+
+E2  CHECK THE PRINTER MODEL FIRST  [your original opening choice]
+    You find the driver and install it remotely. Ticket closed at 4:52. You are
+    good at your job. It is not enough. You never meet the keyboard.
+
+E3  THE SPARE  [written before, commit 5e5552f]
+    You walk out with it. Daniel sees. "It's not working." He shows you the fix
+    (unplug the receiver). It works. "Keep it! I have a spare." He hands it to
+    you and drops it. It breaks. "Oh. Never mind. I'll use the spare."
+    You install the printer driver and go back to your desk.
+
+E4  WALK AWAY  [your open question: end or loop]
+    You finish the driver and go home. You do not think about it. Next morning
+    your fingers are typing on the steering wheel. Nothing is especially wrong.
+    Nothing is especially interesting. Tomorrow there will be a ticket.
+
+E5  THE GIFT
+    You ask Daniel about the keyboard. He lights up: "Oh, you like it? Take a
+    new one from the supply closet!" It's still in the box. You type your name.
+    It's a keyboard. Buying it never worked, and neither does being given one.
+
+E6  CALL YOUR MOTHER
+    You tell Daniel your mother in Ohio is very sick. He sends flowers. He calls
+    her to pray. She is fine. She is also confused. She is coming for a long
+    visit. The keyboard is still on his desk.
+
+E7  METHOD
+    You let Lilly keep going. She is so good that Daniel adopts her: she moves
+    into his guest room, comes to the audit, and asks you to pay her in hugs.
+    Nobody else knows. You never get near the keyboard again.
+
+E8  ASSET NOT FOUND
+    You skip the tag. The auditor scans the decoy. It beeps red. "Asset not
+    found." Daniel is heartbroken. "I just wish you'd asked." You are asked to
+    leave. The keyboard is still on his desk.
+
+E9  NOT THE HERO
+    You keep running. Marcy finds the auditor with a granola bar in her hand.
+    He's fine. He tells everyone who ran. You have the keyboard for eleven hours.
+    Then HR shows up. It feels like nothing.
+
+E10 THE PLATEAU  [canonical, your ending]
+    You're home. The keyboard is on the kitchen table. You type your name. It
+    feels like a keyboard. It always did. What you felt in Daniel's office was
+    never the keyboard. You backspace. Even the backspace is fine. You got what
+    you wanted. Nothing is especially wrong. Nothing is especially interesting.
+    Tomorrow there will be a ticket.
+
+==============================================================================
+OPEN QUESTIONS
+- Do you want all wrong choices to end the story, or should some loop back?
+- The main path is only 11 scenes long now (10 trunk + The Plateau). Do you want
+  it longer, which means splitting merged scenes and adding more endings?
+- Which endings are keepers, which are weak? (My weakest: E6 and E9.)
+- Do you want fewer endings that hit harder, or 10?
+- E3, E1, and E2 are old material. Fine to reuse?
+- Buttons: labels above are placeholders. Do you want to rewrite any?
