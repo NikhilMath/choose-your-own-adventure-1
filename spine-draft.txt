@@ -58,13 +58,13 @@ ACT 2: THE PLAN
    Marcy looks up. You pretend to check a cable. You leave.
    Choice: "Get everyone out of the building."
 
-9. THE OUTAGE  [PROPOSED; merges the old outage and Marcy's errand]
-   Callback to the printer: you take the floor's printers offline "for
-   maintenance." Ten people wander toward your desk, upset. Marcy, who prints
-   everything, comes down herself, and you tell her the real problem is on the
-   fourth floor. Two minutes, maybe. You walk into Daniel's office. The keyboard
-   is right there. Then his calendar pings on the monitor: retreat packing list,
-   "keyboard" on it.
+9. THE OUTAGE  [YOURS: internet outage / PROPOSED: details; merges the old outage and Marcy's errand]
+   You take down the office internet "for an emergency patch." The building goes
+   quiet, then loud: ten people wander toward your desk holding their laptops
+   like sick pets. Marcy, who lives in her inbox, comes down herself, and you tell
+   her the router problem is on the fourth floor. Two minutes, maybe. You walk
+   into Daniel's office. The keyboard is right there. Next to it, on paper (the
+   internet is down), his retreat packing list, with "keyboard" underlined.
    Choice: "Back out. Think."
 
 ACT 3: THE RETREAT  [cancel it with a fake sick grandmother]
