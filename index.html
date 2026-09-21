@@ -27,7 +27,7 @@
 </head>
 <body>
 <main>
-<aside><h1>Keyboard<br><em>Heist.</em></h1><div class="meta"><span>◷ 32 SCENES</span><span>⑂ 11 ENDINGS</span></div>
+<aside><h1>Keyboard<br><em>Heist.</em></h1><div class="meta"><span id="scene-tally">◷ 32 SCENES</span><span id="ending-tally">⑂ 11 ENDINGS</span></div>
 <div class="art" role="img" aria-label="An ordinary office keyboard with one green key on a dark desk"><svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg"><path fill="#193b37" d="M0 0h480v320H0z"/><ellipse cx="240" cy="234" rx="190" ry="24" fill="#142c29"/><path d="M240 110V70q0-25 40-25" fill="none" stroke="#789486" stroke-width="5"/><rect x="50" y="105" width="380" height="130" rx="15" fill="#829788"/><rect x="68" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="242" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="68" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="148" width="24" height="21" rx="4" fill="#d8eeaa"/><rect x="242" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="68" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="242" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="152" y="204" width="176" height="18" rx="4" fill="#d4d9c8"/></svg><span class="art-caption">COMPANY PROPERTY · $149.99</span></div>
 </aside>
 <section class="reader" aria-label="Interactive story"><div class="toolbar"><span class="chapter" id="chapter"></span><button class="text-button" id="restart">↻ Start over</button></div><div id="scene" class="scene"></div><div class="below"><button class="text-button" id="back">← Previous choice</button><span class="save" id="save" role="status"></span></div><details open><summary>Your journey <span id="count"></span></summary><ol id="journey"></ol></details></section>
@@ -617,11 +617,20 @@ const STORY = {
   }
 };
 const SAVE_KEY='keyboard-heist-v2';
+const SEEN_KEY='keyboard-heist-seen-v1';
+const ALL_SCENES=Object.keys(STORY);
+const ALL_ENDINGS=ALL_SCENES.filter(id=>STORY[id].ending);
 let path=['arrival'];
+let seen=new Set();
 let canSave=true;
 function validPath(value){return Array.isArray(value)&&value.length>0&&value[0]==='arrival'&&value.every((id,i)=>Object.hasOwn(STORY,id)&&(i===0||STORY[value[i-1]].choices?.some(c=>c.next===id)));}
 try{const saved=JSON.parse(localStorage.getItem(SAVE_KEY));if(validPath(saved))path=saved;}catch{canSave=false;}
-function persist(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(path));canSave=true;}catch{canSave=false;}document.getElementById('save').textContent=canSave?'Progress saved on this browser':'Progress kept for this visit';}
+try{const found=JSON.parse(localStorage.getItem(SEEN_KEY));if(Array.isArray(found))found.forEach(id=>{if(Object.hasOwn(STORY,id))seen.add(id);});}catch{}
+function persist(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(path));localStorage.setItem(SEEN_KEY,JSON.stringify([...seen]));canSave=true;}catch{canSave=false;}document.getElementById('save').textContent=canSave?'Progress saved on this browser':'Progress kept for this visit';}
+function tally(){
+ document.getElementById('scene-tally').textContent='◷ '+seen.size+' / '+ALL_SCENES.length+' SCENES';
+ document.getElementById('ending-tally').textContent='⑂ '+ALL_ENDINGS.filter(id=>seen.has(id)).length+' / '+ALL_ENDINGS.length+' ENDINGS';
+}
 function render(focus=false){
  const node=STORY[path.at(-1)];
  document.getElementById('chapter').textContent='CHAPTER '+String(path.length).padStart(2,'0')+' / YOUR JOURNEY';
@@ -649,7 +658,7 @@ function render(focus=false){
  const journey=document.getElementById('journey');journey.replaceChildren();path.forEach((id,i)=>{const li=document.createElement('li');
   if(i===path.length-1){li.textContent=STORY[id].title;li.setAttribute('aria-current','step');}
   else{const link=document.createElement('button');link.className='journey-link';link.textContent=STORY[id].title;link.addEventListener('click',()=>{path=path.slice(0,i+1);render(true);});li.append(link);}
-  journey.append(li);});persist();
+  journey.append(li);});path.forEach(id=>seen.add(id));persist();tally();
  if(focus){title.focus({preventScroll:true});if(container.getBoundingClientRect().top<0)container.scrollIntoView({block:'start'});}
 }
 document.getElementById('back').addEventListener('click',()=>{if(path.length>1){path.pop();render(true);}});
