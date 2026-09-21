@@ -233,6 +233,7 @@ hr {
   margin: 22px 0 0;
 }
 #map-box { margin-top: 18px; }
+#dead-box { border-top: 0; margin-top: 10px; padding-top: 0; }
 .map-svg { width: 100%; height: auto; display: block; margin: 4px 0 10px; overflow: visible; }
 .map-edge { stroke: #c3ccbb; stroke-width: 1; }
 .map-edge.map-dim { stroke: #dde2d6; stroke-dasharray: 2 3; }
