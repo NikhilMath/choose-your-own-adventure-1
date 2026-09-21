@@ -1,4 +1,4 @@
-KEYBOARD HEIST: SPINE DRAFT (v8, 35 scenes)
+KEYBOARD HEIST: SPINE DRAFT (v9, 35 scenes)
 Status: UNAPPROVED PROPOSAL. Nothing here is in the game yet. Change anything.
 Target length: about 20 scenes, more if we like where it goes. [YOURS]
 Rules: single choices only (each scene ends with one choice to the next scene),
@@ -20,6 +20,10 @@ ACT 1: THE ITCH
    Nice-CEO Daniel: open door, granola bar, Bible verse Post-it, kids' photo. He
    steps out for a call. You type on his keyboard and notice a keyboard for the
    first time in 22 years. [YOURS: setup / details from the earlier version]
+   Hint at its history [YOURS]: it's worn. The WASD letters are rubbed shiny, the
+   space bar has a faint coffee ring, there's a tiny sticker on the corner. It's
+   still "a nothing keyboard" (keep that line), but it's obviously been loved.
+   Don't explain it yet; the reveal ("the founding keyboard") is in scene 7.
    Choice [PROPOSED]: "Finish the driver. Leave it where it is. For now."
 
 3. THE DRIVE HOME  [PROPOSED]
@@ -230,6 +234,7 @@ OPEN QUESTIONS
 - The weird ramps up in Act 6 only. Do you want it to start earlier (Lilly gets
   weirder, the audit gets weirder)?
 - Brett the balloon consultant is a placeholder name.
+- Scene 2's hint: worn keys, coffee ring, sticker. Any other detail you'd like?
 - The keyboard is now the "founding keyboard" of a $100M company. Does that change
   how the ending should hit? (An ordinary keyboard that built an empire, and it
   still fixes nothing for you.)

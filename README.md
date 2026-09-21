@@ -26,7 +26,7 @@ The application is two static files with no runtime dependencies:
 - `index.html`: markup, inline SVG keyboard illustration, and the story engine script.
 - `styles.css`: responsive cream-and-green layout, serif narrative headings, accessible focus states, reduced-motion support. Linked from the HTML head; keep new styles here, not inline.
 - Static HTML: cover panel and inline SVG keyboard illustration on the left, interactive story on the right; stacked on narrow screens.
-- `STORY`: only the approved opening (`arrival`), marked as a checkpoint with no choices. Its `prompt` tells visitors that the choose-your-own-adventure options are coming soon and Nikhil is working on them in the backend. It contains the plateau paragraph and Daniel’s 4:46 p.m. printer-driver ticket. No other scenes and no endings exist yet.
+- `STORY`: only the approved opening (`arrival`), marked as a checkpoint with no choices. Its `prompt` tells visitors that the choose-your-own-adventure options are coming soon and Nikhil is working on them in the backend. It contains the plateau paragraph, a “A ticket pops up.” beat, and Daniel’s 4:46 p.m. printer-driver ticket. No other scenes and no endings exist yet.
 - Game engine: renders safe text using `textContent`, follows choices, supports going back, confirms restarting an active journey, shows visited scenes, and offers replay at endings.
 - `path`: array of visited scene IDs, starting at `arrival`.
 - `SAVE_KEY`: `keyboard-heist-v1`. Persists the path in localStorage; validates the saved route before restoring it. Falls back to in-memory play if storage is unavailable.
