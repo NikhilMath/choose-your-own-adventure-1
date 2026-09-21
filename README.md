@@ -7,9 +7,9 @@
 - The chosen story is **Keyboard Heist**, a second-person office comedy (the user asked that it be billed as “an office comedy,” not “dark”). The protagonist is an IT Support Manager whose dull, miserable last few months have left life feeling pointless. A printer-driver ticket (their most hated IT task) brings them to a genuinely nice CEO. His ordinary $150 keyboard feels wonderful; buying one would not satisfy the protagonist, but stealing this one gives them purpose. They feel guilty and rationalize that the company wants happy employees. The fictional goal is to avoid being caught. The user reviewed a near-space weather-balloon escalation and cut it as too wacky; do not reintroduce space or balloons unless the user asks.
 - Work one scene or decision at a time: develop the user's idea, propose branches for discussion, and implement the agreed direction. The live game is the full spine as a single path of single-choice buttons, ending at “The plateau” (an earlier version with placeholder choices is recoverable at commit `e4a95d8`). Do not invent continuations merely to fill checkpoints. Add choices back only when their destination scenes are written and agreed with the user.
 - Keep scene text short. Aim for the smallest number of paragraphs that still reads well; each paragraph is a beat, not a chunk. Prefer terse, rhythmic prose over exposition, and combine adjacent beats whenever the writing survives it.
-- Build the true spine (main storyline) first, using single choices only: each spine scene ends with one choice leading to the next spine scene, no forks. Diversions come after the spine exists. The user approved the spine in `spine-draft.txt`, and it is built in `index.html` as a first draft; the prose was written by the assistant from the outline and is open to the user's edits. The user said not to work on other branches yet.
+- Build order (user's direction): the main story (trunk) first, then diversions. The trunk was first drafted as a single path (`spine-draft.txt`, 29 scenes, recoverable in the game at commit `7acb237`); the user then asked for about 20 scenes with about 10 endings, and the game now implements `story-map.txt`. The user said not to worry about other branches beyond what the map shows.
 - Perspective: always second person (“you”). The adventure is about the player, not a fictional character: never use first person (“I”) or refer to the protagonist in the third person outside quoted dialogue. Choice labels and hints must also read as addressed to “you.”
-- Target structure (user's sketch, details pending): about 20 scenes total with about 10 different endings. The sketch shows one start scene on the left widening into a fan of branches toward the right. This replaces the earlier single-path, single-ending plan and the “single choices only” rule; a proposed map is in `story-map.txt` (20 scenes: 10 trunk + 10 endings, no rejoining). It is unapproved; confirm with the user before rebuilding the game from it.
+- Structure (user's sketch): 20 scenes total, 10 trunk scenes and 10 one-scene endings, branches do not rejoin the trunk. Built from `story-map.txt`. The prose is an assistant first draft open to the user's edits.
 - Spine length: aim for about 20 scenes to reach the ending, more if the user likes where it goes.
 - Story structure: the user wants every path to eventually converge on one main storyline; side branches return the protagonist to the main timeline rather than ending the story. This supersedes the fail-ending guidance below for the long term. Merged scenes must be route-neutral unless the engine gains state (see the merge rule in the editing contract).
 - Restart (user's direction): the opening (`arrival`) is approved and kept. Everything after it was scrapped and is being rebuilt, spine first, then diversions. The earlier office scene and `take_it_now` ending remain retrievable in git history (commit `5e5552f`) for reference or reuse only if the user asks.
@@ -29,10 +29,10 @@ The application is two static files with no runtime dependencies:
 - `index.html`: markup, inline SVG keyboard illustration, and the story engine script.
 - `styles.css`: responsive cream-and-green layout, serif narrative headings, accessible focus states, reduced-motion support. Linked from the HTML head; keep new styles here, not inline.
 - Static HTML: cover panel and inline SVG keyboard illustration on the left, interactive story on the right; stacked on narrow screens.
-- `STORY`: 29 scenes on a single path, one button per scene: `arrival` (the approved opening, with an “A ticket pops up.” beat and Daniel Hall’s printer ticket), then office, drive_home, model_number, impostor, plan, recon, window, outage, realization, casting, briefing, visit, cancels, audit, label_maker, auditor, tour, swap, scan, choice, shock, run, lie, question, guilt, home, typing, and the single ending `ending` (“The plateau”). The protagonist leaves with the real keyboard in their bag; the decoy stays on Daniel’s desk.
+- `STORY`: 20 scenes. Trunk: `arrival`, `office`, `plan`, `outage`, `grandmother`, `visit`, `audit`, `swap`, `choice`, `lie`. Endings: `end_plateau` (the canonical ending), `end_restart`, `end_printer`, `end_spare`, `end_walk_away`, `end_gift`, `end_mom`, `end_method`, `end_red`, `end_running`. The protagonist leaves with the real keyboard in their bag; the decoy stays on Daniel’s desk. Scenes have one to three buttons; endings offer replay.
 - Game engine: renders safe text using `textContent`, follows choices, supports going back, confirms restarting an active journey, shows visited scenes, and offers replay at endings.
 - `path`: array of visited scene IDs, starting at `arrival`.
-- `SAVE_KEY`: `keyboard-heist-v1`. Persists the path in localStorage; validates the saved route before restoring it. Falls back to in-memory play if storage is unavailable.
+- `SAVE_KEY`: `keyboard-heist-v2`. Persists the path in localStorage; validates the saved route before restoring it. Falls back to in-memory play if storage is unavailable.
 
 No framework, package manager, build pipeline, backend, generated story API, inventory, or conditional choices exists. Story expansion currently happens through source edits by an assistant. Do not imply the game generates new scenes at runtime.
 
@@ -79,10 +79,17 @@ When expanding the story:
 Current graph:
 
 ```text
-arrival -> office -> drive_home -> model_number -> impostor -> plan -> recon -> window -> outage
- -> realization -> casting -> briefing -> visit -> cancels -> audit -> label_maker -> auditor -> tour
- -> swap -> scan -> choice -> shock -> run -> lie -> question -> guilt -> home -> typing -> ending
-No forks and no checkpoints. Single ending.
+arrival -> office, end_restart, end_printer
+office  -> end_spare, plan, end_walk_away
+plan    -> outage, end_gift
+outage  -> grandmother
+grandmother -> visit, end_mom
+visit   -> audit, end_method
+audit   -> swap, end_red
+swap    -> choice
+choice  -> lie, end_running
+lie     -> end_plateau
+endings: end_plateau, end_restart, end_printer, end_spare, end_walk_away, end_gift, end_mom, end_method, end_red, end_running
 ```
 
 ## Verification expectations
@@ -111,4 +118,4 @@ No automated test suite is checked into the repository yet. Report actual verifi
 
 ## Next work
 
-The spine is built as a first draft. Next, the user reviews and edits the prose scene by scene. The user said not to work on other branches yet; diversions (the opening’s other choices, walk-away and take-it-now ideas at commit `5e5552f`) come later, and must rejoin the spine with route-neutral scenes. Open items from `spine-draft.txt`: whether the story needs a bigger escalation, whether to keep the “founding keyboard” mention, the inhaler and profanity choices. Verification so far: script syntax checked with macOS JavaScriptCore (no `node` installed), and the real engine was run against a stub DOM through all 29 scenes, the save, and the back button; no browser check, no ending-replay check, no mobile check. Follow the standing rule to summarize and suggest 2-3 next steps whenever starting a new path. If introducing inventory, conditional choices, or multiple stories, explicitly design state/save compatibility and revise this handoff.
+The 20-scene, 10-ending map is built and live as a first draft. Next, the user plays it on the live site and reports what they like and dislike; edit scene by scene from that feedback. Open questions from `story-map.txt`: whether the main path (11 scenes) should be longer, which endings to keep or cut (weakest: `end_mom`, `end_running`), and the inhaler and profanity choices. Verification so far: script syntax checked with macOS JavaScriptCore (no `node` installed), and every one of the 10 endings was reached through the real engine with a stub DOM, including replay resetting the route; no browser, mobile, or keyboard-navigation check. Follow the standing rule to summarize and suggest 2-3 next steps whenever starting a new path. If introducing inventory, conditional choices, or multiple stories, explicitly design state/save compatibility and revise this handoff.

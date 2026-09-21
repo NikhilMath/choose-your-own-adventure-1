@@ -1,5 +1,6 @@
-KEYBOARD HEIST: STORY MAP (v1, 20 scenes, 10 endings)
-Status: UNAPPROVED PROPOSAL. Nothing here is in the game yet. Change anything.
+KEYBOARD HEIST: STORY MAP (v2, 20 scenes, 10 endings, built)
+Status: BUILT in index.html as a first draft at the user's request ("push the full
+story map"). Not yet reviewed by the user; expect edits. Change anything.
 Source: the user's sketch (about 20 scenes total, about 10 different endings,
 a fan shape widening toward the endings) and "do what you suggest."
 The old single-path draft is spine-draft.txt (29 scenes); this map compresses it.

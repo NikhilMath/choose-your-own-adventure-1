@@ -12,7 +12,7 @@
 <main>
 <aside><div class="eyebrow">Adventure No. 001 · Office comedy</div><h1>Keyboard<br><em>Heist.</em></h1><p class="intro">Steal a keyboard just to feel something.</p>
 <div class="art" role="img" aria-label="An ordinary office keyboard with one green key on a dark desk"><svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg"><path fill="#193b37" d="M0 0h480v320H0z"/><ellipse cx="240" cy="234" rx="190" ry="24" fill="#142c29"/><path d="M240 110V70q0-25 40-25" fill="none" stroke="#789486" stroke-width="5"/><rect x="50" y="105" width="380" height="130" rx="15" fill="#829788"/><rect x="68" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="242" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="68" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="148" width="24" height="21" rx="4" fill="#d8eeaa"/><rect x="242" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="68" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="242" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="152" y="204" width="176" height="18" rx="4" fill="#d4d9c8"/></svg><span class="art-caption">COMPANY PROPERTY · $149.99</span></div>
-<div class="meta"><span>◷ 29 SCENES</span><span>⌨ FIRST DRAFT</span></div></aside>
+<div class="meta"><span>◷ 20 SCENES</span><span>⑂ 10 ENDINGS</span></div></aside>
 <section class="reader" aria-label="Interactive story"><div class="toolbar"><span class="chapter" id="chapter"></span><button class="text-button" id="restart">↻ Start over</button></div><div id="scene" class="scene"></div><div class="below"><button class="text-button" id="back">← Previous choice</button><span class="save" id="save" role="status"></span></div><details><summary>Your journey <span id="count"></span></summary><ol id="journey"></ol></details></section>
 </main><footer><span>Employee happiness is a company priority.</span><span>YOUR CHOICES. YOUR STORY.</span></footer><noscript>Enable JavaScript in your browser to play this adventure.</noscript>
 <script>
@@ -39,6 +39,16 @@ const STORY = {
         "label": "Head to his office.",
         "hint": "Maybe walking somewhere will count as feeling something.",
         "next": "office"
+      },
+      {
+        "label": "Reply, “Have you tried restarting?”",
+        "hint": "You deserve to ask. Once.",
+        "next": "end_restart"
+      },
+      {
+        "label": "Check the printer model first.",
+        "hint": "There’s still a professional somewhere inside you.",
+        "next": "end_printer"
       }
     ]
   },
@@ -59,116 +69,52 @@ const STORY = {
     ],
     "choices": [
       {
-        "label": "Finish the driver. Leave it where it is. For now.",
-        "hint": "Some things you plan.",
-        "next": "drive_home"
-      }
-    ]
-  },
-  "drive_home": {
-    "location": "6:12 p.m. · Home",
-    "title": "The drive home",
-    "text": [
-      "The printer works. You drive home. Dinner, TV, the usual nothing. Except your fingers keep typing on the couch cushion.",
-      "You type your name. You type it again. It’s the first thing you’ve thought about for longer than a minute in months."
-    ],
-    "choices": [
+        "label": "Take it. Right now.",
+        "hint": "You could be out of the building in ninety seconds. Probably.",
+        "next": "end_spare"
+      },
       {
-        "label": "Look it up.",
-        "hint": "Just to be sure it’s normal.",
-        "next": "model_number"
-      }
-    ]
-  },
-  "model_number": {
-    "location": "11:04 p.m. · Home",
-    "title": "The model number",
-    "text": [
-      "It takes four minutes to find. Full-size. Black and gray. $149.99. Four and a half stars.",
-      "It’s ordinary. That’s the problem. Nothing on this page explains what you felt. One reviewer wrote, “It’s a keyboard.”",
-      "Your cursor hovers over Buy Now. It’s just money. You have money. You have nothing else to spend it on."
-    ],
-    "choices": [
-      {
-        "label": "Buy one.",
-        "hint": "A normal thing to do.",
-        "next": "impostor"
-      }
-    ]
-  },
-  "impostor": {
-    "location": "Two days later · Kitchen table",
-    "title": "The impostor",
-    "text": [
-      "It arrives in a box big enough for a small pizza. You plug it in at the kitchen table and type your name.",
-      "Nothing. Same model, same keys, same clack. It’s a $150 keyboard.",
-      "It has to be his. You don’t know why. You just know you’d know.",
-      "You look at the box. You look at the keyboard. Well. Now you have a decoy."
-    ],
-    "choices": [
-      {
-        "label": "Bring it to work.",
-        "hint": "Keep it in your bag. Don’t explain.",
+        "label": "Leave it. Come back for it later.",
+        "hint": "You’d finish clean. You’d plan. That’s who you are.",
         "next": "plan"
+      },
+      {
+        "label": "Stand up. Walk away. Never think about this again.",
+        "hint": "Everyone would tell you it’s the correct choice.",
+        "next": "end_walk_away"
       }
     ]
   },
   "plan": {
-    "location": "Next morning · 7:52 a.m.",
+    "location": "That week · Home, then work",
     "title": "The plan",
     "text": [
-      "You are early. Nobody is here to see it. You buy your own coffee.",
-      "You open a spreadsheet. Column A: Daniel’s schedule. Column B: Daniel’s door. Column C: Things that could go wrong.",
-      "It’s the most alive you’ve felt in months, and it’s a crime. Or it will be."
+      "The printer works. You go home. Dinner, TV, the usual nothing. Except your fingers keep typing on the couch cushion.",
+      "You look it up. Full-size. Black and gray. $149.99. Four and a half stars. One reviewer wrote, “It’s a keyboard.” You buy one.",
+      "It arrives in a box big enough for a small pizza. You type your name at the kitchen table. Nothing. Same model, same clack. It has to be his. Well. Now you have a decoy.",
+      "You’re early the next morning. You open a spreadsheet. Column A: Daniel’s schedule. Column B: Daniel’s door. Column C: Things that could go wrong. It’s the most alive you’ve felt in months, and it’s a crime. Or it will be.",
+      "IT can go anywhere. Nobody asks why. Daniel eats lunch at 12:15 and leaves his door open. Always. His assistant, Marcy, sits outside it and sees everything.",
+      "Over her shoulder, her calendar: the company retreat, next Friday. Daniel brings his own keyboard to everything. She calls it “the founding keyboard.” He started the company on it. Once it leaves the building, it’s gone."
     ],
     "choices": [
       {
         "label": "Case the office.",
         "hint": "Professionally. You are a professional.",
-        "next": "recon"
-      }
-    ]
-  },
-  "recon": {
-    "location": "Wednesday · Everywhere you’re allowed to be",
-    "title": "Recon",
-    "text": [
-      "IT can go anywhere. Nobody asks why. You check a cable on every floor and learn: Daniel eats lunch at 12:15 and leaves his door open. Always.",
-      "His assistant, Marcy, sits outside it. She sees everything. She has a label maker and a smile.",
-      "Over Marcy’s shoulder, her calendar: the company retreat, next Friday. Daniel brings his own keyboard to everything. She calls it “the founding keyboard.” He started the company on it.",
-      "Once it leaves the building, it’s gone."
-    ],
-    "choices": [
-      {
-        "label": "Wait for a window.",
-        "hint": "There’s always a window.",
-        "next": "window"
-      }
-    ]
-  },
-  "window": {
-    "location": "Thursday · 1:40 p.m.",
-    "title": "The window",
-    "text": [
-      "Daniel leaves for a meeting. His office is empty. Door open, always.",
-      "You make it to the doorway. Marcy looks up. You crouch and examine a cable that doesn’t exist.",
-      "“Everything okay?” “Cable.” She nods. Cables are a thing.",
-      "You leave. You’ll need Marcy elsewhere. You’ll need everyone elsewhere."
-    ],
-    "choices": [
-      {
-        "label": "Take down the internet.",
-        "hint": "For an emergency patch.",
         "next": "outage"
+      },
+      {
+        "label": "Just ask him about it.",
+        "hint": "Normal. Suspiciously normal.",
+        "next": "end_gift"
       }
     ]
   },
   "outage": {
-    "location": "Friday · 10:03 a.m.",
+    "location": "Thursday · Then Friday, 10:03 a.m.",
     "title": "The outage",
     "text": [
-      "You take down the internet for “an emergency patch.” The building goes quiet, then loud.",
-      "Ten people wander toward your desk holding their laptops like sick pets.",
+      "Daniel leaves for a meeting. His office is empty. You make it to the doorway. Marcy looks up. You crouch and examine a cable that doesn’t exist. “Everything okay?” “Cable.” She nods. Cables are a thing.",
+      "The next day, you take down the internet for “an emergency patch.” The building goes quiet, then loud. Ten people wander toward your desk holding their laptops like sick pets.",
       "Marcy, who lives in her inbox, comes down herself. You tell her it’ll be back in two minutes. She thanks you. She goes to the break room for a snack.",
       "You have two minutes. You walk into Daniel’s office. The keyboard is right there.",
       "Next to it, on paper, because the internet is down: his retreat packing list. “Keyboard” is underlined twice."
@@ -177,91 +123,54 @@ const STORY = {
       {
         "label": "Back out. Think.",
         "hint": "You can’t steal it from a cabin in the woods.",
-        "next": "realization"
+        "next": "grandmother"
       }
     ]
   },
-  "realization": {
-    "location": "Friday · 10:09 a.m.",
-    "title": "The realization",
+  "grandmother": {
+    "location": "Friday · Then Saturday, a coffee shop",
+    "title": "The grandmother",
     "text": [
       "You can’t steal it at the retreat. A cabin in the woods, forty coworkers, nowhere to hide. Once the keyboard leaves the building, it’s gone.",
       "The retreat has to be canceled. You can’t cancel it. Daniel can.",
       "Daniel hates leaving anyone out. Last year he canceled the retreat because one intern was allergic to the trees at the cabin.",
-      "All you need is a reason you can’t go. A sick relative. You have a mother in Ohio, who is fine and picks up her phone. You’re going to need a grandmother."
+      "All you need is a reason you can’t go. A sick relative. You have a mother in Ohio, who is fine and picks up her phone. Or you could hire a grandmother.",
+      "You post an ad: “Small family role. Elderly woman. $75/hour. No questions.” Three people reply. The first is a college student in a wig. They probably thought it was for a play. The second is a real grandmother, so old she doesn’t even know how to improvise a lie.",
+      "The third is Lilly. She reads the brief, asks about your childhood, and tears up. You haven’t told her anything yet."
     ],
     "choices": [
       {
-        "label": "Get a grandmother.",
-        "hint": "Legally, this is fine.",
-        "next": "casting"
-      }
-    ]
-  },
-  "casting": {
-    "location": "Saturday · A coffee shop",
-    "title": "The casting",
-    "text": [
-      "You post an ad: “Small family role. Elderly woman. $75/hour. No questions.” Three people reply.",
-      "The first is a college student in a wig. They probably thought it was for a play. The second is a real grandmother, so old she doesn’t even know how to improvise a lie.",
-      "The third is Lilly. She reads the brief, asks about your childhood, and tears up. You haven’t told her anything yet.",
-      "You hire her."
-    ],
-    "choices": [
-      {
-        "label": "Brief her.",
-        "hint": "Keep it simple. Simple is believable.",
-        "next": "briefing"
-      }
-    ]
-  },
-  "briefing": {
-    "location": "Monday · Daniel’s office",
-    "title": "The briefing",
-    "text": [
-      "You tell Daniel your grandmother is very sick and you can’t make the retreat. You look at the floor. You’re better at this than you should be.",
-      "He puts a hand over his heart. “Then we’re not going. Nobody gets left out.”",
-      "Then he asks where she is. He’d like to visit."
-    ],
-    "choices": [
-      {
-        "label": "Take him to see her.",
-        "hint": "There is no version of this that ends well.",
+        "label": "Hire Lilly.",
+        "hint": "She’s far too good. That’s the point.",
         "next": "visit"
+      },
+      {
+        "label": "Forget it. Use your mother in Ohio.",
+        "hint": "She’s fine. She picks up her phone. That may be a problem.",
+        "next": "end_mom"
       }
     ]
   },
   "visit": {
-    "location": "Tuesday · A rented room",
+    "location": "Monday · Then a rented room",
     "title": "The visit",
     "text": [
-      "Daniel arrives with flowers and a casserole. Lilly is propped up in a bed you rented by the hour.",
-      "She knows your middle name. She knows your childhood dog’s name. You don’t remember telling her.",
-      "Daniel takes her hand and prays. She squeezes back. She’s crying real tears. You stand by the door holding the casserole.",
-      "“You’re a good grandkid,” she says to you. She means it more than you can bear."
+      "You tell Daniel your grandmother is very sick and you can’t make the retreat. You look at the floor. You’re better at this than you should be.",
+      "He puts a hand over his heart. “Then we’re not going. Nobody gets left out.” Then he asks where she is. He’d like to visit.",
+      "Daniel arrives with flowers and a casserole. Lilly is propped up in a bed you rented by the hour. She knows your middle name. She knows your childhood dog’s name. You don’t remember telling her.",
+      "Daniel takes her hand and prays. She squeezes back. She’s crying real tears. “You’re a good grandkid,” she says to you. She means it more than you can bear.",
+      "He sends the email: “Family comes first. The retreat is canceled. Please keep our teammate’s grandmother in your prayers.” Marcy replies all with a heart. Forty people follow."
     ],
     "choices": [
       {
-        "label": "Get him out of there.",
-        "hint": "Before she asks for money.",
-        "next": "cancels"
-      }
-    ]
-  },
-  "cancels": {
-    "location": "Wednesday · Everyone’s inbox",
-    "title": "Daniel cancels",
-    "text": [
-      "Daniel sends the email: “Family comes first. The retreat is canceled. Please keep our teammate’s grandmother in your prayers.” Marcy replies all with a heart. Forty people follow.",
-      "You pay Lilly $150 in cash in a parking lot. She asks for a good review. She leaves. She is not coming back.",
-      "The room cost almost as much. Add the decoy, and you’ve spent three keyboards’ worth of money to steal one keyboard.",
-      "Nobody knows it was you. You feel a little sick."
-    ],
-    "choices": [
-      {
-        "label": "Check your inbox.",
-        "hint": "There’s a new email.",
+        "label": "Pay her and move on.",
+        "hint": "Cash. No receipt.",
         "next": "audit"
+      },
+      {
+        "label": "Let Lilly keep going.",
+        "hint": "She’s getting attached. So is he.",
+        "next": "end_method"
       }
     ]
   },
@@ -269,88 +178,32 @@ const STORY = {
     "location": "Thursday · New email",
     "title": "The audit",
     "text": [
-      "Daniel, still worried about your grandmother, throws himself into work. New email, all staff: an asset audit. Every keyboard, every monitor, every stapler, scanned and logged.",
-      "Every keyboard is tagged. Yours isn’t. The moment anyone scans your decoy, it’s over.",
-      "You have exactly one day."
+      "You paid Lilly $150 in cash in a parking lot. She asked for a good review and left. The room cost almost as much. Add the decoy, and you’ve spent three keyboards’ worth of money to steal one keyboard.",
+      "Then, a new email, all staff: an asset audit. Every keyboard, every monitor, every stapler, scanned and logged.",
+      "Every keyboard is tagged. Yours isn’t. The moment anyone scans your decoy, it’s over. You have exactly one day."
     ],
     "choices": [
       {
         "label": "Make a tag.",
         "hint": "You’re in IT. You’re allowed a label printer.",
-        "next": "label_maker"
-      }
-    ]
-  },
-  "label_maker": {
-    "location": "11:02 p.m. · Supply closet",
-    "title": "The label maker",
-    "text": [
-      "The label printer hums. An asset tag is a barcode and a serial number. You’ve seen five hundred of them. You copy one and change a digit.",
-      "The night cleaner opens the door. “Working late?” “Inventory.” He nods. He mops. He does not ask about the barcode.",
-      "You have never worked this hard on anything. You’re smiling in a supply closet."
-    ],
-    "choices": [
-      {
-        "label": "Go home and sleep.",
-        "hint": "Tomorrow is the audit.",
-        "next": "auditor"
-      }
-    ]
-  },
-  "auditor": {
-    "location": "9:00 a.m. · Lobby",
-    "title": "The auditor",
-    "text": [
-      "The auditor arrives at nine sharp with a scanner, a clipboard, and a face like an unopened envelope.",
-      "He counts everything twice. He likes you. You’re the only one who answers his questions with numbers, which is worse."
-    ],
-    "choices": [
-      {
-        "label": "Give him the tour.",
-        "hint": "Steer him. Gently.",
-        "next": "tour"
-      }
-    ]
-  },
-  "tour": {
-    "location": "10:40 a.m. · Fourth floor",
-    "title": "The tour",
-    "text": [
-      "You walk him through the building. Floor one: fine. Floor two: fine. You steer him toward the break room.",
-      "He steers back. He checks his list. Daniel’s office is on it. It is, in fact, the last item.",
-      "He’s working his way toward it, floor by floor. You have to get there first."
-    ],
-    "choices": [
-      {
-        "label": "Get there first.",
-        "hint": "Say you’ll grab the badge.",
         "next": "swap"
+      },
+      {
+        "label": "Skip it. Nobody checks.",
+        "hint": "Nobody ever checks. Probably.",
+        "next": "end_red"
       }
     ]
   },
   "swap": {
-    "location": "11:15 a.m. · Daniel’s office",
+    "location": "11:02 p.m. · Then 11:18 a.m., Daniel’s office",
     "title": "The swap",
     "text": [
-      "Daniel’s office is empty. Marcy’s at lunch. The door is open, because the door is always open.",
-      "The decoy goes on the desk. The real keyboard goes on the chair, for a second, while you straighten the cable.",
-      "Footsteps. The auditor is in the doorway, scanner up."
-    ],
-    "choices": [
-      {
-        "label": "Act natural.",
-        "hint": "Stand in front of the chair.",
-        "next": "scan"
-      }
-    ]
-  },
-  "scan": {
-    "location": "11:18 a.m. · Daniel’s office",
-    "title": "The scan",
-    "text": [
-      "He scans the keyboard on the desk. The forged tag beeps green.",
-      "You almost celebrate. You made a barcode in a supply closet, and it works. You have never been prouder of anything.",
-      "“Well,” he says. He stops. He puts a hand to his chest. He starts to wheeze."
+      "The supply closet. An asset tag is a barcode and a serial number. You copy one and change a digit. The night cleaner asks if you’re working late. “Inventory.” He does not ask about the barcode.",
+      "The auditor arrives at nine sharp with a scanner, a clipboard, and a face like an unopened envelope. He counts everything twice. He likes you. You’re the only one who answers his questions with numbers, which is worse.",
+      "You give him the tour, steering him away from Daniel’s office. He steers back. It is the last item on his list. You get there first.",
+      "The office is empty. The decoy goes on the desk. The real keyboard goes on the chair, for a second, while you straighten the cable. Footsteps. The auditor is in the doorway, scanner up.",
+      "He scans the keyboard on the desk. The forged tag beeps green. You have never been prouder of anything. “Well,” he says. He stops. He puts a hand to his chest. He starts to wheeze."
     ],
     "choices": [
       {
@@ -365,141 +218,160 @@ const STORY = {
     "title": "The choice",
     "text": [
       "He drops to one knee. His scanner clatters. He’s gasping like a man who’s run out of a word.",
-      "Behind you, on the chair, the keyboard.",
-      "There’s a second. One. You look at the keyboard. You think about the keyboard."
-    ],
-    "choices": [
-      {
-        "label": "Grab the keyboard.",
-        "hint": "Everyone would tell you not to.",
-        "next": "shock"
-      }
-    ]
-  },
-  "shock": {
-    "location": "11:19 a.m. · Daniel’s office",
-    "title": "The shock",
-    "text": [
-      "You are shocked. Shocked that you thought it. That it took a second. That you’re still thinking it.",
-      "You feel guilty in a way you didn’t know you could.",
-      "You grab the keyboard and run."
-    ],
-    "choices": [
-      {
-        "label": "Run.",
-        "hint": "Away from a man who can’t breathe.",
-        "next": "run"
-      }
-    ]
-  },
-  "run": {
-    "location": "11:19 a.m. · The hallway",
-    "title": "The run",
-    "text": [
-      "Down the hall, keyboard in your arms, past a fern and a framed poster that says TEAMWORK.",
-      "Something skitters under your shoe. You look down. It’s an inhaler.",
+      "Behind you, on the chair, the keyboard. There’s a second. One. You look at the keyboard. You think about the keyboard.",
+      "You are shocked. Shocked that you thought it. That it took a second. You feel guilty in a way you didn’t know you could.",
+      "You grab the keyboard and run. Down the hall, past a fern and a poster that says TEAMWORK. Something skitters under your shoe. You look down. It’s an inhaler.",
       "“Fuck,” you say."
     ],
     "choices": [
       {
-        "label": "Go back.",
+        "label": "Go back with the inhaler.",
         "hint": "The keyboard is coming with you.",
         "next": "lie"
+      },
+      {
+        "label": "Keep running.",
+        "hint": "He can’t be that sick. Right?",
+        "next": "end_running"
       }
     ]
   },
   "lie": {
-    "location": "11:20 a.m. · Daniel’s office",
+    "location": "11:24 a.m. · Then that evening",
     "title": "The lie",
     "text": [
-      "You slide back into the office on your knees. You press the inhaler into his hand.",
-      "“You dropped this,” you say. “Ten seconds ago. I saw it.”",
-      "He breathes. He breathes again. He nods, eyes wet. He believes you completely."
-    ],
-    "choices": [
-      {
-        "label": "Help him up.",
-        "hint": "Keep your story straight.",
-        "next": "question"
-      }
-    ]
-  },
-  "question": {
-    "location": "11:24 a.m. · Daniel’s office",
-    "title": "The question",
-    "text": [
-      "He sits against the desk. He sees the keyboard in your arms.",
-      "“Why did you grab the keyboard?”",
-      "“I don’t know,” you say. “I was too busy thinking about saving your life.”",
-      "It’s almost true. He looks at you like you’re a hospital. He assumes you would never have let him die over a keyboard. That lands harder than the inhaler."
-    ],
-    "choices": [
-      {
-        "label": "Walk out.",
-        "hint": "Slowly. With the keyboard.",
-        "next": "guilt"
-      }
-    ]
-  },
-  "guilt": {
-    "location": "6:40 p.m. · Your car",
-    "title": "The guilt",
-    "text": [
-      "By evening, everyone knows about the inhaler. Nobody knows about the keyboard, which is in your bag.",
-      "You should feel guilty. You do. You rationalize: the company wants happy employees. You are an employee. You are happy. Aren’t you?",
-      "You canceled a retreat. You hired an actor. You lied to a man having an asthma attack. Your phone buzzes. Daniel: “Heard what you did today. Thank you. You saved a man’s life.”"
+      "You slide back into the office on your knees. You press the inhaler into his hand. “You dropped this,” you say. “Ten seconds ago. I saw it.”",
+      "He breathes. He breathes again. He nods, eyes wet. He believes you completely.",
+      "He sits against the desk. He sees the keyboard in your arms. “Why did you grab the keyboard?” “I don’t know,” you say. “I was too busy thinking about saving your life.”",
+      "It’s almost true. He looks at you like you’re a hospital. He assumes you would never have let him die over a keyboard. That lands harder than the inhaler.",
+      "By evening, everyone knows about the inhaler. Nobody knows about the keyboard, which is in your bag. You should feel guilty. You do. You rationalize: the company wants happy employees. You are an employee. You are happy. Aren’t you?",
+      "Your phone buzzes. Daniel: “Heard what you did today. Thank you. You saved a man’s life.”"
     ],
     "choices": [
       {
         "label": "Go home.",
         "hint": "You’ve been waiting for this for weeks.",
-        "next": "home"
+        "next": "end_plateau"
       }
     ]
   },
-  "home": {
-    "location": "10:48 p.m. · Kitchen table",
-    "title": "The keyboard at home",
-    "text": [
-      "It’s on your kitchen table. It’s plugged in.",
-      "Nobody is cheering. The refrigerator hums. It’s very quiet."
-    ],
-    "choices": [
-      {
-        "label": "Type your name.",
-        "hint": "It’s what you did the first time.",
-        "next": "typing"
-      }
-    ]
-  },
-  "typing": {
-    "location": "10:52 p.m. · Kitchen table",
-    "title": "Typing",
-    "text": [
-      "You type your name. It appears on the screen.",
-      "It feels like a keyboard. It always did. What you felt in Daniel’s office was never the keyboard.",
-      "You type it again anyway. You backspace. Even the backspace is fine."
-    ],
-    "choices": [
-      {
-        "label": "Turn it off.",
-        "hint": "It’s late.",
-        "next": "ending"
-      }
-    ]
-  },
-  "ending": {
+  "end_plateau": {
     "location": "Ending · Company property",
     "title": "The plateau",
     "ending": true,
     "text": [
-      "The screen goes dark. You sit in a dark kitchen with a $150 keyboard that started a company.",
+      "It’s on your kitchen table. It’s plugged in. Nobody is cheering. The refrigerator hums.",
+      "You type your name. It appears on the screen. It feels like a keyboard. It always did. What you felt in Daniel’s office was never the keyboard.",
+      "You type it again anyway. You backspace. Even the backspace is fine.",
       "You got what you wanted. Nothing is especially wrong. Nothing is especially interesting.",
       "Tomorrow there will be a ticket."
     ]
+  },
+  "end_restart": {
+    "location": "Ending · Ticket closed",
+    "title": "Have you tried restarting?",
+    "ending": true,
+    "text": [
+      "Daniel replies in eleven seconds. “Oh! Good idea!” A minute later: “That worked!! You’re a genius. Appreciate you!”",
+      "The ticket closes at 4:49 p.m. It’s the fastest you’ve ever solved anything. It took no skill at all.",
+      "You never go to his office. You go home. You have never felt so nothing.",
+      "Tomorrow there will be a ticket."
+    ]
+  },
+  "end_printer": {
+    "location": "Ending · Ticket closed",
+    "title": "Check the printer model first.",
+    "ending": true,
+    "text": [
+      "It’s a model you know. You find the driver, push it to Daniel’s laptop, and the printer wakes up with a small, proud beep.",
+      "Ticket closed at 4:52. You’re very good at your job. It has never been enough.",
+      "You never see Daniel’s office. You never meet his keyboard. You never know what you missed."
+    ]
+  },
+  "end_spare": {
+    "location": "Ending · The spare",
+    "title": "Take it. Right now.",
+    "ending": true,
+    "text": [
+      "You pick it up. It weighs almost nothing. You walk out holding it in both hands, like a casserole.",
+      "Daniel is in the hallway, phone already lowered. “Oh! What are you doing with that?”",
+      "“It’s not working,” you say. “I’ll grab you a different one.”",
+      "“Oh no, that happened before!” He’s delighted to help. “Just unplug the little receiver and plug it back in. Don’t even need to reset anything.”",
+      "You are the IT Support Manager.",
+      "He does it for you, right there in the hallway. It works. Of course it works. “Honestly, keep it! I’ve got a spare in a drawer.” He holds it out to you with both hands.",
+      "It slips. It hits the floor. The space bar skates down the hall. Something inside makes a small, final sound.",
+      "Daniel looks at it. “Oh. Never mind. I’ll use the spare.”",
+      "You install the printer driver. It takes four minutes. Then you go back to your desk, where Outlook is waiting."
+    ]
+  },
+  "end_walk_away": {
+    "location": "Ending · Nothing happens",
+    "title": "Stand up. Walk away. Never think about this again.",
+    "ending": true,
+    "text": [
+      "You finish the driver. You say goodbye to Daniel. You say goodbye to the keyboard, silently, like an idiot.",
+      "You go home. You do not think about it. You think about it in the shower. You think about it at dinner.",
+      "The next morning, your fingers are typing on the steering wheel.",
+      "Nothing is especially wrong. Nothing is especially interesting. Tomorrow there will be a ticket."
+    ]
+  },
+  "end_gift": {
+    "location": "Ending · The gift",
+    "title": "Just ask him about it.",
+    "ending": true,
+    "text": [
+      "You ask Daniel where he got the keyboard. He lights up like you’ve asked about his kids.",
+      "“Oh, you like it? Take a new one from the supply closet! We have a whole box!”",
+      "It’s still in its plastic. You carry it to your desk with both hands, like it could still mean something. You type your name.",
+      "It’s a keyboard. Buying it never worked. Being given one doesn’t either."
+    ]
+  },
+  "end_mom": {
+    "location": "Ending · Long distance",
+    "title": "Forget it. Use your mother in Ohio.",
+    "ending": true,
+    "text": [
+      "You tell Daniel your mother is very sick. He is stricken. He is also thorough: he asks for her number, so he can pray with her.",
+      "She picks up on the first ring. She is fine. She is also confused. Daniel prays for three minutes. She says “Amen,” because she is polite.",
+      "She calls you back at six. “Who is Daniel and why is he so nice to me? Are you okay?”",
+      "She’s coming for a long visit. She has already booked the flight. The keyboard is still on Daniel’s desk."
+    ]
+  },
+  "end_method": {
+    "location": "Ending · Method",
+    "title": "Let Lilly keep going.",
+    "ending": true,
+    "text": [
+      "You let Lilly keep going. She is not a woman who stops. She tells Daniel he reminds her of her late husband, Walter.",
+      "By Friday, Daniel has given her the guest room. By Monday, she is at the all-hands, taking notes.",
+      "She catches your eye across the conference table and mouths: “You owe me.” She is not wrong.",
+      "Nobody else knows. You never get near the keyboard again."
+    ]
+  },
+  "end_red": {
+    "location": "Ending · Asset not found",
+    "title": "Skip it. Nobody checks.",
+    "ending": true,
+    "text": [
+      "You skip the tag. You do the swap at lunch. Nobody checks, you tell yourself.",
+      "The auditor checks. He scans the keyboard on Daniel’s desk. It beeps once. Red. “Asset not found,” says the scanner, very calmly.",
+      "He looks at the keyboard. He looks at you. He has seen this before, and he is sad about it.",
+      "Daniel is heartbroken. “I just wish you’d asked.” You are asked to leave. The real keyboard was in your bag the whole time. It feels like nothing."
+    ]
+  },
+  "end_running": {
+    "location": "Ending · Not the hero",
+    "title": "Keep running.",
+    "ending": true,
+    "text": [
+      "You keep running. Past the fern, past TEAMWORK, past Marcy, who is coming down the hall with a granola bar.",
+      "She finds the auditor on the floor. She finds the inhaler under the fern. He is fine. He is also very clear about who ran.",
+      "You have the keyboard for eleven hours. It is on your kitchen table. It feels like nothing.",
+      "At nine a.m., HR is waiting by your desk. Daniel stands behind them, holding the granola bar. He looks so disappointed you almost feel something."
+    ]
   }
 };
-const SAVE_KEY='keyboard-heist-v1';
+const SAVE_KEY='keyboard-heist-v2';
 let path=['arrival'];
 let canSave=true;
 function validPath(value){return Array.isArray(value)&&value.length>0&&value[0]==='arrival'&&value.every((id,i)=>Object.hasOwn(STORY,id)&&(i===0||STORY[value[i-1]].choices?.some(c=>c.next===id)));}
