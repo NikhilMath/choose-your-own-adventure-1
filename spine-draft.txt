@@ -1,4 +1,4 @@
-KEYBOARD HEIST: SPINE DRAFT (v9, 35 scenes)
+KEYBOARD HEIST: SPINE DRAFT (v10, 35 scenes)
 Status: UNAPPROVED PROPOSAL. Nothing here is in the game yet. Change anything.
 Target length: about 20 scenes, more if we like where it goes. [YOURS]
 Rules: single choices only (each scene ends with one choice to the next scene),
@@ -13,7 +13,9 @@ Every scene aims to stay short, a few terse beats, per the README.
 ACT 1: THE ITCH
 ------------------------------------------------------------------------------
 1. ARRIVAL  (written, approved)
-   Plateau paragraph, Daniel's 4:46 p.m. printer-driver ticket.
+   Plateau paragraph, "A ticket pops up," and the 4:46 p.m. printer-driver ticket
+   from Daniel Hall, CEO. [YOURS: full name is Daniel Hall; the story otherwise
+   calls him Daniel.]
    Choice: "Head to his office."
 
 2. OFFICE  (written earlier, commit 5e5552f; to be rebuilt without the fork)
