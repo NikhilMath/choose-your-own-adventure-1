@@ -1,4 +1,4 @@
-KEYBOARD HEIST: STORY MAP (v3, 32 scenes, 16 endings, built)
+KEYBOARD HEIST: STORY MAP (v4, 32 scenes, 11 endings, built)
 Status: BUILT in index.html as a first draft at the user's request ("push the full
 story map"). Not yet reviewed by the user; expect edits. Change anything.
 Source: the user's sketch (about 20 scenes total, about 10 different endings,
@@ -184,3 +184,20 @@ JUST ASK: "The founding keyboard"
 
 Later wrong choices (mom, method, red, running, spare, printer model) remain
 one-scene endings.
+
+==============================================================================
+V4 ADDITION: EARLY DEAD ENDS REJOIN THE MAIN STORY
+(User: "there seems to be a lot of dead ends from the beginning, can we bring
+them back into the main story line?" Five endings became scenes that rejoin.)
+
+  printer_model (was end_printer) ........ -> office   (Daniel: come by, granola bar)
+  lemon         (was end_lemon) .......... -> office   (Daniel catches you at the elevator)
+  draft         (was end_draft) .......... -> plan     (it was the typing you liked)
+  typo          (was end_typo) ........... -> plan     (you want to feel it again)
+  declined      (was end_declined) ....... -> outage   (still doing this, feeling worse)
+
+Kept as real endings: spare, sick, speech, sabbatical, founding, borrowed, plus
+the later ones (mom, method, red, running) and the plateau. 11 endings total.
+The shared scenes (office, plan, outage) were edited to read correctly from
+every route: the office no longer mentions a driver download, and the plan's
+opening no longer says the printer works.

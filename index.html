@@ -30,7 +30,7 @@
 <main>
 <aside><div class="eyebrow">Adventure No. 001 · Office comedy</div><h1>Keyboard<br><em>Heist.</em></h1><p class="intro">Steal a keyboard just to feel something.</p>
 <div class="art" role="img" aria-label="An ordinary office keyboard with one green key on a dark desk"><svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg"><path fill="#193b37" d="M0 0h480v320H0z"/><ellipse cx="240" cy="234" rx="190" ry="24" fill="#142c29"/><path d="M240 110V70q0-25 40-25" fill="none" stroke="#789486" stroke-width="5"/><rect x="50" y="105" width="380" height="130" rx="15" fill="#829788"/><rect x="68" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="242" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="120" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="68" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="148" width="24" height="21" rx="4" fill="#d8eeaa"/><rect x="242" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="148" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="68" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="97" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="126" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="155" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="184" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="213" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="242" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="271" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="300" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="329" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="358" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="387" y="176" width="24" height="21" rx="4" fill="#d4d9c8"/><rect x="152" y="204" width="176" height="18" rx="4" fill="#d4d9c8"/></svg><span class="art-caption">COMPANY PROPERTY · $149.99</span></div>
-<div class="meta"><span>◷ 32 SCENES</span><span>⑂ 16 ENDINGS</span></div></aside>
+<div class="meta"><span>◷ 32 SCENES</span><span>⑂ 11 ENDINGS</span></div></aside>
 <section class="reader" aria-label="Interactive story"><div class="toolbar"><span class="chapter" id="chapter"></span><button class="text-button" id="restart">↻ Start over</button></div><div id="scene" class="scene"></div><div class="below"><button class="text-button" id="back">← Previous choice</button><span class="save" id="save" role="status"></span></div><details open><summary>Your journey <span id="count"></span></summary><ol id="journey"></ol></details></section>
 </main><footer><span>Employee happiness is a company priority.</span><span>YOUR CHOICES. YOUR STORY.</span></footer><noscript>Enable JavaScript in your browser to play this adventure.</noscript>
 <script>
@@ -66,7 +66,7 @@ const STORY = {
       {
         "label": "Check the printer model first.",
         "hint": "There’s still a professional somewhere inside you.",
-        "next": "end_printer"
+        "next": "printer_model"
       }
     ]
   },
@@ -79,7 +79,7 @@ const STORY = {
       "You did eat. You decline. He apologizes for the ticket, for the printer, for having a printer at all.",
       "There’s a Bible verse on a Post-it stuck to his monitor. A framed photo of his kids on the desk.",
       "He offers you his chair. His phone lights up. “Sorry, gotta grab this. Holler if you need anything.” He steps out. The door doesn’t quite close.",
-      "The driver downloads. You put your hands on the keyboard because your hands have to go somewhere.",
+      "You put your hands on the keyboard because your hands have to go somewhere.",
       "You type your name. It’s a nothing keyboard, the kind companies buy in bulk. You type your name again.",
       "You’ve been typing on keyboards for twenty-two years. You have never noticed a keyboard before. You are noticing this keyboard.",
       "You type a whole sentence: “Something is wrong with me.” You backspace it. The backspace also feels wonderful.",
@@ -107,7 +107,7 @@ const STORY = {
     "location": "That week · Home, then work",
     "title": "The plan",
     "text": [
-      "The printer works. You go home. Dinner, TV, the usual nothing. Except your fingers keep typing on the couch cushion.",
+      "You can’t stop thinking about the keyboard. Dinner, TV, the usual nothing. Except your fingers keep typing on the couch cushion.",
       "You look it up. Full-size. Black and gray. $149.99. Four and a half stars. One reviewer wrote, “It’s a keyboard.” You buy one.",
       "It arrives in a box big enough for a small pizza. You type your name at the kitchen table. Nothing. Same model, same clack. It has to be his. Well. Now you have a decoy.",
       "You’re early the next morning. You open a spreadsheet. Column A: Daniel’s schedule. Column B: Daniel’s door. Column C: Things that could go wrong. It’s the most alive you’ve felt in months, and it’s a crime. Or it will be.",
@@ -285,16 +285,6 @@ const STORY = {
       "Tomorrow there will be a ticket."
     ]
   },
-  "end_printer": {
-    "location": "Ending · Ticket closed",
-    "title": "Check the printer model first.",
-    "ending": true,
-    "text": [
-      "You look up the printer’s model. It’s one you’ve fixed a hundred times. You find the driver, push it to Daniel’s laptop, and the printer wakes up with a small, proud beep.",
-      "Ticket closed at 4:52. You’re very good at your job. It has never been enough.",
-      "You never see Daniel’s office. You never meet his keyboard. You never know what you missed."
-    ]
-  },
   "end_spare": {
     "location": "Ending · The spare",
     "title": "Take it. Right now.",
@@ -394,7 +384,7 @@ const STORY = {
       {
         "label": "Say “thank you” and sit down.",
         "hint": "Safe. Quiet. Familiar.",
-        "next": "end_lemon"
+        "next": "lemon"
       }
     ]
   },
@@ -417,15 +407,6 @@ const STORY = {
       "You get a standing ovation. Nobody believes you."
     ]
   },
-  "end_lemon": {
-    "location": "Ending · Lemon cake",
-    "title": "Say “thank you” and sit down.",
-    "ending": true,
-    "text": [
-      "You say thank you. You sit down. The cake is lemon. You hate lemon.",
-      "You eat two slices. You have never felt so appreciated. You have never felt so far away."
-    ]
-  },
   "walk_away": {
     "location": "Next morning · Your desk",
     "title": "Stand up. Walk away. Never think about this again.",
@@ -444,7 +425,7 @@ const STORY = {
       {
         "label": "Save it as a draft.",
         "hint": "Safe. Unsent. Yours.",
-        "next": "end_draft"
+        "next": "draft"
       }
     ]
   },
@@ -467,17 +448,8 @@ const STORY = {
       {
         "label": "Say it was a typo.",
         "hint": "Recover. Retreat. Rewrite.",
-        "next": "end_typo"
+        "next": "typo"
       }
-    ]
-  },
-  "end_draft": {
-    "location": "Ending · Drafts",
-    "title": "Save it as a draft.",
-    "ending": true,
-    "text": [
-      "You save it as a draft. It joins fourteen others. The oldest is from 2021 and just says “Dear Daniel,” which is somehow the saddest one.",
-      "You close the folder. Tomorrow there will be a ticket."
     ]
   },
   "end_sabbatical": {
@@ -488,17 +460,6 @@ const STORY = {
       "Six weeks, paid. You buy nothing. You go nowhere. You lie on the couch and wait to feel rested.",
       "On day thirteen, you catch yourself typing on the arm of the couch.",
       "On day forty-two, you go back. There is a ticket."
-    ]
-  },
-  "end_typo": {
-    "location": "Ending · Autocorrect",
-    "title": "Say it was a typo.",
-    "ending": true,
-    "text": [
-      "“It was a typo,” you say.",
-      "Daniel reads the email. It says, in full, “Dear Daniel, I quit.” He looks at you for a long moment. “A typo,” he says gently. “Okay.”",
-      "He believes you. He hugs you anyway. He smells like granola.",
-      "It was the most alive you’ve felt all year, and you didn’t even leave."
     ]
   },
   "ask": {
@@ -545,7 +506,7 @@ const STORY = {
       {
         "label": "Say you couldn’t possibly.",
         "hint": "You have a decoy in your bag. Have some shame.",
-        "next": "end_declined"
+        "next": "declined"
       }
     ]
   },
@@ -570,14 +531,86 @@ const STORY = {
       "Tomorrow there will be a ticket."
     ]
   },
-  "end_declined": {
-    "location": "Ending · Some shame",
+  "printer_model": {
+    "location": "4:52 p.m. · Your desk",
+    "title": "Check the printer model first.",
+    "text": [
+      "You look up the printer’s model. It’s one you’ve fixed a hundred times. You find the driver, push it to Daniel’s laptop, and the printer wakes up with a small, proud beep.",
+      "Ticket closed at 4:52. You’re very good at your job. It has never been enough.",
+      "Daniel replies in nine seconds. “You’re a lifesaver!! Come by, I want to thank you in person. I have a granola bar somewhere!”"
+    ],
+    "choices": [
+      {
+        "label": "Go to his office.",
+        "hint": "Maybe walking somewhere will count as feeling something.",
+        "next": "office"
+      }
+    ]
+  },
+  "lemon": {
+    "location": "Friday · 3:40 p.m. · The all-hands",
+    "title": "Say “thank you” and sit down.",
+    "text": [
+      "You say thank you. You sit down. The cake is lemon. You hate lemon.",
+      "You eat two slices. You have never felt so appreciated. You have never felt so far away.",
+      "Afterward, Daniel catches you by the elevator. “Come by my office before you go. I have something for you. It’s a secret. It’s a granola bar.”"
+    ],
+    "choices": [
+      {
+        "label": "Go to his office.",
+        "hint": "Maybe walking somewhere will count as feeling something.",
+        "next": "office"
+      }
+    ]
+  },
+  "draft": {
+    "location": "That night · Home",
+    "title": "Save it as a draft.",
+    "text": [
+      "You save it as a draft. It joins fourteen others. The oldest is from 2021 and just says “Dear Daniel,” which is somehow the saddest one.",
+      "It wasn’t quitting you liked. It was the typing. It was the backspace.",
+      "That night, your fingers won’t stop. Couch cushion. Steering wheel. The edge of the sink."
+    ],
+    "choices": [
+      {
+        "label": "Look it up.",
+        "hint": "Just to be sure it’s normal.",
+        "next": "plan"
+      }
+    ]
+  },
+  "typo": {
+    "location": "9:31 a.m. · Your desk",
+    "title": "Say it was a typo.",
+    "text": [
+      "“It was a typo,” you say.",
+      "Daniel reads the email. It says, in full, “Dear Daniel, I quit.” He looks at you for a long moment. “A typo,” he says gently. “Okay.”",
+      "He believes you. He hugs you anyway. He smells like granola.",
+      "It was the most alive you’ve felt all year, and you didn’t even leave. You want to feel it again. You’re not sure how."
+    ],
+    "choices": [
+      {
+        "label": "Figure out how.",
+        "hint": "You already know how.",
+        "next": "plan"
+      }
+    ]
+  },
+  "declined": {
+    "location": "Thirty-five minutes later · Daniel’s office",
     "title": "Say you couldn’t possibly.",
-    "ending": true,
     "text": [
       "You say you couldn’t possibly. Daniel insists. You say it again. It costs you more than you expected.",
       "He puts it back on the desk, a little hurt, and hands you a granola bar to make up for it.",
-      "In your bag, the decoy has never felt heavier. You eat the granola bar. It’s a really good granola bar."
+      "In your bag, the decoy has never felt heavier. You eat the granola bar. It’s a really good granola bar.",
+      "You’re still doing this. You’re just going to feel worse about it."
+    ],
+    "choices": [
+      {
+        "label": "Back to the plan.",
+        "hint": "Guilt is a feeling. Feelings are what you came for.",
+        "next": "outage"
+      }
     ]
   }
 };
