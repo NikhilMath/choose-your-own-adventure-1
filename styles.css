@@ -105,6 +105,8 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 18px;
   margin-bottom: 34px;
 }
 .chapter { font-size: 10px; letter-spacing: 2px; color: var(--muted); }
@@ -117,7 +119,7 @@ h2 {
 }
 .text-button:hover { color: var(--ink); }
 .text-button:disabled:hover { color: var(--muted); }
-.tools { display: flex; gap: 20px; align-items: center; }
+.tools { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 0 20px; }
 
 /* Scene */
 .scene { animation: arrive .35s ease; scroll-margin-top: 20px; }
@@ -281,5 +283,6 @@ noscript { display: block; padding: 30px; }
   .art { height: 190px; border-radius: 100px 100px 6px 6px; margin-top: 20px; }
   #map-box { margin-bottom: 35px; }
   .toolbar { margin-bottom: 22px; }
+  .tools { justify-content: flex-start; }
   h2 { font-size: 30px; }
 }
