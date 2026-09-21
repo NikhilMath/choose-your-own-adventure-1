@@ -600,7 +600,7 @@ function render(focus=false){
   if(i===path.length-1){li.textContent=STORY[id].title;li.setAttribute('aria-current','step');}
   else{const link=document.createElement('button');link.className='journey-link';link.textContent=STORY[id].title;link.addEventListener('click',()=>{path=path.slice(0,i+1);render(true);});li.append(link);}
   journey.append(li);});persist();
- if(focus)title.focus({preventScroll:true});
+ if(focus){title.focus({preventScroll:true});if(container.getBoundingClientRect().top<0)container.scrollIntoView({block:'start'});}
 }
 document.getElementById('back').addEventListener('click',()=>{if(path.length>1){path.pop();render(true);}});
 document.getElementById('restart').addEventListener('click',()=>{if(path.length===1||confirm('Start a new journey? Your current path will be reset.')){path=['arrival'];render(true);}});
