@@ -100,11 +100,12 @@ No automated test suite is checked into the repository yet. Report actual verifi
 ## Git and delivery
 
 - Repository: https://github.com/NikhilMath/choose-your-own-adventure-1
+- Live site (Netlify): https://keyboardheist.netlify.app
 - Default working/push branch: `main`.
 - Inspect `git status` before editing or committing. Preserve unrelated user work.
 - Stage only task files, use a descriptive commit, and push to `origin main` after verification.
 - GitHub CLI (`gh`) is installed and authenticated on this machine, so `git push origin main` works over HTTPS without prompting. If auth breaks, re-run `gh auth login` and retry.
-- A GitHub source push does not itself configure website hosting. There is no deployment configuration in this repository.
+- The site is hosted on Netlify at the URL above; the user set it up outside this repository, so there is no deployment configuration in the repo. Assume pushes to `main` deploy it, but verify with the user rather than claiming it is live.
 - License: MIT, see `LICENSE`.
 
 ## Next work
