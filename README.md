@@ -10,7 +10,7 @@
 - Work one scene or decision at a time: develop the user's idea, propose branches for discussion, and implement the agreed direction. The live game is the full spine as a single path of single-choice buttons, ending at “The plateau” (an earlier version with placeholder choices is recoverable at commit `e4a95d8`). Do not invent continuations merely to fill checkpoints. Add choices back only when their destination scenes are written and agreed with the user.
 - Keep scene text short. Aim for the smallest number of paragraphs that still reads well; each paragraph is a beat, not a chunk. Prefer terse, rhythmic prose over exposition, and combine adjacent beats whenever the writing survives it.
 - Endings (user's direction): the button at an ending goes back to the last choice, not to the beginning.
-- The shared description says “three real endings and ten ways to miss them”; update it if that split changes.
+- The shared description says “every choice leading to one of three endings”; update it if that split changes.
 - Link previews: `index.html` has Open Graph and Twitter card tags pointing at `og-image.jpg` (2400x1260 JPEG at quality 95, made from an SVG rendered at 2x because a 1200x630 PNG looked blurry in LinkedIn’s Post Inspector; the user wants it to say only “Keyboard Heist” in the site’s serif style, cream “Keyboard” over lime italic “Heist.” on the dark green background, with no other text or art). LinkedIn caches previews; refresh with https://www.linkedin.com/post-inspector/.
 - Wrong choices (user's direction): early wrong choices grow into mini-adventures, and the user asked that the early dead ends be brought back into the main storyline. Five early branches now rejoin (see the graph); the funniest stay as real endings. Because there is no memory of route, every scene with more than one way in (`office`, `plan`, `outage`) must read correctly for all incoming routes; keep them route-neutral.
 - Build order (user's direction): the main story (trunk) first, then diversions. The trunk was first drafted as a single path (`spine-draft.txt`, 29 scenes, recoverable in the game at commit `7acb237`); the user then asked for about 20 scenes with about 10 endings, and the game now implements `story-map.txt`. The user said not to worry about other branches beyond what the map shows.
@@ -35,14 +35,16 @@ The application is two static files with no runtime dependencies:
 - `index.html`: markup, inline SVG keyboard illustration, and the story engine script.
 - `styles.css`: responsive cream-and-green layout, serif narrative headings, accessible focus states, reduced-motion support. Linked from the HTML head; keep new styles here, not inline.
 - Static HTML: no site header, footer, or cover eyebrow (the user removed the “OTHER PATHS / STORIES YOU STEP INTO” bar, the “Employee happiness is a company priority. / YOUR CHOICES. YOUR STORY.” footer, and the “Adventure No. 001 · Office comedy” line). Keep the `.eyebrow` CSS rule: the engine still uses that class for each scene’s location tag. The cover is now just the title, the scenes/endings line, and the illustration; the “Steal a keyboard just to feel something.” tagline was removed from the page but is deliberately kept in the `description`, `og:description` and `twitter:description` meta tags so shared links still have copy. the page opens straight into the cover panel and inline SVG keyboard illustration on the left, interactive story on the right; stacked on narrow screens.
-- `STORY`: 38 scenes. Trunk: `arrival`, `office`, `plan`, `outage`, `grandmother`, `visit`, `audit`, `swap`, `choice`, `lie`. Mini-adventures: restart (`restart`, `ceremony`, `lemon`), walk away (`walk_away`, `resigned`, `draft`, `typo`), just ask (`ask`, `garage`, `declined`, plus the wizard branch `end_founding`, `invoices`, `wizard`, `pretend`), plus `printer_model`. Real endings (3): `end_plateau` (“The plateau”), `end_wizard` (“Eleven years”) and `refuse` (“The first no”). Dead ends (10): `end_spare`, `end_mom`, `end_method`, `end_red`, `end_running`, `end_sick`, `end_speech`, `end_sabbatical`, `end_borrowed`, `end_report`. `end_founding` continues despite its id. Rejoin scenes: `printer_model` and `lemon` lead back to `office`; `draft` and `typo` to `plan`; `declined` and `pretend` to `outage`. Scenes have one to three buttons.
+- `STORY`: 38 scenes, 3 real endings (`end_plateau` “The plateau”, `end_wizard` “Eleven years”, `refuse` “The first no”) and no dead ends. Trunk: `arrival`, `office`, `plan`, `outage`, `grandmother`, `visit`, `audit`, `swap`, `choice`, `lie`. Everything else is a detour that rejoins the trunk further along, or the wizard branch. Scenes have one to four buttons.
 - Game engine: renders safe text using `textContent`, follows choices, scrolls the new scene’s top into view after a choice, back, journey click, or restart when that top is above the viewport (needed on phones, where the page would otherwise stay scrolled to the bottom), supports going back, confirms restarting an active journey, shows visited scenes in “Your journey” (a `<details open>` list that starts open, per the user; every earlier step is a button that jumps back to that scene and trims the route; the current step is plain text), and at an ending offers “Try a different choice,” which goes back to the last choice you made (not the beginning; “Start over” in the toolbar still resets to the opening).
 - `path`: array of visited scene IDs, starting at `arrival`.
 - `SAVE_KEY`: `keyboard-heist-v2`. Persists the current path in localStorage; validates the saved route before restoring it. Falls back to in-memory play if storage is unavailable.
 - `SEEN_KEY`: `keyboard-heist-seen-v1`. A separate, ever-growing list of every scene id the player has ever reached, so discovery survives “Start over” and reloads (that is the point: it must never be cleared by a restart). Unknown ids are filtered out on load, and corrupt or blocked storage is caught and rebuilt from the current path rather than crashing.
 - “Your map” in the cover column draws a top-down SVG of the branches the player has discovered: a dot per scene laid out by its depth from `arrival`, lines for the choices between them, bright green and larger for the real ending, hollow outlined dots for dead ends, a dark halo for where you are, and faint dashed stubs for branches not yet taken (so it hints at what is left without spoiling it). Every discovered dot is clickable and jumps to that scene: `routeTo()` runs a breadth-first search for the shortest real route from `arrival` and assigns that to `path`, so the saved route always passes `validPath` and survives a reload. Never set `path` to a bare scene id; an invalid route is silently discarded on load. Each clickable dot has an invisible radius-9 hit circle over it (the visible dots are far too small to tap on a phone) and is keyboard operable via `role="button"`, `tabindex` and Enter or Space. Faint unexplored dots are deliberately not clickable, so the map cannot be used to skip ahead. `DEPTH`, the rows, the node list and the viewBox are all computed from `STORY` at runtime, so **the map keeps working automatically as endings and branches are added; it never needs updating by hand.** The same is true of the scene and ending counts. The only manual step when adding an ending is giving it a `name` (it falls back to `title` if you forget). Scaling limits to watch: the SVG is 250 units wide, so a single depth row wider than about 8 scenes will crowd, and the map grows 28 units taller per row of depth.
 - The toolbar has two controls, both spelled out in full at the user’s request so nobody has to guess which one loses data: “↻ Start over and do NOT clear history” resets the current run only, and “✕ Start over AND clear history” wipes `SEEN_KEY` behind a `confirm()` warning and is disabled when there is nothing to clear. Both labels are long, so `.toolbar` and `.tools` wrap. Clearing must also reset `path` to `['arrival']`, because `render()` re-adds the current path to `seen` on every draw; wiping `seen` alone would silently come straight back.
-- Endings vs dead ends (user's direction): only a scene with `finale: true` counts as a real ending, because only those show “The end.” Everything else with `ending: true` is a dead end and is counted and listed separately, so the headline number stays honest (today: 3 real endings, 10 dead ends). `ALL_ENDINGS` and `ALL_DEAD` derive this from `STORY`; `fillList()` renders both. To promote a dead end later, give it `finale: true` and the counters, lists and map follow. Every ending needs a short `name` (for example “The spare”). Both lists start collapsed; “Your journey” and “Your map” start open.
+- No dead ends (user's direction, from market research: dead ends confused or put people off). Every former dead end now rejoins the story further along, so all 1,675 possible playthroughs end at one of the three real endings, none revisits a scene, and none loops. A dead end may only feed a scene **later** than itself; feeding one back to anything a player has already passed through would create a loop. Where each one lands: `end_spare`, `end_sabbatical` to `plan`; `end_sick`, `end_speech` to `office`; `end_borrowed`, `end_report` to `outage`; `end_mom`, `end_method` to `audit`; `end_red`, `end_running` to `end_plateau`. Their `end_` ids are kept so existing tracking survives. To make `audit` read correctly for the routes that never hired Mrs. Cox, her payment and the three-keyboards line moved into `visit`. The dead ends list and its legend line hide themselves while there are none, and reappear if one is ever added.
+- The map lays scenes out by **longest** path from the opening (not shortest), so a scene always sits below every scene that leads into it and no arrow points up; unused depths are collapsed so there are no gaps. Row spacing tightens past about 19 rows so a fully explored map stays near 550 units tall.
+- Endings vs dead ends (user's direction): only a scene with `finale: true` counts as a real ending, because only those show “The end.” Everything else with `ending: true` is a dead end and is counted and listed separately, so the headline number stays honest (today: 3 real endings, 0 dead ends). `ALL_ENDINGS` and `ALL_DEAD` derive this from `STORY`; `fillList()` renders both. To promote a dead end later, give it `finale: true` and the counters, lists and map follow. Every ending needs a short `name` (for example “The spare”). Both lists start collapsed; “Your journey” and “Your map” start open.
 - `tally()` fills the cover counters (`#scene-tally`, `#ending-tally`) with “N / TOTAL SCENES” and “N / TOTAL ENDINGS”. Totals are derived from `STORY` at runtime, never hardcoded, so they cannot go stale when scenes are added; the numbers in the HTML are only a no-JavaScript fallback.
 
 No framework, package manager, build pipeline, backend, generated story API, inventory, or conditional choices exists. Story expansion currently happens through source edits by an assistant. Do not imply the game generates new scenes at runtime.
@@ -90,25 +92,27 @@ When expanding the story:
 Current graph:
 
 ```text
-arrival -> office, restart, printer_model
-office  -> end_spare, plan, walk_away
-plan    -> outage, ask
-outage  -> grandmother
-grandmother -> visit, end_mom
-visit   -> audit, end_method
-audit   -> swap, end_red
-swap    -> choice
-choice  -> lie, end_running
-lie     -> end_plateau          (real ending)
-Rejoin the main story:
-printer_model -> office
-restart -> ceremony, end_sick;   ceremony -> end_speech, lemon;   lemon -> office
-walk_away -> resigned, draft;    draft -> plan;   resigned -> end_sabbatical, typo;   typo -> plan
-ask -> garage, end_founding;     garage -> end_founding, end_borrowed, declined;   declined -> outage
-The wizard branch:
-end_founding -> invoices -> wizard
-wizard  -> end_wizard (real ending), refuse (real ending), end_report (dead end), pretend
-pretend -> outage               (back into the heist)
+The trunk:
+arrival -> office -> plan -> outage -> grandmother -> visit -> audit -> swap -> choice -> lie -> end_plateau
+Detours, and where they rejoin (always further along, so there are no loops):
+arrival -> restart -> end_sick -> office
+                   -> ceremony -> end_speech -> office
+                               -> lemon -> office
+arrival -> printer_model -> office
+office  -> end_spare -> plan
+office  -> walk_away -> resigned -> end_sabbatical -> plan
+                                 -> typo -> plan
+                     -> draft -> plan
+plan    -> ask -> garage -> end_borrowed -> outage
+                         -> declined -> outage
+               -> end_founding (from ask or garage) -> invoices -> wizard
+wizard  -> end_wizard (real ending), refuse (real ending)
+        -> end_report -> outage
+        -> pretend -> outage
+grandmother -> end_mom -> audit
+visit   -> end_method -> audit
+audit   -> end_red -> end_plateau
+choice  -> end_running -> end_plateau
 ```
 
 ## Continuity rules (learned in the full review)
@@ -150,4 +154,4 @@ No automated test suite is checked into the repository yet. Report actual verifi
 
 ## Next work
 
-The map, three early mini-adventures, the rejoin routes and the wizard branch are built and live (38 scenes, 3 real endings, 10 dead ends). Next, the user plays it on the live site and reports what they like and dislike; edit scene by scene from that feedback. Open questions: whether the main path (11 scenes) should be longer, which endings to keep or cut, and the inhaler and profanity choices. A full continuity and syntax review was done (30 fixes, then a second and third read). Verification so far: script syntax checked with macOS JavaScriptCore (no `node` installed), and every ending and dead end and every rejoin route were reached through the real engine with a stub DOM, including the ending button going back exactly one choice, the journey links were tested, and the scroll-to-scene behavior was tested against a stub (not on a real iPhone); no browser, mobile, or keyboard-navigation check, and the favicon was only viewed as a rendered PNG, not in a browser tab. Follow the standing rule to summarize and suggest 2-3 next steps whenever starting a new path. If introducing inventory, conditional choices, or multiple stories, explicitly design state/save compatibility and revise this handoff.
+The map, three early mini-adventures, the rejoin routes and the wizard branch are built and live (38 scenes, 3 real endings, no dead ends). Next, the user plays it on the live site and reports what they like and dislike; edit scene by scene from that feedback. Open questions: whether the main path (11 scenes) should be longer, which endings to keep or cut, and the inhaler and profanity choices. A full continuity and syntax review was done (30 fixes, then a second and third read). Verification so far: script syntax checked with macOS JavaScriptCore (no `node` installed), and every ending and dead end and every rejoin route were reached through the real engine with a stub DOM, including the ending button going back exactly one choice, the journey links were tested, and the scroll-to-scene behavior was tested against a stub (not on a real iPhone); no browser, mobile, or keyboard-navigation check, and the favicon was only viewed as a rendered PNG, not in a browser tab. Follow the standing rule to summarize and suggest 2-3 next steps whenever starting a new path. If introducing inventory, conditional choices, or multiple stories, explicitly design state/save compatibility and revise this handoff.
