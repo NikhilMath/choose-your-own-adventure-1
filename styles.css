@@ -31,9 +31,15 @@ main {
   padding: 54px 5% 35px;
   display: grid;
   grid-template-columns: minmax(280px, .85fr) minmax(340px, 1fr);
-  gap: 8%;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "aside reader" "map reader";
+  column-gap: 8%;
+  row-gap: 0;
 }
 aside, .reader { min-width: 0; }
+aside { grid-area: aside; }
+.reader { grid-area: reader; }
+#map-box { grid-area: map; }
 .reader { padding-top: 6px; }
 
 /* Typography */
