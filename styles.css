@@ -277,6 +277,28 @@ noscript { display: block; padding: 30px; }
   from { opacity: 0; transform: translateY(7px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+/* Scene vignettes (phone only, pilot scenes): small looping drawings that
+   stand in for the title and cover art once the player is past scene 1. */
+@keyframes type-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(6px); }
+}
+.vignette .hand-left  { animation: type-bounce .9s ease-in-out infinite; transform-origin: center; }
+.vignette .hand-right { animation: type-bounce .9s ease-in-out infinite .45s; transform-origin: center; }
+@keyframes key-pulse {
+  0%, 100% { opacity: .55; }
+  50%      { opacity: 1; }
+}
+.vignette .key-glow { animation: key-pulse 1.6s ease-in-out infinite; }
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.vignette .restart-icon { animation: spin 2.4s linear infinite; transform-origin: 235px 88px; }
+@keyframes scan {
+  0%, 100% { transform: scaleX(0); }
+  50%      { transform: scaleX(1); }
+}
+.vignette .loadbar { animation: scan 2.2s ease-in-out infinite; transform-origin: left; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
