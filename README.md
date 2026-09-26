@@ -141,7 +141,7 @@ No automated test suite is checked into the repository yet. Report actual verifi
 ## Git and delivery
 
 - Repository: https://github.com/NikhilMath/choose-your-own-adventure-1
-- Live site (Netlify): https://keyboardheist.netlify.app
+- Live site: https://keyboardheist.com (hosted on Netlify; the user bought this domain and it needs a Netlify custom-domain entry plus DNS records at the registrar to actually resolve, which is outside an assistant's reach). The old https://keyboardheist.netlify.app address still works alongside it unless the user removes it in Netlify's site settings.
 - Default working/push branch: `main`.
 - Inspect `git status` before editing or committing. Preserve unrelated user work.
 - Stage only task files, use a descriptive commit, and push to `origin main` after verification.
