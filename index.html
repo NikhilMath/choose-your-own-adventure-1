@@ -959,16 +959,16 @@ const asideEl=document.querySelector('aside');
 const coverTitle=document.getElementById('cover-title');
 const coverArt=document.getElementById('cover-art');
 const vignetteArt=document.getElementById('vignette-art');
-// Pilot: a small looping SVG drawing for a scene, shown only on phones, only
-// once the player is past the opening. Add an entry here to give any scene
-// one; scenes without an entry keep the normal title and cover art.
+// Pilot: a small looping SVG drawing for a scene, on any screen size, once
+// the player is past the opening. Add an entry here to give any scene one;
+// scenes without an entry keep the normal title and cover art.
 const VIGNETTES={
  office:{alt:'A small drawing of someone typing at a desk, one key glowing green.',svg:'<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg"><path fill="#193b37" d="M0 0h480v320H0z"/><ellipse cx="240" cy="266" rx="170" ry="20" fill="#142c29"/><rect x="90" y="228" width="300" height="14" rx="5" fill="#142c29"/><rect x="176" y="196" width="128" height="32" rx="6" fill="#829788"/><rect x="188" y="204" width="16" height="14" rx="3" fill="#d4d9c8"/><rect x="210" y="204" width="16" height="14" rx="3" fill="#d4d9c8"/><rect x="232" y="204" width="16" height="14" rx="3" fill="#d8eeaa" class="key-glow"/><rect x="254" y="204" width="16" height="14" rx="3" fill="#d4d9c8"/><rect x="276" y="204" width="16" height="14" rx="3" fill="#d4d9c8"/><circle cx="240" cy="112" r="26" fill="#d4d9c8"/><rect x="204" y="134" width="72" height="66" rx="20" fill="#789486"/><rect x="196" y="176" width="22" height="16" rx="6" fill="#829788" class="hand-left"/><rect x="262" y="176" width="22" height="16" rx="6" fill="#829788" class="hand-right"/></svg>'},
  restart:{alt:'A small drawing of a printer with a restart arrow spinning above it.',svg:'<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg"><path fill="#193b37" d="M0 0h480v320H0z"/><ellipse cx="240" cy="266" rx="170" ry="20" fill="#142c29"/><rect x="170" y="150" width="140" height="90" rx="14" fill="#829788"/><rect x="188" y="138" width="104" height="18" rx="5" fill="#d4d9c8"/><rect x="188" y="196" width="104" height="10" rx="4" fill="#142c29"/><circle cx="290" cy="222" r="6" fill="#d8eeaa"/><g class="restart-icon"><path d="M225 88a22 22 0 1 1 -6 15" fill="none" stroke="#d8eeaa" stroke-width="6" stroke-linecap="round"/><path d="M213 84l6 19 19-6z" fill="#d8eeaa"/></g></svg>'},
  printer_model:{alt:'A small drawing of a laptop with a loading bar, a printer waiting nearby.',svg:'<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg"><path fill="#193b37" d="M0 0h480v320H0z"/><ellipse cx="240" cy="266" rx="170" ry="20" fill="#142c29"/><rect x="150" y="110" width="180" height="112" rx="12" fill="#829788"/><rect x="164" y="122" width="152" height="86" rx="6" fill="#142c29"/><rect x="178" y="196" width="124" height="8" rx="4" fill="#0f2320"/><rect x="178" y="196" width="124" height="8" rx="4" fill="#d8eeaa" class="loadbar"/><rect x="360" y="178" width="70" height="46" rx="8" fill="#789486" opacity=".7"/><rect x="372" y="168" width="46" height="12" rx="4" fill="#d4d9c8" opacity=".7"/></svg>'}
 };
 function updateHeaderVisual(){
- const v=narrowScreen.matches?VIGNETTES[path.at(-1)]:null;
+ const v=VIGNETTES[path.at(-1)];
  if(v){vignetteArt.innerHTML=v.svg;vignetteArt.setAttribute('aria-label',v.alt);vignetteArt.hidden=false;coverArt.hidden=true;coverTitle.hidden=true;}
  else{vignetteArt.hidden=true;coverArt.hidden=false;coverTitle.hidden=false;}
 }
