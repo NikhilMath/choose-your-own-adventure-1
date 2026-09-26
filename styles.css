@@ -43,13 +43,6 @@ aside { grid-area: aside; }
 .reader { padding-top: 6px; }
 
 /* Typography */
-.eyebrow {
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  color: var(--muted);
-}
 h1 {
   font-family: Georgia, serif;
   font-size: clamp(54px, 6vw, 86px);
@@ -277,14 +270,6 @@ hr {
 }
 .journey-link:hover { color: var(--ink); text-decoration-color: currentColor; }
 li[aria-current="step"] { color: var(--ink); font-weight: 600; }
-.ending-tag {
-  display: inline-block;
-  background: #e5ebd8;
-  border-radius: 20px;
-  padding: 7px 12px;
-  font-size: 10px;
-  letter-spacing: 1px;
-}
 noscript { display: block; padding: 30px; }
 
 /* Motion */

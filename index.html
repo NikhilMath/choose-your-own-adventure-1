@@ -908,7 +908,6 @@ function fillList(found,all,countId,listId,noteId,one,many){
 function render(focus=false){
  const node=STORY[path.at(-1)];
  const container=document.getElementById('scene');container.replaceChildren();
- const tag=document.createElement('div');tag.className=node.ending?'ending-tag':'eyebrow';tag.textContent=node.location;container.append(tag);
  const title=document.createElement('h2');title.textContent=node.title;title.tabIndex=-1;container.append(title);
  const prose=document.createElement('div');prose.className='prose';node.text.forEach(text=>{const p=document.createElement('p');p.textContent=text;prose.append(p);});container.append(prose);
  if(node.ticket){
