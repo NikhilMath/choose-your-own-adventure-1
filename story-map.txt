@@ -230,3 +230,17 @@ and a little pitchfork as the "you are here" marker.
                      "Say nothing."                   -> hell_quiet
   hell_truth ....... "Go back with the inhaler."      -> lie (rejoins the main story)
   hell_quiet ....... "Go back to your cubicle."       -> hell_plateau    REAL ENDING "The lower plateau"
+
+UPDATE: the Hell dead ends now link together (user: "make it so the dead ends go
+towards each other somehow, they all link together while making the story make
+sense, so there's less dead ends"). Five dead ends became one.
+
+  hell_upstairs .... fired on Earth, stamped UNCLAIMED          -> hell_lost
+  hell_grab ........ the committee sends you to count pitchforks -> hell_lost
+  hell_form ........ your Form 666 gets lost                     -> hell_lost
+  hell_trade ....... Compliance confiscates the keyboard         -> hell_lost
+  hell_lake ........ assigned to Lost and Found                  -> hell_lost
+  hell_lost ........ "Fill out a tag for yourself."  -> hell_return
+                     "Stay behind the table."        -> hell_table  DEAD END "Unclaimed"
+  hell_truth ....... "Get in the elevator."          -> hell_return
+  hell_return ...... "Go back with the inhaler."     -> lie (rejoins the main story)
