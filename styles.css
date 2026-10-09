@@ -256,6 +256,16 @@ hr {
 .map-here .kb-body { fill: var(--ink); }
 .map-here .kb-key { fill: #d4d9c8; }
 .map-here .kb-accent { fill: var(--accent); }
+.map-here .pf-halo { fill: #3a1411; }
+.map-here .pf-fork { fill: none; stroke: #ff5a3c; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.map-here .pf-tips { fill: #ff5a3c; }
+.map-edge.map-hell { stroke: #dfa59d; }
+.map-edge.map-hell.map-dim { stroke: #efd0cb; }
+.map-node.map-hell { fill: #b3261e; }
+.map-node.map-hell.map-finale { fill: #ff4a2e; }
+.map-node.map-hell.map-dead { fill: var(--paper); stroke: #b3261e; }
+.map-node.map-hell.map-unseen { fill: #eec6c1; }
+.key-hell { display: none; }
 .map-hit { fill: transparent; cursor: pointer; }
 .map-hit:focus-visible { outline: 3px solid #7a9744; outline-offset: 2px; }
 .map-key { margin: 0; font-size: 11px; line-height: 1.6; color: var(--muted); }
@@ -274,6 +284,42 @@ hr {
 .journey-link:hover { color: var(--ink); text-decoration-color: currentColor; }
 li[aria-current="step"] { color: var(--ink); font-weight: 600; }
 noscript { display: block; padding: 30px; }
+
+/* Hell (user's direction): from "Keep running." on, the page goes black.
+   html.hell is toggled by updateTheme() in index.html. */
+body { transition: background-color .6s ease, color .6s ease; }
+html.hell {
+  color-scheme: dark;
+  --paper: #0b0b0b;
+  --ink: #f2e8e5;
+  --muted: #a3928e;
+  --line: #2f2523;
+  --accent: #6e1d16;
+}
+.hell h1 em { color: #e8432d; }
+.hell .prose { color: #d9ccc8; }
+.hell .art { background: #1c0c0b; }
+.hell .art-caption { color: #b9a19b; }
+.hell .choice { background: #161111; }
+.hell .choice:hover { background: #2a1513; border-color: #8a2a20; }
+.hell .choice-number { border-color: #4a3431; color: #c09690; }
+.hell .choice.primary small,
+.hell .choice.visited small { color: #e7c2bb; }
+.hell .choice.visited .choice-number { border-color: #b8463a; color: #ffd9d2; }
+.hell .ticket { background: #161111; border-left-color: #b8463a; }
+.hell #found-list li::before,
+.hell #dead-list li::before { color: #e8432d; }
+.hell button:focus-visible,
+.hell summary:focus-visible,
+.hell .map-hit:focus-visible { outline-color: #e8432d; }
+.hell .map-edge { stroke: #3b403c; }
+.hell .map-edge.map-dim { stroke: #2a2e2b; }
+.hell .map-node.map-unseen { fill: #353a36; }
+.hell .map-edge.map-hell { stroke: #7a2a22; }
+.hell .map-edge.map-hell.map-dim { stroke: #43201c; }
+.hell .map-node.map-hell.map-unseen { fill: #4e211d; }
+.hell .key-earth { display: none; }
+.hell .key-hell { display: inline; }
 
 /* Motion */
 @keyframes arrive {

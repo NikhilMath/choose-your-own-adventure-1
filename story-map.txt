@@ -201,3 +201,32 @@ the later ones (mom, method, red, running) and the plateau. 11 endings total.
 The shared scenes (office, plan, outage) were edited to read correctly from
 every route: the office no longer mentions a driver download, and the plan's
 opening no longer says the printer works.
+
+==============================================================================
+THE HELL BRANCH (built 2026-10-09 at the user's request; first draft)
+User: from the "Keep running." dead end, you are now in Hell. About 15 more
+scenes, little branch-offs, a few dead ends, and you want the pitchfork of one
+of the demons you meet on your first day. Red dots on the map, a black page,
+and a little pitchfork as the "you are here" marker.
+
+  choice ........... "Keep running."                  -> end_running (no longer an ending)
+  end_running ...... "Sign in."                       -> hell_orientation
+                     "Run back up the stairs."        -> hell_upstairs   DEAD END "Not the hero"
+  hell_orientation . "Hand it back. Smile."           -> hell_plan
+                     "Ask where you get one."         -> hell_requisition
+                     "Keep holding it. Walk out."     -> hell_grab       DEAD END "The committee"
+  hell_requisition . "Fill it out."                   -> hell_form       DEAD END "Pending"
+                     "Forget the form."               -> hell_plan
+  hell_plan ........ "Swap it at the huddle."         -> hell_huddle
+                     "Just ask for it."               -> hell_ask
+                     "Make a deal with the Devil."    -> hell_devil
+  hell_ask ......... "Take it. Take the job."         -> hell_job        REAL ENDING "Driver unavailable"
+                     "Say no thanks. Steal it later." -> hell_huddle
+  hell_devil ....... "Offer him the keyboard."        -> hell_trade      DEAD END "Fair trade"
+                     "Leave. Do it yourself."         -> hell_huddle
+  hell_huddle ...... "Scratch in a serial number. Then swap." -> hell_count
+                     "Swap now. Hide the real one in the Lake of Fire." -> hell_lake  DEAD END "Lost and found"
+  hell_count ....... "Tell the truth."                -> hell_truth
+                     "Say nothing."                   -> hell_quiet
+  hell_truth ....... "Go back with the inhaler."      -> lie (rejoins the main story)
+  hell_quiet ....... "Go back to your cubicle."       -> hell_plateau    REAL ENDING "The lower plateau"
