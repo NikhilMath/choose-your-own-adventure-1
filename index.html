@@ -32,7 +32,7 @@
 <div class="art vignette" id="vignette-art" role="img" hidden></div>
 <hr><div class="meta"><span id="scene-tally">◷ 42 SCENES</span><span id="ending-tally">⑂ 4 ENDINGS</span></div></aside>
 <section class="reader" aria-label="Interactive story"><div class="toolbar"><div class="tools"><button class="text-button" id="clear">✕ Start over AND clear history</button><button class="text-button" id="restart">↻ Start over and do NOT clear history</button></div></div><div id="scene" class="scene"></div><div class="below"><button class="text-button" id="back">← Previous choice</button><span class="save" id="save" role="status"></span></div><div id="mobile-map-slot"></div><details open><summary>Your journey <span id="count"></span></summary><ol id="journey"></ol></details><details><summary>Endings found <span id="found-count"></span></summary><ul id="found-list"></ul><p class="still-hidden" id="still-hidden"></p></details><details id="dead-box"><summary>Dead ends found <span id="dead-count"></span></summary><ul id="dead-list"></ul><p class="still-hidden" id="dead-hidden"></p></details></section>
-<details open id="map-box"><summary>Your map</summary><div id="map"></div><p class="map-key">Green marks an ending. The dark dot is where you are. Click any dot to jump back to that scene. Green marks a real ending. Hollow dots are dead ends. Faint dots are branches you have not taken yet.</p></details>
+<details open id="map-box"><summary>Your map</summary><div id="map"></div><p class="map-key">The keyboard is where you are. Click any dot to jump back to that scene. Green marks a real ending. Hollow dots are dead ends. Faint dots are branches you have not taken yet.</p></details>
 </main><footer>Created by <a href="https://nikhilmath.com" target="_blank" rel="noopener noreferrer">NikhilMath.com</a></footer><noscript>Enable JavaScript in your browser to play this adventure.</noscript>
 <script>
 // STORY DATA: write each destination scene before adding a choice that links to it.
@@ -839,6 +839,14 @@ try{const found=JSON.parse(localStorage.getItem(SEEN_KEY));if(Array.isArray(foun
 function persist(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(path));localStorage.setItem(SEEN_KEY,JSON.stringify([...seen]));canSave=true;}catch{canSave=false;}document.getElementById('save').textContent=canSave?'Progress saved on this browser':'Progress kept for this visit';}
 const DEPTH=(()=>{const d={arrival:0},q=['arrival'];while(q.length){const k=q.shift();(STORY[k].choices||[]).forEach(c=>{if(!(c.next in d)){d[c.next]=d[k]+1;q.push(c.next);}});}return d;})();
 const SVGNS='http://www.w3.org/2000/svg';
+// "You are here" marker: a geometric keyboard centred on 0,0, as [x,y,width,height,rx,class].
+// Halo and body, two rows of five keys (the last one accented, like the favicon), then key, space bar, key.
+const KEYBOARD=(()=>{
+ const r=[[-11.5,-8.1,23,16.2,4,'kb-halo'],[-9.5,-6.1,19,12.2,2.4,'kb-body']];
+ [-4.6,-1.2].forEach((y,ri)=>[-8,-4.6,-1.2,2.2,5.6].forEach((x,ci)=>r.push([x,y,2.4,2.4,.6,ri&&ci===4?'kb-key kb-accent':'kb-key'])));
+ r.push([-8,2.2,2.4,2.4,.6,'kb-key'],[-4.6,2.2,9.2,2.4,.6,'kb-key'],[5.6,2.2,2.4,2.4,.6,'kb-key']);
+ return r;
+})();
 function routeTo(target){
  const prev={arrival:null},q=['arrival'];
  while(q.length){const k=q.shift();if(k===target)break;(STORY[k].choices||[]).forEach(c=>{if(!(c.next in prev)){prev[c.next]=k;q.push(c.next);}});}
@@ -870,10 +878,22 @@ function drawMap(){
  Object.keys(pos).forEach(id=>{
   const unseen=!seen.has(id),v=STORY[id];
   const kind=v.finale?' map-finale':v.ending?' map-dead':'';
-  const dot=document.createElementNS(SVGNS,'circle');
-  dot.setAttribute('cx',pos[id].x);dot.setAttribute('cy',pos[id].y);
-  dot.setAttribute('r',unseen?2.5:v.finale?5.5:v.ending?4:3.5);
-  dot.setAttribute('class','map-node'+(unseen?' map-unseen':kind)+(id===here?' map-here':''));
+  let dot;
+  if(id===here){
+   dot=document.createElementNS(SVGNS,'g');
+   dot.setAttribute('class','map-here');
+   dot.setAttribute('transform','translate('+pos[id].x+' '+pos[id].y+')');
+   KEYBOARD.forEach(([x,y,w,h,rx,cls])=>{
+    const k=document.createElementNS(SVGNS,'rect');
+    k.setAttribute('x',x);k.setAttribute('y',y);k.setAttribute('width',w);k.setAttribute('height',h);
+    k.setAttribute('rx',rx);k.setAttribute('class',cls);dot.append(k);
+   });
+  }else{
+   dot=document.createElementNS(SVGNS,'circle');
+   dot.setAttribute('cx',pos[id].x);dot.setAttribute('cy',pos[id].y);
+   dot.setAttribute('r',unseen?2.5:v.finale?5.5:v.ending?4:3.5);
+   dot.setAttribute('class','map-node'+(unseen?' map-unseen':kind));
+  }
   const t=document.createElementNS(SVGNS,'title');
   t.textContent=unseen?'Not explored yet':(STORY[id].name||STORY[id].title);
   dot.append(t);svg.append(dot);
